@@ -10,9 +10,10 @@ interface CategoryCardProps {
   image: string
   link: string
   className?: string
+  priority?: boolean
 }
 
-export default function CategoryCard({ name, image, link, className = "" }: CategoryCardProps) {
+export default function CategoryCard({ name, image, link, className = "", priority = false }: CategoryCardProps) {
   const cardRef = useRef<HTMLDivElement>(null)
   const { scrollYProgress } = useScroll({
     target: cardRef,
@@ -29,7 +30,7 @@ export default function CategoryCard({ name, image, link, className = "" }: Cate
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
-      className={`relative group bg-zinc-900 border border-white/5 flex flex-col ${className}`}
+      className={`relative group bg-zinc-900 border border-white/5 flex flex-col rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow ${className}`}
     >
       <Link href={link} className="flex flex-col w-full h-full">
         {/* Upper Image Section */}
@@ -42,8 +43,9 @@ export default function CategoryCard({ name, image, link, className = "" }: Cate
               src={image}
               alt={name}
               fill
+              sizes="(max-width: 768px) 280px, (max-width: 1024px) 320px, 380px"
               className="object-cover transition-transform duration-700 group-hover:scale-110"
-              priority
+              priority={priority}
             />
           </motion.div>
           {/* Subtle Studio Overlay */}

@@ -41,21 +41,21 @@ export function Footer() {
     <footer className="bg-zinc-950 text-white border-t border-white/5">
       {/* Main Footer */}
       <div className="container mx-auto px-6 lg:px-12 py-10 lg:py-14">
-        <div className="grid lg:grid-cols-5 gap-12 lg:gap-8">
+        <div className="grid lg:grid-cols-5 gap-8">
           {/* Brand Column */}
           <div className="lg:col-span-2">
             <Link href="/" className="group">
               <img src="/Matrix-Platform-Logo.png" alt="Logo" loading="lazy" className="h-20 w-auto object-contain" />
             </Link>
 
-            <p className="text-slate-400 leading-relaxed mb-8 max-w-sm">
+            <p className="text-slate-400 leading-relaxed mb-8 max-w-sm mt-4">
               From fabric to finished product. Three countries, one integrated supply chain
               bridging China&apos;s textile power with South Asia&apos;s manufacturing excellence.
             </p>
 
             <Button
               variant="outline"
-              className="border-white/20 text-white bg-white/5 hover:bg-white/10 gap-2"
+              className="border-white/20 text-white bg-white/5 hover:bg-white/10 gap-2 min-h-[48px] px-6"
             >
               <Download className="w-4 h-4" />
               Download Company Profile
@@ -63,14 +63,14 @@ export function Footer() {
           </div>
 
           {/* Links Columns */}
-          <div>
+          <div className="mt-8 lg:mt-0">
             <h4 className="font-semibold text-white mb-6">Company</h4>
-            <ul className="space-y-4">
+            <ul className="space-y-2">
               {footerLinks.company.map((link) => (
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="text-slate-400 hover:text-sky-400 transition-colors"
+                    className="text-slate-400 hover:text-sky-400 transition-colors py-2 min-h-[40px] inline-block w-full"
                   >
                     {link.label}
                   </Link>
@@ -79,14 +79,14 @@ export function Footer() {
             </ul>
           </div>
 
-          <div>
+          <div className="mt-4 lg:mt-0">
             <h4 className="font-semibold text-white mb-6">Services</h4>
-            <ul className="space-y-4">
+            <ul className="space-y-2">
               {footerLinks.services.map((link) => (
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="text-slate-400 hover:text-sky-400 transition-colors"
+                    className="text-slate-400 hover:text-sky-400 transition-colors py-2 min-h-[40px] inline-block w-full"
                   >
                     {link.label}
                   </Link>
@@ -95,14 +95,14 @@ export function Footer() {
             </ul>
           </div>
 
-          <div>
+          <div className="mt-4 lg:mt-0">
             <h4 className="font-semibold text-white mb-6">Resources</h4>
-            <ul className="space-y-4">
+            <ul className="space-y-2">
               {footerLinks.resources.map((link) => (
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="text-slate-400 hover:text-sky-400 transition-colors"
+                    className="text-slate-400 hover:text-sky-400 transition-colors py-2 min-h-[40px] inline-block w-full"
                   >
                     {link.label}
                   </Link>

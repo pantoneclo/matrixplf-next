@@ -108,13 +108,13 @@ export function HeroSection() {
             >
               <span
                 key={`title-${currentSlide}`}
-                className="block text-4xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-5xl font-bold text-white leading-none tracking-tight animate-fade-in-up"
+                className="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight tracking-tight animate-fade-in-up"
               >
                 {slide.title}
               </span>
               <span
                 key={`highlight-${currentSlide}`}
-                className="block text-4xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-5xl font-bold text-white leading-none tracking-tight mt-2 animate-fade-in-up animation-delay-100"
+                className="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight tracking-tight mt-2 animate-fade-in-up animation-delay-100"
               >
                 {slide.titleHighlight}
               </span>
@@ -123,10 +123,10 @@ export function HeroSection() {
             {/* Subtitle */}
             <div
               key={`subtitle-${currentSlide}`}
-              className={`mt-8 space-y-2 transition-all duration-1000 delay-300 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+              className={`mt-8 space-y-3 transition-all duration-1000 delay-300 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
                 }`}
             >
-              <p className="text-xl md:text-2xl text-white/90 font-medium animate-fade-in-up animation-delay-200">
+              <p className="text-xl md:text-2xl lg:text-3xl text-white/90 font-medium animate-fade-in-up animation-delay-200">
                 {slide.subtitle}
               </p>
               <p className="text-lg md:text-xl text-white/80 animate-fade-in-up animation-delay-300">
@@ -136,12 +136,12 @@ export function HeroSection() {
 
             {/* CTA Buttons */}
             <div
-              className={`flex flex-wrap gap-4 mt-10 transition-all duration-1000 delay-500 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+              className={`flex flex-col sm:flex-row flex-wrap gap-4 mt-10 transition-all duration-1000 delay-500 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
                 }`}
             >
               <Button
                 size="lg"
-                className="bg-sky-500 hover:bg-sky-600 text-white px-6 py-6 text-base font-medium rounded-full gap-2 group transition-all duration-300 hover:shadow-lg hover:shadow-sky-500/25"
+                className="w-full sm:w-auto bg-sky-500 hover:bg-sky-600 text-white px-8 py-6 text-base font-medium rounded-full gap-2 group transition-all duration-300 hover:shadow-lg hover:shadow-sky-500/25 min-h-[48px]"
               >
                 <Download className="w-5 h-5" />
                 Download Profile
@@ -149,7 +149,7 @@ export function HeroSection() {
               <Button
                 size="lg"
                 variant="outline"
-                className="border-white/60 text-slate-800 bg-white/90 hover:bg-white px-6 py-6 text-base font-medium rounded-full transition-all duration-300"
+                className="w-full sm:w-auto border-white/60 text-slate-800 bg-white/90 hover:bg-white px-8 py-6 text-base font-medium rounded-full transition-all duration-300 min-h-[48px]"
               >
                 Contact Our Team
               </Button>

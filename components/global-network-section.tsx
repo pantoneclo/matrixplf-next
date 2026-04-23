@@ -1,5 +1,3 @@
-"use client"
-
 import Image from "next/image"
 import { MapPin } from "lucide-react"
 
@@ -87,6 +85,33 @@ export function GlobalNetworkSection() {
           </p>
         </div>
 
+        {/* Mobile Map (shows below header, above cards on small screens) */}
+        <div className="lg:hidden relative w-full aspect-[2/1] mb-8 opacity-80 pointer-events-none">
+          <Image
+            src="/images/world-map.png"
+            alt="World Map"
+            fill
+            sizes="(max-width: 1024px) 100vw, 0vw"
+            className="object-contain"
+          />
+          {pins.map(pin => (
+            <div
+              key={pin.id}
+              className="absolute"
+              style={{ top: pin.top, left: pin.left, transform: 'translate(-50%, -100%)' }}
+            >
+              <div
+                className="absolute top-[80%] left-1/2 -translate-x-1/2 w-3 h-3 rounded-full animate-ping opacity-75"
+                style={{ backgroundColor: pin.color }}
+              />
+              <MapPin
+                className="w-8 h-8 relative z-10"
+                style={{ color: pin.color, fill: `${pin.color}40`, strokeWidth: 1.5 }}
+              />
+            </div>
+          ))}
+        </div>
+
         <div className="relative">
           {/* Map Overlay for Desktop Container */}
           <div className="absolute inset-0 z-0 hidden lg:flex items-center justify-center opacity-70 pointer-events-none">
@@ -95,6 +120,7 @@ export function GlobalNetworkSection() {
                 src="/images/world-map.png"
                 alt="World Map"
                 fill
+                sizes="(min-width: 1024px) 900px, 0vw"
                 className="object-contain"
                 priority
               />
@@ -125,14 +151,14 @@ export function GlobalNetworkSection() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[1fr_2fr_1fr] xl:grid-cols-[1fr_3fr_1fr] relative z-10 gap-6 lg:gap-8 items-center">
 
             {/* Left Column */}
-            <div className="space-y-4 md:space-y-6 lg:space-y-8 col-start-1">
+            <div className="flex flex-row overflow-x-auto snap-x snap-mandatory gap-4 pb-4 md:pb-0 md:flex-col md:space-y-6 lg:space-y-8 col-start-1 scrollbar-hide">
               {leftNodes.map((node) => (
                 <div
                   key={node.id}
-                  className="relative group w-full max-w-sm mx-auto lg:ml-auto"
+                  className="relative group w-[85vw] min-w-[280px] snap-center md:w-full md:min-w-0 max-w-sm mx-auto lg:ml-auto flex-shrink-0 md:flex-shrink"
                 >
                   <div
-                    className="border-2 rounded-2xl p-4 lg:p-6 bg-[#2a2e33]/90 backdrop-blur-md shadow-xl transition-all hover:-translate-y-1 hover:shadow-2xl hover:bg-[#2a2e33]"
+                    className="h-full border-2 rounded-2xl p-4 lg:p-6 bg-[#2a2e33]/90 backdrop-blur-md shadow-xl transition-all hover:-translate-y-1 hover:shadow-2xl hover:bg-[#2a2e33]"
                     style={{ borderColor: node.color }}
                   >
                     <h3 className="text-lg lg:text-xl font-bold mb-1" style={{ color: node.color }}>{node.title}</h3>
@@ -147,14 +173,14 @@ export function GlobalNetworkSection() {
             <div className="hidden lg:block col-start-2 self-stretch" />
 
             {/* Right Column */}
-            <div className="space-y-4 md:space-y-6 lg:space-y-8 col-start-1 md:col-start-2 lg:col-start-3">
+            <div className="flex flex-row overflow-x-auto snap-x snap-mandatory gap-4 pb-4 md:pb-0 md:flex-col md:space-y-6 lg:space-y-8 col-start-1 md:col-start-2 lg:col-start-3 scrollbar-hide">
               {rightNodes.map((node) => (
                 <div
                   key={node.id}
-                  className="relative group w-full max-w-sm mx-auto lg:mr-auto"
+                  className="relative group w-[85vw] min-w-[280px] snap-center md:w-full md:min-w-0 max-w-sm mx-auto lg:mr-auto flex-shrink-0 md:flex-shrink"
                 >
                   <div
-                    className="border-2 rounded-2xl p-4 lg:p-6 bg-[#2a2e33]/90 backdrop-blur-md shadow-xl transition-all hover:-translate-y-1 hover:shadow-2xl hover:bg-[#2a2e33]"
+                    className="h-full border-2 rounded-2xl p-4 lg:p-6 bg-[#2a2e33]/90 backdrop-blur-md shadow-xl transition-all hover:-translate-y-1 hover:shadow-2xl hover:bg-[#2a2e33]"
                     style={{ borderColor: node.color }}
                   >
                     <h3 className="text-lg lg:text-xl font-bold mb-1" style={{ color: node.color }}>{node.title}</h3>
@@ -165,32 +191,6 @@ export function GlobalNetworkSection() {
               ))}
             </div>
           </div>
-        </div>
-
-        {/* Mobile Map (shows below header, above cards on small screens) */}
-        <div className="lg:hidden relative w-full aspect-[2/1] my-8 opacity-80 pointer-events-none">
-          <Image
-            src="/images/world-map.png"
-            alt="World Map"
-            fill
-            className="object-contain"
-          />
-          {pins.map(pin => (
-            <div
-              key={pin.id}
-              className="absolute"
-              style={{ top: pin.top, left: pin.left, transform: 'translate(-50%, -100%)' }}
-            >
-              <div
-                className="absolute top-[80%] left-1/2 -translate-x-1/2 w-3 h-3 rounded-full animate-ping opacity-75"
-                style={{ backgroundColor: pin.color }}
-              />
-              <MapPin
-                className="w-8 h-8 relative z-10"
-                style={{ color: pin.color, fill: `${pin.color}40`, strokeWidth: 1.5 }}
-              />
-            </div>
-          ))}
         </div>
 
       </div>

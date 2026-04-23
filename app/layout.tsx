@@ -7,7 +7,7 @@ const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'Matrixplatform | From Fabric to Finished Product',
+  title: 'Matrixplatform change | From Fabric to Finished Product',
   description: 'Vertically integrated textile manufacturing partner across China, Bangladesh, and Sri Lanka. 3M+ garments per month, 37 partner factories, 15+ international certifications.',
   generator: 'v0.app',
   icons: {

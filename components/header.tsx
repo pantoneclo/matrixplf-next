@@ -42,7 +42,6 @@ export function Header() {
             <img
               src="/Matrix-Platform-Logo.png"
               alt="Logo"
-              loading="lazy"
               style={{ width: "300px", height: "auto" }}
               className={`transition-all duration-300 object-contain ${isScrolled ? "h-14 md:h-14" : "h-14"
                 }`}
@@ -58,7 +57,7 @@ export function Header() {
                 <Link
                   key={item.label}
                   href={item.href}
-                  className={`text-sm font-medium transition-colors duration-300 px-4 py-2 rounded-full ${isScrolled
+                  className={`text-sm font-medium transition-colors duration-300 px-4 py-2 rounded-full min-h-[40px] flex items-center ${isScrolled
                     ? isActive ? "text-sky-400 bg-white/10" : "text-white/90 hover:text-sky-400 hover:bg-white/10"
                     : isActive ? "text-sky-500 bg-white/50" : "text-slate-700 hover:text-sky-500 hover:bg-white/50"
                     }`}
@@ -69,7 +68,7 @@ export function Header() {
             })}
             <Button
               size="sm"
-              className="ml-2 gap-2 bg-sky-500 hover:bg-sky-600 text-white rounded-full px-5 py-2 text-sm font-medium"
+              className="ml-2 gap-2 bg-sky-500 hover:bg-sky-600 text-white rounded-full px-5 py-2 text-sm font-medium min-h-[40px]"
             >
               <Download className="w-4 h-4" />
               Download Profile
@@ -79,8 +78,9 @@ export function Header() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className={`lg:hidden p-2 transition-colors ${isScrolled ? "text-white" : "text-slate-900"
+            className={`lg:hidden p-2 transition-colors min-h-[48px] min-w-[48px] flex items-center justify-center ${isScrolled ? "text-white" : "text-slate-900"
               }`}
+            aria-label="Toggle Menu"
           >
             {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -91,7 +91,7 @@ export function Header() {
           className={`lg:hidden overflow-hidden transition-all duration-500 ${isMobileMenuOpen ? "max-h-[500px] opacity-100 mt-6" : "max-h-0 opacity-0"
             }`}
         >
-          <div className={`backdrop-blur-md rounded-2xl shadow-xl p-6 space-y-4 border transition-colors ${isScrolled ? "bg-slate-900/90 border-white/10" : "bg-white/90 border-slate-200"
+          <div className={`backdrop-blur-md rounded-2xl shadow-xl p-6 space-y-2 border transition-colors ${isScrolled ? "bg-slate-900/90 border-white/10" : "bg-white/90 border-slate-200"
             }`}>
             {navItems.map((item) => {
               const isActive = pathname === item.href
@@ -99,9 +99,9 @@ export function Header() {
                 <Link
                   key={item.label}
                   href={item.href}
-                  className={`block font-medium py-2 transition-colors ${isScrolled
-                    ? isActive ? "text-sky-400" : "text-white hover:text-sky-400"
-                    : isActive ? "text-sky-500" : "text-slate-700 hover:text-sky-500"
+                  className={`block font-medium py-3 px-2 rounded-lg transition-colors ${isScrolled
+                    ? isActive ? "text-sky-400 bg-white/5" : "text-white hover:text-sky-400 hover:bg-white/5"
+                    : isActive ? "text-sky-500 bg-slate-50" : "text-slate-700 hover:text-sky-500 hover:bg-slate-50"
                     }`}
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
@@ -109,7 +109,7 @@ export function Header() {
                 </Link>
               )
             })}
-            <Button className="w-full gap-2 bg-sky-500 hover:bg-sky-600 text-white mt-4 rounded-full">
+            <Button className="w-full gap-2 bg-sky-500 hover:bg-sky-600 text-white mt-4 rounded-full min-h-[48px]">
               <Download className="w-4 h-4" />
               Download Profile
             </Button>

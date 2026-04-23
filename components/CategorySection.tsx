@@ -62,6 +62,7 @@ export default function CategorySection() {
                     image={col.items[0].image}
                     link={col.items[0].link}
                     className="w-full h-full"
+                    priority={slotIndex < 2}
                   />
                 ) : (
                   // Double Stacked Cards
@@ -71,12 +72,14 @@ export default function CategorySection() {
                       image={col.items[0].image}
                       link={col.items[0].link}
                       className="w-full h-[48%]"
+                      priority={slotIndex < 2}
                     />
                     <CategoryCard
                       name={col.items[1].name}
                       image={col.items[1].image}
                       link={col.items[1].link}
                       className="w-full h-[48%]"
+                      priority={slotIndex < 2}
                     />
                   </>
                 )}
