@@ -1,5 +1,4 @@
 import Image from "next/image"
-import { MapPin } from "lucide-react"
 
 const leftNodes = [
   {
@@ -7,14 +6,14 @@ const leftNodes = [
     title: "Matrix Design d.o.o.",
     location: "Slovenia",
     desc: "EU legal entity. EORI registration, EU VAT, logistics coordination, sample handling.",
-    color: "#eab308", // Yellow
+    color: "#b59410", // Yellow
   },
   {
     id: "hongkong",
     title: "Matrix Platform Limited",
     location: "Hong Kong",
     desc: "Trade finance, HSBC credit facility, LC operations, parent entity for all factory relationships",
-    color: "#38bdf8", // Light Blue
+    color: "#0ea5e9", // Light Blue
   },
   {
     id: "china",
@@ -38,161 +37,167 @@ const rightNodes = [
     title: "Matrix Apparels Ltd",
     location: "Dhaka, Bangladesh",
     desc: "Built from scratch. Design centre, product development, multi-product flexibility.",
-    color: "#4ade80", // Light Green
+    color: "#a3e635", // Lime
   },
   {
     id: "bd2",
     title: "IFS Texwear Ltd",
     location: "Dhaka, Bangladesh",
     desc: "80 sewing lines, 20 tons/day output. The volume engine.",
-    color: "#4ade80",
+    color: "#10b981", // Emerald
   },
   {
     id: "bd3",
     title: "MB Knit Fashion Ltd",
     location: "Dhaka, Bangladesh",
     desc: "Est. 1992, 1.4 million pcs/month (peak 2.1M). LPP Rated A.",
-    color: "#4ade80",
+    color: "#15803d", // Green
   },
   {
     id: "bd4",
     title: "Westknit",
     location: "Bangladesh",
     desc: "Knit specialist. Partner factory, same family ownership as Lithe and IFS.",
-    color: "#4ade80",
+    color: "#2dd4bf", // Teal
   }
 ];
 
-const pins = [
-  { id: 'slovenia', color: '#eab308', top: '24%', left: '54%' },
-  { id: 'china', color: '#a855f7', top: '33%', left: '83%' },
-  { id: 'hongkong', color: '#38bdf8', top: '38%', left: '81%' },
-  { id: 'bangladesh', color: '#4ade80', top: '37%', left: '75%' },
-  { id: 'srilanka', color: '#f97316', top: '46%', left: '72%' },
-]
+const allNodes = [...leftNodes, ...rightNodes];
 
 export function GlobalNetworkSection() {
   return (
-    <section className="bg-[#212429] text-white relative overflow-hidden min-h-screen flex items-center py-12 md:py-16 lg:py-24">
-      <div className="container mx-auto px-6 max-w-[1400px]">
+    <section className="bg-[#1a1c1e] text-white relative overflow-hidden min-h-screen py-16 lg:py-24">
+      <div className="w-full max-w-[1200px] mx-auto px-4 sm:px-6">
         {/* Header */}
-        <div className="text-center mb-10 md:mb-16 relative z-20">
-          <h2 className="text-3xl md:text-5xl font-bold mb-3 md:mb-4 tracking-tight text-[#4cb5e4] uppercase">
+        <div className="text-center mb-12 lg:mb-16">
+          <h2 className="text-3xl md:text-5xl font-extrabold mb-4 tracking-tight text-sky-400 uppercase">
             One Integrated Group
           </h2>
-          <p className="text-base md:text-xl text-gray-300 max-w-3xl mx-auto px-4">
+          <p className="text-base md:text-lg text-slate-400 max-w-2xl mx-auto">
             Our Infrastructure Was Built To Solve The Complexity Of Modern Apparel Sourcing
           </p>
         </div>
 
-        {/* Mobile Map (shows below header, above cards on small screens) */}
-        <div className="lg:hidden relative w-full aspect-[2/1] mb-8 opacity-80 pointer-events-none">
-          <Image
-            src="/images/world-map.png"
-            alt="World Map"
-            fill
-            sizes="(max-width: 1024px) 100vw, 0vw"
-            className="object-contain"
-          />
-          {pins.map(pin => (
-            <div
-              key={pin.id}
-              className="absolute"
-              style={{ top: pin.top, left: pin.left, transform: 'translate(-50%, -100%)' }}
-            >
-              <div
-                className="absolute top-[80%] left-1/2 -translate-x-1/2 w-3 h-3 rounded-full animate-ping opacity-75"
-                style={{ backgroundColor: pin.color }}
-              />
-              <MapPin
-                className="w-8 h-8 relative z-10"
-                style={{ color: pin.color, fill: `${pin.color}40`, strokeWidth: 1.5 }}
-              />
-            </div>
-          ))}
-        </div>
-
-        <div className="relative">
-          {/* Map Overlay for Desktop Container */}
-          <div className="absolute inset-0 z-0 hidden lg:flex items-center justify-center opacity-70 pointer-events-none">
-            <div className="relative w-full max-w-[900px] aspect-[2/1]">
-              <Image
-                src="/images/world-map.png"
-                alt="World Map"
-                fill
-                sizes="(min-width: 1024px) 900px, 0vw"
-                className="object-contain"
-                priority
-              />
-
-              {/* Blinking Map Pins */}
-              {pins.map(pin => (
-                <div
-                  key={pin.id}
-                  className="absolute"
-                  style={{ top: pin.top, left: pin.left, transform: 'translate(-50%, -100%)' }}
-                >
-                  {/* Pin Pulse */}
-                  <div
-                    className="absolute top-[80%] left-1/2 -translate-x-1/2 w-4 h-4 rounded-full animate-ping opacity-75"
-                    style={{ backgroundColor: pin.color }}
-                  />
-                  {/* Core Pin */}
-                  <MapPin
-                    className="w-10 h-10 relative z-10"
-                    style={{ color: pin.color, fill: `${pin.color}40`, strokeWidth: 1.5 }}
-                  />
-                </div>
-              ))}
-            </div>
+        {/* Mobile View (< lg) */}
+        <div className="lg:hidden">
+          {/* Mobile Map */}
+          <div className="relative w-full aspect-[4/3] sm:aspect-[16/9] mb-8 opacity-60 pointer-events-none flex justify-center">
+            <Image
+              src="/images/world-map.png"
+              alt="World Map"
+              fill
+              sizes="(max-width: 1024px) 100vw, 0vw"
+              className="object-contain"
+            />
+            {/* We could add generic pins for mobile here if needed, but keeping it clean works best */}
           </div>
 
-          {/* Cards Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[1fr_2fr_1fr] xl:grid-cols-[1fr_3fr_1fr] relative z-10 gap-6 lg:gap-8 items-center">
-
-            {/* Left Column */}
-            <div className="flex flex-row overflow-x-auto snap-x snap-mandatory gap-4 pb-4 md:pb-0 md:flex-col md:space-y-6 lg:space-y-8 col-start-1 scrollbar-hide">
-              {leftNodes.map((node) => (
+          {/* Mobile Horizontal Scrolling Cards */}
+          <div className="flex flex-row overflow-x-auto snap-x snap-mandatory gap-4 pb-6 scrollbar-hide -mx-4 px-4 sm:-mx-6 sm:px-6">
+            {allNodes.map((node) => (
+              <div
+                key={node.id}
+                className="relative flex-shrink-0 w-[85vw] max-w-[340px] snap-center"
+              >
                 <div
-                  key={node.id}
-                  className="relative group w-[85vw] min-w-[280px] snap-center md:w-full md:min-w-0 max-w-sm mx-auto lg:ml-auto flex-shrink-0 md:flex-shrink"
+                  className="bg-black/40 backdrop-blur-sm p-6 rounded-xl border-2 h-full flex flex-col transition-all duration-300"
+                  style={{ borderColor: node.color }}
                 >
-                  <div
-                    className="h-full border-2 rounded-2xl p-4 lg:p-6 bg-[#2a2e33]/90 backdrop-blur-md shadow-xl transition-all hover:-translate-y-1 hover:shadow-2xl hover:bg-[#2a2e33]"
-                    style={{ borderColor: node.color }}
-                  >
-                    <h3 className="text-lg lg:text-xl font-bold mb-1" style={{ color: node.color }}>{node.title}</h3>
-                    <h4 className="text-xs lg:text-sm font-semibold mb-2 lg:mb-3 text-white">{node.location}</h4>
-                    <p className="text-xs lg:text-sm text-gray-300 leading-relaxed font-light">{node.desc}</p>
-                  </div>
+                  <h3 className="text-lg font-bold mb-1" style={{ color: node.color }}>{node.title}</h3>
+                  <p className="text-sm font-bold text-white mb-3">{node.location}</p>
+                  <p className="text-sm text-slate-300 leading-relaxed">{node.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Desktop View (>= lg) */}
+        <div className="hidden lg:block relative w-full aspect-[1200/850] mx-auto mt-10">
+          {/* Map Background */}
+          <div className="absolute inset-0 z-0 flex items-center justify-center opacity-30 pointer-events-none">
+            <img 
+              alt="World Map Silhouette" 
+              className="w-full h-auto object-contain" 
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwbZPaoZQbMyqHNyGuCMOMhHJsawb6979ZEE8MwQTRIgI1OFzGElghBG9S-Mkfh_jJigbtkN3riNOu3vwNAFi_mz6krXIELJA7bmm_ZKXF929ClbOyCx0gEc79d1t9W57HqnJP1wdZR0Vx6u__NVKZGgiJupf7j4NtNrJzTh6Hiv5bpwQO0vblb0KpDTAWsRdMo6QvSU2QPwmNr7ecF1Zbxs6AKZZ7aZ82qlw6NRWperCkj13Ru0qI7sFZlntYZX7rcTJ7_UgwxTgS"
+            />
+          </div>
+
+          {/* Animated SVG Connections */}
+          <svg className="absolute inset-0 w-full h-full z-10 pointer-events-none" preserveAspectRatio="none" viewBox="0 0 1200 850">
+            <style>
+              {`
+                .network-line {
+                  stroke-dasharray: 6;
+                  animation: dash 30s linear infinite;
+                  stroke-opacity: 0.8;
+                }
+                @keyframes dash {
+                  to { stroke-dashoffset: 1000; }
+                }
+              `}
+            </style>
+            
+            {/* Left Connectors */}
+            <path className="network-line" d="M 340 100 L 515 100 L 515 450" fill="transparent" stroke="#b59410" strokeWidth="2.5"></path>
+            <path className="network-line" d="M 340 310 L 415 310 L 415 480" fill="transparent" stroke="#0ea5e9" strokeWidth="2.5"></path>
+            <path className="network-line" d="M 340 520 L 490 520 L 490 515" fill="transparent" stroke="#a855f7" strokeWidth="2.5"></path>
+            <path className="network-line" d="M 340 730 L 560 730 L 560 540" fill="transparent" stroke="#f97316" strokeWidth="2.5"></path>
+            
+            {/* Right Connectors */}
+            <path className="network-line" d="M 860 100 L 710 100 L 710 495" fill="transparent" stroke="#a3e635" strokeWidth="2.5"></path>
+            <path className="network-line" d="M 860 310 L 730 310 L 730 515" fill="transparent" stroke="#10b981" strokeWidth="2.5"></path>
+            <path className="network-line" d="M 860 520 L 750 520 L 750 530" fill="transparent" stroke="#15803d" strokeWidth="2.5"></path>
+            <path className="network-line" d="M 860 730 L 780 730 L 780 545" fill="transparent" stroke="#2dd4bf" strokeWidth="2.5"></path>
+            
+            {/* Ping Dots */}
+            <circle cx="515" cy="450" fill="#b59410" r="8"></circle>
+            <circle cx="415" cy="480" fill="#0ea5e9" r="8"></circle>
+            <circle cx="490" cy="515" fill="#a855f7" r="8"></circle>
+            <circle cx="560" cy="540" fill="#f97316" r="8"></circle>
+            <circle cx="710" cy="495" fill="#a3e635" r="8"></circle>
+            <circle cx="730" cy="515" fill="#10b981" r="8"></circle>
+            <circle cx="750" cy="530" fill="#15803d" r="8"></circle>
+            <circle cx="780" cy="545" fill="#2dd4bf" r="8"></circle>
+
+            {/* Pulsing effects on dots */}
+            <circle cx="515" cy="450" fill="#b59410" r="16" className="animate-ping opacity-30"></circle>
+            <circle cx="415" cy="480" fill="#0ea5e9" r="16" className="animate-ping opacity-30" style={{ animationDelay: '0.2s' }}></circle>
+            <circle cx="490" cy="515" fill="#a855f7" r="16" className="animate-ping opacity-30" style={{ animationDelay: '0.4s' }}></circle>
+            <circle cx="560" cy="540" fill="#f97316" r="16" className="animate-ping opacity-30" style={{ animationDelay: '0.6s' }}></circle>
+            <circle cx="710" cy="495" fill="#a3e635" r="16" className="animate-ping opacity-30" style={{ animationDelay: '0.8s' }}></circle>
+            <circle cx="730" cy="515" fill="#10b981" r="16" className="animate-ping opacity-30" style={{ animationDelay: '1.0s' }}></circle>
+            <circle cx="750" cy="530" fill="#15803d" r="16" className="animate-ping opacity-30" style={{ animationDelay: '1.2s' }}></circle>
+            <circle cx="780" cy="545" fill="#2dd4bf" r="16" className="animate-ping opacity-30" style={{ animationDelay: '1.4s' }}></circle>
+          </svg>
+
+          {/* Cards Layout */}
+          <div className="relative z-20 grid grid-cols-2 gap-x-[520px] h-full pointer-events-none">
+            {/* Left Column */}
+            <div className="space-y-[4.7rem] pt-3 flex flex-col items-end">
+              {leftNodes.map((node) => (
+                <div key={node.id} className="bg-black/40 backdrop-blur-sm p-6 rounded-xl border-2 w-[340px] relative pointer-events-auto transition-transform hover:-translate-y-1 hover:shadow-lg" style={{ borderColor: node.color }}>
+                  <h3 className="text-lg font-bold mb-0.5" style={{ color: node.color }}>{node.title}</h3>
+                  <p className="text-sm font-bold text-white mb-3">{node.location}</p>
+                  <p className="text-xs text-slate-300 leading-relaxed">{node.desc}</p>
+                  <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1.5 w-3 h-3 rounded-full" style={{ backgroundColor: node.color }}></div>
                 </div>
               ))}
             </div>
-
-            {/* Spacer for the Map on Desktop */}
-            <div className="hidden lg:block col-start-2 self-stretch" />
 
             {/* Right Column */}
-            <div className="flex flex-row overflow-x-auto snap-x snap-mandatory gap-4 pb-4 md:pb-0 md:flex-col md:space-y-6 lg:space-y-8 col-start-1 md:col-start-2 lg:col-start-3 scrollbar-hide">
+            <div className="space-y-[4.7rem] pt-3 flex flex-col items-start">
               {rightNodes.map((node) => (
-                <div
-                  key={node.id}
-                  className="relative group w-[85vw] min-w-[280px] snap-center md:w-full md:min-w-0 max-w-sm mx-auto lg:mr-auto flex-shrink-0 md:flex-shrink"
-                >
-                  <div
-                    className="h-full border-2 rounded-2xl p-4 lg:p-6 bg-[#2a2e33]/90 backdrop-blur-md shadow-xl transition-all hover:-translate-y-1 hover:shadow-2xl hover:bg-[#2a2e33]"
-                    style={{ borderColor: node.color }}
-                  >
-                    <h3 className="text-lg lg:text-xl font-bold mb-1" style={{ color: node.color }}>{node.title}</h3>
-                    <h4 className="text-xs lg:text-sm font-semibold mb-2 lg:mb-3 text-white">{node.location}</h4>
-                    <p className="text-xs lg:text-sm text-gray-300 leading-relaxed font-light">{node.desc}</p>
-                  </div>
+                <div key={node.id} className="bg-black/40 backdrop-blur-sm p-6 rounded-xl border-2 w-[340px] relative pointer-events-auto transition-transform hover:-translate-y-1 hover:shadow-lg" style={{ borderColor: node.color }}>
+                  <div className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1.5 w-3 h-3 rounded-full" style={{ backgroundColor: node.color }}></div>
+                  <h3 className="text-lg font-bold mb-0.5" style={{ color: node.color }}>{node.title}</h3>
+                  <p className="text-sm font-bold text-white mb-3">{node.location}</p>
+                  <p className="text-xs text-slate-300 leading-relaxed">{node.desc}</p>
                 </div>
               ))}
             </div>
           </div>
         </div>
-
       </div>
     </section>
   )

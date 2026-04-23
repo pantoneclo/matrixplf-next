@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "slate-950": "#0c0e11",
+            },
+            "fontFamily": {
+                "headline": ["Manrope"],
+                "body": ["Inter"],
+                "label": ["Space Grotesk"]
+            }
+          },
+        }
+      }
+    </script>
+<style>
+        .network-line {
+            stroke-dasharray: 6;
+            animation: dash 30s linear infinite;
+            stroke-opacity: 0.8;
+        }
+        @keyframes dash {
+            to { stroke-dashoffset: 1000; }
+        }
+        body {
+            background-color: #1a1c1e; /* Matching the deep dark grey/black of the reference image */
+        }
+    </style>
+</head>
+<body class="text-white font-body selection:bg-sky-500/30 overflow-x-hidden min-h-screen flex items-center justify-center p-4">
+<main class="w-full max-w-[1200px] flex flex-col items-center">
+<!-- Header -->
+<div class="text-center mb-16">
+<h1 class="font-headline text-4xl md:text-5xl font-extrabold tracking-tight text-sky-400 mb-4 uppercase">ONE INTEGRATED GROUP</h1>
+<p class="font-body text-lg text-slate-400 max-w-2xl mx-auto">
+            Our Infrastructure Was Built To Solve The Complexity Of Modern Apparel Sourcing
+        </p>
+</div>
+<!-- Interactive Canvas Area -->
+<div class="relative w-full aspect-[1200/850]">
+<!-- World Map Background -->
+<div class="absolute inset-0 z-0 flex items-center justify-center opacity-30">
+<img alt="World Map Silhouette" class="w-full h-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwbZPaoZQbMyqHNyGuCMOMhHJsawb6979ZEE8MwQTRIgI1OFzGElghBG9S-Mkfh_jJigbtkN3riNOu3vwNAFi_mz6krXIELJA7bmm_ZKXF929ClbOyCx0gEc79d1t9W57HqnJP1wdZR0Vx6u__NVKZGgiJupf7j4NtNrJzTh6Hiv5bpwQO0vblb0KpDTAWsRdMo6QvSU2QPwmNr7ecF1Zbxs6AKZZ7aZ82qlw6NRWperCkj13Ru0qI7sFZlntYZX7rcTJ7_UgwxTgS"/>
+</div>
+<!-- SVG Connectors Layer -->
+<svg class="absolute inset-0 w-full h-full z-10" preserveaspectratio="none" viewbox="0 0 1200 850">
+<!-- Left Side Connectors -->
+<!-- Slovenia - Card 1 -->
+<path class="network-line" d="M 340 100 L 515 100 L 515 450" fill="transparent" stroke="#b59410" stroke-width="2.5"></path>
+<!-- HK - Card 2 -->
+<path class="network-line" d="M 340 310 L 415 310 L 415 480" fill="transparent" stroke="#0ea5e9" stroke-width="2.5"></path>
+<!-- Shaoxing - Card 3 -->
+<path class="network-line" d="M 340 520 L 490 520 L 490 515" fill="transparent" stroke="#a855f7" stroke-width="2.5"></path>
+<!-- Colombo - Card 4 -->
+<path class="network-line" d="M 340 730 L 560 730 L 560 540" fill="transparent" stroke="#f97316" stroke-width="2.5"></path>
+<!-- Right Side Connectors -->
+<!-- Dhaka Matrix - Card 1 -->
+<path class="network-line" d="M 860 100 L 710 100 L 710 495" fill="transparent" stroke="#a3e635" stroke-width="2.5"></path>
+<!-- Dhaka IFS - Card 2 -->
+<path class="network-line" d="M 860 310 L 730 310 L 730 515" fill="transparent" stroke="#10b981" stroke-width="2.5"></path>
+<!-- Dhaka MB - Card 3 -->
+<path class="network-line" d="M 860 520 L 750 520 L 750 530" fill="transparent" stroke="#15803d" stroke-width="2.5"></path>
+<!-- Bangladesh Westknit - Card 4 -->
+<path class="network-line" d="M 860 730 L 780 730 L 780 545" fill="transparent" stroke="#2dd4bf" stroke-width="2.5"></path>
+<!-- Map Pins (Dots) -->
+<circle cx="515" cy="450" fill="#b59410" r="8"></circle> <!-- Slovenia -->
+<circle cx="415" cy="480" fill="#0ea5e9" r="8"></circle> <!-- HK -->
+<circle cx="490" cy="515" fill="#a855f7" r="8"></circle> <!-- Shaoxing -->
+<circle cx="560" cy="540" fill="#f97316" r="8"></circle> <!-- Colombo -->
+<circle cx="710" cy="495" fill="#a3e635" r="8"></circle> <!-- Matrix -->
+<circle cx="730" cy="515" fill="#10b981" r="8"></circle> <!-- IFS -->
+<circle cx="750" cy="530" fill="#15803d" r="8"></circle> <!-- MB -->
+<circle cx="780" cy="545" fill="#2dd4bf" r="8"></circle> <!-- Westknit -->
+</svg>
+<!-- Cards Layout -->
+<div class="relative z-20 grid grid-cols-1 lg:grid-cols-2 gap-x-[520px] gap-y-12 h-full py-4">
+<!-- Column Left -->
+<div class="space-y-12">
+<!-- Slovenia -->
+<div class="bg-black/40 backdrop-blur-sm p-6 rounded-xl border-2 border-[#b59410] w-[340px] relative">
+<h3 class="font-headline text-lg font-bold text-[#b59410] mb-0.5">Matrix Design d.o.o.</h3>
+<p class="font-label text-sm font-bold text-white mb-3">Slovenia</p>
+<p class="text-xs text-slate-300 leading-relaxed">EU legal entity. EORI registration, EU VAT, logistics coordination, sample handling.</p>
+<div class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1.5 w-3 h-3 rounded-full bg-[#b59410]"></div>
+</div>
+<!-- Hong Kong -->
+<div class="bg-black/40 backdrop-blur-sm p-6 rounded-xl border-2 border-sky-500 w-[340px] relative">
+<h3 class="font-headline text-lg font-bold text-sky-400 mb-0.5">Matrix Platform Limited</h3>
+<p class="font-label text-sm font-bold text-white mb-3">Hong Kong</p>
+<p class="text-xs text-slate-300 leading-relaxed">Trade finance, HSBC credit facility, LC operations, parent entity for all factory relationships</p>
+<div class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1.5 w-3 h-3 rounded-full bg-sky-500"></div>
+</div>
+<!-- China -->
+<div class="bg-black/40 backdrop-blur-sm p-6 rounded-xl border-2 border-purple-500 w-[340px] relative">
+<h3 class="font-headline text-lg font-bold text-purple-400 mb-0.5">Zhejiang Monalisa Textile</h3>
+<p class="font-label text-sm font-bold text-white mb-3">Shaoxing, China</p>
+<p class="text-xs text-slate-300 leading-relaxed">30% owned. 3 million metres/month fabric capacity. Polyester, viscose, blended, knit fabrics.</p>
+<div class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1.5 w-3 h-3 rounded-full bg-purple-500"></div>
+</div>
+<!-- Sri Lanka -->
+<div class="bg-black/40 backdrop-blur-sm p-6 rounded-xl border-2 border-orange-500 w-[340px] relative">
+<h3 class="font-headline text-lg font-bold text-orange-400 mb-0.5">Sri Lanka Operations</h3>
+<p class="font-label text-sm font-bold text-white mb-3">Colombo</p>
+<p class="text-xs text-slate-300 leading-relaxed">Technical lingerie and polyamide products. BOI approved, amanté brand.</p>
+<div class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1.5 w-3 h-3 rounded-full bg-orange-500"></div>
+</div>
+</div>
+<!-- Column Right -->
+<div class="space-y-12">
+<!-- Matrix Apparels -->
+<div class="bg-black/40 backdrop-blur-sm p-6 rounded-xl border-2 border-lime-400 w-[340px] relative">
+<div class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1.5 w-3 h-3 rounded-full bg-lime-400"></div>
+<h3 class="font-headline text-lg font-bold text-lime-400 mb-0.5">Matrix Apparels Ltd</h3>
+<p class="font-label text-sm font-bold text-white mb-3">Dhaka, Bangladesh</p>
+<p class="text-xs text-slate-300 leading-relaxed">Built from scratch. Design centre, product development, multi-product flexibility.</p>
+</div>
+<!-- IFS Texwear -->
+<div class="bg-black/40 backdrop-blur-sm p-6 rounded-xl border-2 border-emerald-500 w-[340px] relative">
+<div class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1.5 w-3 h-3 rounded-full bg-emerald-500"></div>
+<h3 class="font-headline text-lg font-bold text-emerald-400 mb-0.5">IFS Texwear Ltd</h3>
+<p class="font-label text-sm font-bold text-white mb-3">Dhaka, Bangladesh</p>
+<p class="text-xs text-slate-300 leading-relaxed">80 sewing lines, 20 tons/day output. The volume engine.</p>
+</div>
+<!-- MB Knit -->
+<div class="bg-black/40 backdrop-blur-sm p-6 rounded-xl border-2 border-green-700 w-[340px] relative">
+<div class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1.5 w-3 h-3 rounded-full bg-green-700"></div>
+<h3 class="font-headline text-lg font-bold text-green-600 mb-0.5">MB Knit Fashion Ltd</h3>
+<p class="font-label text-sm font-bold text-white mb-3">Dhaka, Bangladesh</p>
+<p class="text-xs text-slate-300 leading-relaxed">Est. 1992, 1.4 million pcs/month (peak 2.1M). LPP Rated A.</p>
+</div>
+<!-- Westknit -->
+<div class="bg-black/40 backdrop-blur-sm p-6 rounded-xl border-2 border-teal-500 w-[340px] relative">
+<div class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1.5 w-3 h-3 rounded-full bg-teal-500"></div>
+<h3 class="font-headline text-lg font-bold text-teal-400 mb-0.5">Westknit</h3>
+<p class="font-label text-sm font-bold text-white mb-3">Bangladesh</p>
+<p class="text-xs text-slate-300 leading-relaxed">Knit specialist. Partner factory, same family ownership as Lithe and IFS.</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+</body></html>
