@@ -5,7 +5,7 @@
     "location": "Gazipur, Bangladesh",
     "bannerImages": [
       {
-        "image": "/banners/factory.webp",
+        "image": "/assets/company/MAtrix.jpg",
         "status": "active"
       }
     ],
@@ -75,7 +75,7 @@
     "location": "Dhaka, Bangladesh",
     "bannerImages": [
       {
-        "image": "/banners/factory.webp",
+        "image": "/assets/company/IFS.webp",
         "status": "active"
       }
     ],
@@ -132,7 +132,7 @@
     "location": "Narayanganj, Bangladesh",
     "bannerImages": [
       {
-        "image": "/banners/factory.webp",
+        "image": "/assets/company/MBKnitFashion.jpg",
         "status": "active"
       }
     ],

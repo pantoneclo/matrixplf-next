@@ -26,18 +26,18 @@ const slides = [
   {
     id: 3,
     image: "/hero/Cover-3.png",
-    title: "PRODUCT DEVELOPMENT,",
-    titleHighlight: "BACKED BY TECHNICAL EXPERTISE.",
-    subtitle: "Design-led R&D and technical teams turning concepts into precise,production-ready garments.",
-    description: "Fit engineering, cost efficiency, and quality control — built with a responsible and scalable approach.",
+    title: "Technical Expertise,",
+    titleHighlight: "Behind Every Product.",
+    subtitle: "Design-led R&D and technical teams shaping precise, production-ready garments.",
+    description: "Fit engineering, cost efficiency, and quality control — built to scale responsibly.",
   },
   {
     id: 4,
     image: "/hero/Cover-4.jpg",
-    title: "GLOBAL",
-    titleHighlight: "PARTNERSHIPS.",
-    subtitle: "Trusted by Leading Brands.",
-    description: "Working with world-renowned fashion labels worldwide.",
+    title: "Trusted by Global Brands",
+    titleHighlight: "Manufacturing Excellence.",
+    subtitle: "End-to-end manufacturing systems enabling global brands with consistency, reliability, and scale.",
+    description: "From development to delivery, built for consistency and reliability. Ensuring performance at scale.",
   },
 ]
 
