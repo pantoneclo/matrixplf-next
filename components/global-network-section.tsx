@@ -6,11 +6,9 @@ import {
   ComposableMap,
   Geographies,
   Geography,
-  Marker,
-  Line,
-  ZoomableGroup
+  Marker
 } from "react-simple-maps"
-import { Search, MapPin, RotateCcw } from "lucide-react"
+import { Search, MapPin } from "lucide-react"
 
 const geoUrl = "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json"
 
@@ -94,33 +92,23 @@ const rightNodes = [
 
 const allNodes = [...leftNodes, ...rightNodes];
 
+// Calibration for scale 220, center [60, 35] on 1400x900 viewport
 const MAP_SCALE = 220;
 const CENTER_LON = 60;
 const CENTER_LAT = 35;
 const PX_PER_DEG = (MAP_SCALE * Math.PI) / 180;
 
-// Reverse project pixel coordinates to geographic coordinates
-const unprojectX = (x: number) => CENTER_LON + (x - 700) / PX_PER_DEG;
-const unprojectY = (y: number) => {
-  const cLatRad = (CENTER_LAT * Math.PI) / 180;
-  const cOffset = Math.log(Math.tan(Math.PI / 4 + cLatRad / 2));
-  const lOffset = cOffset + (450 - y) / MAP_SCALE;
-  return (2 * Math.atan(Math.exp(lOffset)) - Math.PI / 2) * (180 / Math.PI);
+const projectX = (lon: number) => 700 + (lon - CENTER_LON) * PX_PER_DEG;
+const projectY = (lat: number) => {
+  const centerLatRad = (CENTER_LAT * Math.PI) / 180;
+  const latRad = (lat * Math.PI) / 180;
+  const centerOffset = Math.log(Math.tan(Math.PI / 4 + centerLatRad / 2));
+  const latOffset = Math.log(Math.tan(Math.PI / 4 + latRad / 2));
+  return 450 - MAP_SCALE * (latOffset - centerOffset);
 };
 
 export function GlobalNetworkSection() {
-  const [position, setPosition] = useState({ center: [60, 35] as [number, number], zoom: 1 });
   const [activeId, setActiveId] = useState<string | null>(null);
-
-  const handleFocus = (node: any) => {
-    setActiveId(node.id);
-    setPosition({ center: node.coordinates, zoom: 3 });
-  };
-
-  const resetMap = () => {
-    setActiveId(null);
-    setPosition({ center: [60, 35], zoom: 1 });
-  };
 
   return (
     <section className="bg-[#0b121f] py-20 lg:py-32 relative overflow-hidden" id="network">
@@ -138,24 +126,9 @@ export function GlobalNetworkSection() {
               Our integrated design and manufacturing infrastructure spanning across continents.
             </p>
           </div>
-
-          <AnimatePresence>
-            {activeId && (
-              <motion.button 
-                initial={{ opacity: 0, scale: 0.9 }} 
-                animate={{ opacity: 1, scale: 1 }} 
-                exit={{ opacity: 0, scale: 0.9 }}
-                onClick={resetMap} 
-                className="flex items-center gap-2 px-6 py-3 bg-sky-500/20 hover:bg-sky-500/30 text-sky-400 rounded-full border border-sky-500/30 transition-all font-bold text-sm"
-              >
-                <RotateCcw className="w-4 h-4" />
-                Reset Global View
-              </motion.button>
-            )}
-          </AnimatePresence>
         </div>
 
-        {/* Desktop Dashboard Area */}
+        {/* Desktop Dashboard Area - Static Layout */}
         <div className="hidden lg:block relative w-full aspect-[1400/900] mx-auto bg-[#0d1420] rounded-[3.5rem] border border-white/5 overflow-hidden shadow-2xl">
           
           <ComposableMap 
@@ -163,128 +136,81 @@ export function GlobalNetworkSection() {
             projectionConfig={{ scale: MAP_SCALE, center: [CENTER_LON, CENTER_LAT] }} 
             width={1400} 
             height={900}
-            className="w-full h-full outline-none select-none"
+            className="w-full h-full outline-none select-none opacity-40 focus:outline-none"
           >
-            <ZoomableGroup zoom={position.zoom} center={position.center} onMoveEnd={(p) => setPosition({ center: p.coordinates, zoom: p.zoom })}>
-              <Geographies geography={geoUrl}>
-                {({ geographies }) =>
-                  geographies.map((geo) => (
-                    <Geography key={geo.rsmKey} geography={geo} fill="#151d29" stroke="#2d3a4b" strokeWidth={0.5} style={{ default: { outline: "none" } }} />
-                  ))
-                }
-              </Geographies>
+            <Geographies geography={geoUrl}>
+              {({ geographies }) =>
+                geographies.map((geo) => (
+                  <Geography key={geo.rsmKey} geography={geo} fill="#151d29" stroke="#2d3a4b" strokeWidth={0.5} style={{ default: { outline: "none" }, hover: { outline: "none" }, pressed: { outline: "none" } }} />
+                ))
+              }
+            </Geographies>
 
-              {/* Dynamic Path Connectors using Line component for full TS compatibility */}
-              {leftNodes.map((node, i) => {
-                const cy = (900 / leftNodes.length) * (i + 0.5);
-                const spineOffset = [60, 110, 80, 140][i % 4];
-                const spineX = 350 + spineOffset;
-                const cardEdgeX = 350;
-                
-                // Convert pixel positions to geographic coordinates for Line tracking
-                const spineLon = unprojectX(spineX);
-                const cardLon = unprojectX(cardEdgeX);
-                const cardLat = unprojectY(cy);
-                
-                const z = position.zoom;
-
-                return (
-                  <g key={`path-l-${node.id}`}>
-                    <Line
-                      from={node.coordinates}
-                      to={[spineLon, node.coordinates[1]]}
-                      stroke={node.color}
-                      strokeWidth={1.8 / Math.sqrt(z)}
-                      strokeDasharray={`${6 / z}, ${4 / z}`}
-                      className="transition-opacity duration-300"
-                      style={{ opacity: activeId && activeId !== node.id ? 0.1 : 0.5 }}
-                    />
-                    <Line
-                      from={[spineLon, node.coordinates[1]]}
-                      to={[spineLon, cardLat]}
-                      stroke={node.color}
-                      strokeWidth={1.8 / Math.sqrt(z)}
-                      strokeDasharray={`${6 / z}, ${4 / z}`}
-                      className="transition-opacity duration-300"
-                      style={{ opacity: activeId && activeId !== node.id ? 0.1 : 0.5 }}
-                    />
-                    <Line
-                      from={[spineLon, cardLat]}
-                      to={[cardLon, cardLat]}
-                      stroke={node.color}
-                      strokeWidth={1.8 / Math.sqrt(z)}
-                      strokeDasharray={`${6 / z}, ${4 / z}`}
-                      className="transition-opacity duration-300"
-                      style={{ opacity: activeId && activeId !== node.id ? 0.1 : 0.5 }}
-                    />
-                  </g>
-                );
-              })}
-
-              {rightNodes.map((node, i) => {
-                const cy = (900 / rightNodes.length) * (i + 0.5);
-                const spineOffset = [70, 130, 90, 150, 110][i % 5];
-                const spineX = 1050 - spineOffset;
-                const cardEdgeX = 1050;
-                
-                const spineLon = unprojectX(spineX);
-                const cardLon = unprojectX(cardEdgeX);
-                const cardLat = unprojectY(cy);
-                
-                const z = position.zoom;
-
-                return (
-                  <g key={`path-r-${node.id}`}>
-                    <Line
-                      from={node.coordinates}
-                      to={[spineLon, node.coordinates[1]]}
-                      stroke={node.color}
-                      strokeWidth={1.8 / Math.sqrt(z)}
-                      strokeDasharray={`${6 / z}, ${4 / z}`}
-                      className="transition-opacity duration-300"
-                      style={{ opacity: activeId && activeId !== node.id ? 0.1 : 0.5 }}
-                    />
-                    <Line
-                      from={[spineLon, node.coordinates[1]]}
-                      to={[spineLon, cardLat]}
-                      stroke={node.color}
-                      strokeWidth={1.8 / Math.sqrt(z)}
-                      strokeDasharray={`${6 / z}, ${4 / z}`}
-                      className="transition-opacity duration-300"
-                      style={{ opacity: activeId && activeId !== node.id ? 0.1 : 0.5 }}
-                    />
-                    <Line
-                      from={[spineLon, cardLat]}
-                      to={[cardLon, cardLat]}
-                      stroke={node.color}
-                      strokeWidth={1.8 / Math.sqrt(z)}
-                      strokeDasharray={`${6 / z}, ${4 / z}`}
-                      className="transition-opacity duration-300"
-                      style={{ opacity: activeId && activeId !== node.id ? 0.1 : 0.5 }}
-                    />
-                  </g>
-                );
-              })}
-
-              {/* Map Markers */}
-              {allNodes.map((node) => (
-                <Marker key={`dot-${node.id}`} coordinates={node.coordinates} onClick={() => handleFocus(node)}>
-                  <g className="cursor-pointer group">
-                    <circle r={5 / Math.sqrt(position.zoom)} fill={node.color} />
-                    <circle r={14 / Math.sqrt(position.zoom)} fill={node.color} className="animate-ping opacity-20" />
-                  </g>
-                </Marker>
-              ))}
-            </ZoomableGroup>
+            {allNodes.map((node) => (
+              <Marker key={`dot-${node.id}`} coordinates={node.coordinates}>
+                <g className="outline-none focus:outline-none">
+                  <circle r={5} fill={node.color} className="outline-none" />
+                  <circle r={14} fill={node.color} className="animate-ping opacity-20 outline-none" />
+                </g>
+              </Marker>
+            ))}
           </ComposableMap>
+
+          {/* SVG Overlay for Accurately Staggered Lines */}
+          <svg className="absolute inset-0 w-full h-full z-10 pointer-events-none" viewBox="0 0 1400 900">
+            {leftNodes.map((node, i) => {
+              const mx = projectX(node.coordinates[0]);
+              const my = projectY(node.coordinates[1]);
+              const cy = (900 / leftNodes.length) * (i + 0.5);
+              const spineOffset = [60, 110, 80, 140][i % 4];
+              const spineX = 350 + spineOffset;
+              const cardEdgeX = 350;
+
+              return (
+                <motion.path
+                  key={`line-l-${node.id}`}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: activeId && activeId !== node.id ? 0.1 : 0.6 }}
+                  d={`M ${mx} ${my} L ${spineX} ${my} L ${spineX} ${cy} L ${cardEdgeX} ${cy}`}
+                  fill="none"
+                  stroke={node.color}
+                  strokeWidth="1.8"
+                  strokeDasharray="6,4"
+                />
+              );
+            })}
+
+            {rightNodes.map((node, i) => {
+              const mx = projectX(node.coordinates[0]);
+              const my = projectY(node.coordinates[1]);
+              const cy = (900 / rightNodes.length) * (i + 0.5);
+              const spineOffset = [70, 130, 90, 150, 110][i % 5];
+              const spineX = 1050 - spineOffset;
+              const cardEdgeX = 1050;
+
+              return (
+                <motion.path
+                  key={`line-r-${node.id}`}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: activeId && activeId !== node.id ? 0.1 : 0.6 }}
+                  d={`M ${mx} ${my} L ${spineX} ${my} L ${spineX} ${cy} L ${cardEdgeX} ${cy}`}
+                  fill="none"
+                  stroke={node.color}
+                  strokeWidth="1.8"
+                  strokeDasharray="6,4"
+                />
+              );
+            })}
+          </svg>
 
           {/* Address Boxes Layer */}
           <div className="absolute inset-0 z-20 pointer-events-none p-10">
             {leftNodes.map((node, i) => (
               <div
                 key={`card-l-${node.id}`}
-                onClick={() => handleFocus(node)}
-                className={`absolute -translate-y-1/2 left-10 w-[310px] h-[130px] bg-[#0b121f]/80 backdrop-blur-xl p-6 rounded-2xl border-2 pointer-events-auto transition-all shadow-2xl flex flex-col justify-center cursor-pointer ${activeId === node.id ? "scale-105 border-white/40 ring-4 ring-sky-500/20" : "hover:translate-x-2"}`}
+                onMouseEnter={() => setActiveId(node.id)}
+                onMouseLeave={() => setActiveId(null)}
+                className={`absolute -translate-y-1/2 left-10 w-[310px] h-[130px] bg-[#0b121f]/80 backdrop-blur-xl p-6 rounded-2xl border-2 pointer-events-auto transition-all shadow-2xl flex flex-col justify-center ${activeId === node.id ? "scale-105 border-white/40 shadow-sky-500/10" : ""}`}
                 style={{ 
                   top: `${((i + 0.5) / leftNodes.length) * 100}%`,
                   borderColor: activeId === node.id ? node.color : `${node.color}50`,
@@ -303,8 +229,9 @@ export function GlobalNetworkSection() {
             {rightNodes.map((node, i) => (
               <div
                 key={`card-r-${node.id}`}
-                onClick={() => handleFocus(node)}
-                className={`absolute -translate-y-1/2 right-10 w-[310px] h-[130px] bg-[#0b121f]/80 backdrop-blur-xl p-6 rounded-2xl border-2 pointer-events-auto transition-all shadow-2xl text-right flex flex-col justify-center cursor-pointer ${activeId === node.id ? "scale-105 border-white/40 ring-4 ring-sky-500/20" : "hover:-translate-x-2"}`}
+                onMouseEnter={() => setActiveId(node.id)}
+                onMouseLeave={() => setActiveId(null)}
+                className={`absolute -translate-y-1/2 right-10 w-[310px] h-[130px] bg-[#0b121f]/80 backdrop-blur-xl p-6 rounded-2xl border-2 pointer-events-auto transition-all shadow-2xl text-right flex flex-col justify-center ${activeId === node.id ? "scale-105 border-white/40 shadow-sky-500/10" : ""}`}
                 style={{ 
                   top: `${((i + 0.5) / rightNodes.length) * 100}%`,
                   borderColor: activeId === node.id ? node.color : `${node.color}50`,
