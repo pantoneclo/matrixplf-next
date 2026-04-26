@@ -1,6 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
-import { Download, Factory, MapPin, Phone, Mail } from "lucide-react"
+import { Download, Factory, MapPin, Phone, Mail, ArrowRight } from "lucide-react"
 import { notFound } from "next/navigation"
 
 import { Header } from "@/components/header"
@@ -188,18 +188,18 @@ export default async function FactoryPage({ params }: FactoryPageProps) {
                                 <div className="flex items-start gap-4">
                                     <MapPin className="w-5 h-5 text-[#4cb5e4] mt-1 shrink-0" />
                                     <div>
-                                        <h3 className="text-[#4cb5e4] font-semibold text-sm tracking-wider uppercase mb-1">Headquarters</h3>
+                                        <h3 className="text-[#4cb5e4] font-semibold text-sm tracking-wider uppercase mb-1">Factory Address</h3>
                                         <p className="text-gray-300 text-sm">{factory.contact.hq}</p>
                                     </div>
                                 </div>
 
-                                <div className="flex items-start gap-4">
+                                {/* <div className="flex items-start gap-4">
                                     <Phone className="w-5 h-5 text-[#4cb5e4] mt-1 shrink-0" />
                                     <div>
                                         <h3 className="text-[#4cb5e4] font-semibold text-sm tracking-wider uppercase mb-1">Phone</h3>
                                         <p className="text-gray-300 text-sm">{factory.contact.phone}</p>
                                     </div>
-                                </div>
+                                </div> */}
 
                                 <div className="flex items-start gap-4">
                                     <Mail className="w-5 h-5 text-[#4cb5e4] mt-1 shrink-0" />
@@ -212,6 +212,78 @@ export default async function FactoryPage({ params }: FactoryPageProps) {
                         </div>
 
                     </div>
+                </div>
+            </section>
+
+            {/* Related Factories Section */}
+            <section className="container mx-auto px-6 lg:px-12 py-20 border-t border-white/5">
+                <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+                    <div className="space-y-4">
+                        <div className="flex items-center gap-3">
+                            <span className="text-sky-400 text-[10px] font-bold uppercase tracking-[0.3em]">Explore More</span>
+                            <div className="h-px w-12 bg-sky-500/30" />
+                        </div>
+                        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-white">
+                            Related <span className="text-sky-500">Factories</span>
+                        </h2>
+                    </div>
+                    <Link
+                        href="/factory"
+                        className="group flex items-center gap-2 text-sm font-bold text-sky-400 hover:text-white transition-colors"
+                    >
+                        View All Facilities
+                        <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                    </Link>
+                </div>
+
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {Object.entries(factoriesData)
+                        .filter(([key]) => key !== slug)
+                        .slice(0, 3)
+                        .map(([key, f]: [string, any]) => (
+                            <Link
+                                key={key}
+                                href={`/factory/${key}`}
+                                className="group relative block overflow-hidden rounded-[2rem] bg-[#1e2632] border border-white/5 hover:border-sky-500/30 transition-all duration-500"
+                            >
+                                <div className="aspect-[16/10] relative overflow-hidden">
+                                    <Image
+                                        src={f.bannerImages?.find((img: any) => img.status === "active")?.image || "/banners/factory.webp"}
+                                        alt={f.namePart1}
+                                        fill
+                                        className="object-cover transition-transform duration-700 group-hover:scale-110"
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-[#1e2632] via-transparent to-transparent opacity-60" />
+
+                                    <div className="absolute top-4 right-4">
+                                        <div className="p-2.5 rounded-full bg-black/40 backdrop-blur-md border border-white/10 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                            <ArrowRight className="w-5 h-5 -rotate-45" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className="p-8">
+                                    <div className="flex items-center gap-2 text-sky-400 mb-3">
+                                        <MapPin className="w-4 h-4" />
+                                        <span className="text-[11px] font-bold uppercase tracking-wider">{f.location}</span>
+                                    </div>
+                                    <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-sky-400 transition-colors">
+                                        {f.namePart1} {f.namePart2}
+                                    </h3>
+
+                                    <div className="grid grid-cols-2 gap-4 pt-6 border-t border-white/5">
+                                        <div>
+                                            <p className="text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-1 text-sky-400/60">Capacity</p>
+                                            <p className="text-sm font-bold text-slate-200">{f.stats.capacity}</p>
+                                        </div>
+                                        <div>
+                                            <p className="text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-1 text-sky-400/60">Workers</p>
+                                            <p className="text-sm font-bold text-slate-200">{f.stats.workers}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </Link>
+                        ))}
                 </div>
             </section>
             <Footer />

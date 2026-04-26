@@ -188,7 +188,7 @@
     "location": "Dhaka, Bangladesh",
     "bannerImages": [
       {
-        "image": "/banners/factory.webp",
+        "image": "/assets/company/lithe.jpg",
         "status": "active"
       }
     ],
@@ -247,7 +247,7 @@
     "location": "Mymensingh, Bangladesh",
     "bannerImages": [
       {
-        "image": "/banners/factory.webp",
+        "image": "/assets/company/westknit.webp",
         "status": "active"
       }
     ],
@@ -302,7 +302,7 @@
     "location": "Colombo, Sri Lanka",
     "bannerImages": [
       {
-        "image": "/banners/factory.webp",
+        "image": "/assets/company/amante.webp",
         "status": "active"
       }
     ],

@@ -195,7 +195,7 @@ export function GlobalNetworkSection() {
             {rightNodes.map((node) => (
               <div
                 key={node.id}
-                className="absolute left-[860px] w-[340px] -translate-y-1/2 bg-black/40 backdrop-blur-md p-5 rounded-xl border-2 pointer-events-auto transition-all hover:-translate-y-[calc(50%+4px)] hover:shadow-2xl"
+                className="absolute right-0 w-[340px] -translate-y-1/2 bg-black/40 backdrop-blur-md p-5 rounded-xl border-2 pointer-events-auto transition-all hover:-translate-y-[calc(50%+4px)] hover:shadow-2xl"
                 style={{ top: `${(node.y / 1050) * 100}%`, borderColor: node.color }}
               >
                 <div className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1.5 w-3 h-3 rounded-full" style={{ backgroundColor: node.color }}></div>

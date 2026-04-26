@@ -2,6 +2,7 @@
 
 import { motion, useScroll, useTransform, useSpring } from "framer-motion"
 import { useRef, useMemo } from "react"
+import { ArrowRight } from "lucide-react"
 import CategoryCard from "./CategoryCard"
 import { categories } from "@/lib/data"
 import { Reveal } from "@/components/Reveal"
@@ -18,9 +19,9 @@ export default function CategorySection() {
   const columns = useMemo(() => {
     return [
       { type: 'single', width: 'w-[85vw] sm:w-[400px] md:w-[500px] lg:w-[600px]', items: [categories[0]] },
-      { type: 'double', width: 'w-[75vw] sm:w-[300px] md:w-[350px] lg:w-[420px]', items: [categories[1], categories[2]] },
+      { type: 'double', width: '', items: [categories[1], categories[2]] },
       { type: 'single', width: 'w-[75vw] sm:w-[300px] md:w-[350px] lg:w-[420px]', items: [categories[3]] },
-      { type: 'double', width: 'w-[85vw] sm:w-[400px] md:w-[500px] lg:w-[600px]', items: [categories[4], categories[5]] },
+      { type: 'double', width: '', items: [categories[4], categories[5]] },
       { type: 'single', width: 'w-[85vw] sm:w-[400px] md:w-[500px] lg:w-[600px]', items: [categories[6]] },
     ]
   }, [])
@@ -54,25 +55,25 @@ export default function CategorySection() {
       </div>
 
       {/* Sticky Gallery Section - Locks scroll to slide horizontally */}
-      <div ref={containerRef} className="relative h-[400vh]">
+      <div ref={containerRef} className="relative h-[600vh]">
         <section className="sticky top-0 h-screen w-full flex flex-col justify-center overflow-hidden">
           <div className="w-full relative z-10 flex items-center">
             {/* Horizontal Carousel Track */}
             <motion.div
               style={{ x: smoothX }}
-              className="flex gap-6 md:gap-12 items-stretch h-[75vh] md:h-[80vh] lg:h-[85vh] pl-6 lg:pl-12"
+              className="flex gap-2 md:gap-4 items-stretch h-[75vh] md:h-[80vh] lg:h-[85vh] pl-6 lg:pl-12"
             >
               {columns.map((col, idx) => (
-                <div 
-                  key={idx} 
-                  className={`flex-shrink-0 flex flex-col gap-6 md:gap-12 ${col.width}`}
+                <div
+                  key={idx}
+                  className={` flex flex-col gap-6 md:gap-12 ${col.width}`}
                 >
                   {col.type === 'single' ? (
                     <CategoryCard
                       name={col.items[0].name}
                       image={col.items[0].images[0]}
                       link={col.items[0].link}
-                      className="w-full h-full rounded-[2.5rem] shadow-2xl"
+                      className="w-full h-full  shadow-2xl"
                       priority={idx < 2}
                     />
                   ) : (
@@ -81,20 +82,52 @@ export default function CategorySection() {
                         name={col.items[0].name}
                         image={col.items[0].images[0]}
                         link={col.items[0].link}
-                        className="w-full h-[47%] rounded-[2rem] shadow-xl"
+                        className="w-full h-full  shadow-xl"
                         priority={idx < 2}
                       />
                       <CategoryCard
                         name={col.items[1].name}
                         image={col.items[1].images[0]}
                         link={col.items[1].link}
-                        className="w-full h-[47%] rounded-[2rem] shadow-xl"
+                        className="w-full h-full  shadow-xl"
                         priority={idx < 2}
                       />
                     </>
                   )}
                 </div>
               ))}
+
+              {/* Final CTA Card */}
+              <div className="flex-shrink-0 w-[85vw] sm:w-[500px] md:w-[600px] lg:w-[800px] h-full rounded-[2.5rem] bg-[#111823] border border-white/10 p-10 md:p-20 flex flex-col justify-between relative overflow-hidden group">
+                <div className="flex justify-between items-start relative z-10">
+                  <span className="text-sky-500 text-[10px] md:text-xs font-bold uppercase tracking-[0.3em]">
+                    End of Categories
+                  </span>
+                  <p className="max-w-[240px] text-[10px] md:text-xs text-slate-500 leading-relaxed text-right font-medium">
+                    Nine fashion-led product categories, each developed across our integrated manufacturing footprint.
+                  </p>
+                </div>
+
+                <div className="relative z-10 space-y-8">
+                  <div className="space-y-4">
+                    <h3 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] tracking-tight">
+                      Ready to develop your <span className="text-sky-500">next program?</span>
+                    </h3>
+                    <p className="text-slate-400 text-base md:text-lg max-w-xl leading-relaxed">
+                      Our design and merchandising teams turn concepts into shippable styles across all nine categories.
+                    </p>
+                  </div>
+                  
+                  <button className="inline-flex items-center gap-3 px-10 py-5 bg-sky-500 hover:bg-sky-400 text-[#0d1420] rounded-full font-bold text-lg transition-all group/btn shadow-xl shadow-sky-500/20 active:scale-95">
+                    Start a conversation
+                    <ArrowRight className="w-6 h-6 transition-transform group-hover/btn:translate-x-2" />
+                  </button>
+                </div>
+
+                {/* Decorative background globs */}
+                <div className="absolute top-[-10%] right-[-10%] w-[400px] h-[400px] bg-sky-500/5 blur-[120px] rounded-full -z-0 group-hover:bg-sky-500/10 transition-colors duration-700" />
+                <div className="absolute bottom-[-20%] left-[-10%] w-[500px] h-[500px] bg-sky-500/10 blur-[150px] rounded-full -z-0" />
+              </div>
 
               {/* End Cap Spacer to allow full scroll of last item */}
               <div className="flex-shrink-0 w-[40vw]" />

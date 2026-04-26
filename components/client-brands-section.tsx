@@ -88,12 +88,6 @@ export function ClientBrandsSection() {
               Trusted By <span className="text-sky-500">Leading Brands</span>
             </h2>
           </Reveal>
-
-          <Reveal delay={0.2} className="max-w-md lg:text-right">
-            <p className="text-slate-500 text-sm md:text-base leading-relaxed">
-              Partnering with the world&apos;s most recognized fashion brands.
-            </p>
-          </Reveal>
         </div>
       </div>
 
