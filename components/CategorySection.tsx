@@ -50,6 +50,30 @@ export default function CategorySection() {
   const xMovement = useTransform(scrollYProgress, [0, 1], ["0%", `-${columns.length * 15}%`])
   const smoothX = useSpring(xMovement, { stiffness: 60, damping: 25 })
 
+  // Touch handling for mobile finger slide
+  const touchStart = useRef<number | null>(null)
+  
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStart.current = e.touches[0].clientX
+  }
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    if (touchStart.current === null) return
+    
+    const touchCurrent = e.touches[0].clientX
+    const deltaX = touchStart.current - touchCurrent
+    
+    // Convert horizontal swipe into vertical scroll
+    if (Math.abs(deltaX) > 10) {
+      window.scrollBy(0, deltaX * 1.5)
+      touchStart.current = touchCurrent
+    }
+  }
+
+  const handleTouchEnd = () => {
+    touchStart.current = null
+  }
+
   return (
     <div className="relative bg-[#0d1420]">
       {/* Introduction Header - Scrolls Naturally with the page */}
@@ -81,7 +105,10 @@ export default function CategorySection() {
             {/* Horizontal Carousel Track */}
             <motion.div
               style={{ x: smoothX }}
-              className="flex gap-2 md:gap-4 items-stretch h-[75vh] md:h-[80vh] lg:h-[85vh] pl-6 lg:pl-12"
+              className="flex gap-2 md:gap-4 items-stretch h-[75vh] md:h-[80vh] lg:h-[85vh] pl-6 lg:pl-12 touch-pan-y"
+              onTouchStart={handleTouchStart}
+              onTouchMove={handleTouchMove}
+              onTouchEnd={handleTouchEnd}
             >
               {columns.map((col, idx) => (
                 <div

@@ -77,12 +77,33 @@ export function ProductsSection() {
   const visibleCards = viewportWidth >= 1280 ? 4 : viewportWidth >= 1024 ? 3 : viewportWidth >= 640 ? 2 : 1
   const maxScroll = Math.max(0, (categories.length - visibleCards) * (cardWidth + gap))
 
+  const [touchStart, setTouchStart] = useState<number | null>(null)
+  const [touchEnd, setTouchEnd] = useState<number | null>(null)
+
   const handlePrev = () => {
     setSliderPosition(prev => Math.max(0, prev - (cardWidth + gap)))
   }
 
   const handleNext = () => {
     setSliderPosition(prev => Math.min(maxScroll, prev + (cardWidth + gap)))
+  }
+
+  const onTouchStart = (e: React.TouchEvent) => {
+    setTouchEnd(null)
+    setTouchStart(e.targetTouches[0].clientX)
+  }
+
+  const onTouchMove = (e: React.TouchEvent) => {
+    setTouchEnd(e.targetTouches[0].clientX)
+  }
+
+  const onTouchEnd = () => {
+    if (!touchStart || !touchEnd) return
+    const distance = touchStart - touchEnd
+    const isLeftSwipe = distance > 50
+    const isRightSwipe = distance < -50
+    if (isLeftSwipe) handleNext()
+    if (isRightSwipe) handlePrev()
   }
 
   return (
@@ -143,7 +164,12 @@ export function ProductsSection() {
         </button>
 
         {/* Cards container */}
-        <div className="overflow-hidden px-6 lg:px-16">
+        <div 
+          className="overflow-hidden px-6 lg:px-16"
+          onTouchStart={onTouchStart}
+          onTouchMove={onTouchMove}
+          onTouchEnd={onTouchEnd}
+        >
           <div
             ref={sliderRef}
             className="flex gap-2 transition-transform duration-500 ease-out"

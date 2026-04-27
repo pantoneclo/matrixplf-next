@@ -11,6 +11,7 @@ const slides = [
   {
     id: 1,
     image: "/hero/Cover1.jpg",
+    mobileImage: "/hero/mobile/Cover-1.jpg",
     title: "FROM FABRIC",
     titleHighlight: "TO <br/>FINISHED PRODUCT.",
     subtitle: "Three Countries. One Integrated Supply Chain.",
@@ -19,6 +20,7 @@ const slides = [
   {
     id: 2,
     image: "/hero/Cover-2.jpg",
+    mobileImage: "/hero/mobile/Cover-2.jpg",
     title: "Quality Built",
     titleHighlight: "ON <br/> FULL CONTROL",
     subtitle: "Integrated production systems ensuringconsistency at every stage.",
@@ -27,6 +29,7 @@ const slides = [
   {
     id: 3,
     image: "/hero/Cover-3.png",
+    mobileImage: "/hero/mobile/Cover-3.jpg",
     title: "TECHNICAL EDGE",
     titleHighlight: "IN <br> EVERY PRODUCT",
     subtitle: "Design-led R&D and technical teams shaping precise, production-ready garments.",
@@ -35,6 +38,7 @@ const slides = [
   {
     id: 4,
     image: "/hero/Cover-4.jpg",
+    mobileImage: "/hero/mobile/Cover-4.jpg",
     title: "Trusted ",
     titleHighlight: "by <br/> Global Brands.",
     subtitle: "End-to-end manufacturing systems enabling global brands with consistency, reliability, and scale.",
@@ -78,7 +82,7 @@ export function HeroSection() {
   const slide = slides[currentSlide]
 
   return (
-    <section className="relative h-screen min-h-[640px] w-full overflow-hidden">
+    <section className="relative h-screen min-h-[500px] sm:min-h-[640px] w-full overflow-hidden">
       {/* Background Images with Ken Burns Effect */}
       {slides.map((s, index) => (
         <div
@@ -86,13 +90,24 @@ export function HeroSection() {
           className={`absolute inset-0 transition-opacity duration-1000 ${index === currentSlide ? "opacity-100" : "opacity-0"
             }`}
         >
+          {/* Desktop Image */}
           <Image
             src={s.image}
             alt="Hero background"
             fill
             priority={index === 0}
-            loading="eager"
-            className={`object-cover transition-transform duration-[8000ms] ease-out ${index === currentSlide ? "scale-110" : "scale-100"
+            loading={index === 0 ? "eager" : "lazy"}
+            className={`hidden md:block object-cover transition-transform duration-[8000ms] ease-out ${index === currentSlide ? "scale-110" : "scale-100"
+              }`}
+          />
+          {/* Mobile Image */}
+          <Image
+            src={s.mobileImage}
+            alt="Hero background mobile"
+            fill
+            priority={index === 0}
+            loading={index === 0 ? "eager" : "lazy"}
+            className={`block md:hidden object-cover transition-transform duration-[8000ms] ease-out ${index === currentSlide ? "scale-110" : "scale-100"
               }`}
           />
           {/* Dark overlay for better text readability */}
@@ -101,9 +116,9 @@ export function HeroSection() {
       ))}
 
       {/* Content */}
-      <div className="relative z-20 h-full flex items-center py-24">
+      <div className="relative z-20 h-full flex items-center py-12 sm:py-24">
         <div className="container mx-auto px-6 lg:px-12">
-          <div className="max-w-4xl pt-20">
+          <div className="max-w-4xl pt-8 sm:pt-20">
             {/* Main Heading */}
             <h1
               className={`transition-all duration-1000 uppercase ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
@@ -128,7 +143,7 @@ export function HeroSection() {
             {/* Subtitle */}
             <div
               key={`subtitle-${currentSlide}`}
-              className={`mt-8 space-y-3 transition-all duration-1000 delay-300 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+              className={`mt-6 sm:mt-8 space-y-2 sm:space-y-3 transition-all duration-1000 delay-300 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
                 }`}
             >
               <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-white/90 font-medium animate-fade-in-up animation-delay-200">
@@ -141,22 +156,22 @@ export function HeroSection() {
 
             {/* CTA Buttons */}
             <div
-              className={`flex flex-col sm:flex-row flex-wrap gap-4 mt-10 transition-all duration-1000 delay-500 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+              className={`flex flex-row flex-wrap gap-3 sm:gap-4 mt-8 sm:mt-10 transition-all duration-1000 delay-500 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
                 }`}
             >
               <Button
                 size="lg"
                 onClick={() => setIsProfileModalOpen(true)}
-                className="w-full sm:w-auto bg-sky-500 hover:bg-sky-600 text-white px-8 py-6 text-base font-medium rounded-full gap-2 group transition-all duration-300 hover:shadow-lg hover:shadow-sky-500/25 min-h-[48px]"
+                className="flex-1 sm:flex-none bg-sky-500 hover:bg-sky-600 text-white px-4 sm:px-8 py-4 sm:py-6 text-[13px] sm:text-base font-medium rounded-full gap-2 group transition-all duration-300 hover:shadow-lg hover:shadow-sky-500/25 min-h-[40px] sm:min-h-[48px]"
               >
-                <Download className="w-5 h-5" />
+                <Download className="w-4 h-4 sm:w-5 sm:h-5" />
                 Download Profile
               </Button>
-              <Link href="/contact" className="w-full sm:w-auto">
+              <Link href="/contact" className="flex-1 sm:flex-none">
                 <Button
                   size="lg"
                   variant="outline"
-                  className="w-full sm:w-auto border-white/60 text-slate-800 bg-white/90 hover:bg-white px-8 py-6 text-base font-medium rounded-full transition-all duration-300 min-h-[48px]"
+                  className="w-full border-white/60 text-slate-800 bg-white/90 hover:bg-white px-4 sm:px-8 py-4 sm:py-6 text-[13px] sm:text-base font-medium rounded-full transition-all duration-300 min-h-[40px] sm:min-h-[48px]"
                 >
                   Contact Our Team
                 </Button>

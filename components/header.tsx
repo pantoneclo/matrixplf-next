@@ -48,7 +48,7 @@ export function Header() {
               <img
                 src="/Matrix-Platform-Logo-1.png"
                 alt="Logo"
-                className={`w-[210px] sm:w-[260px] lg:w-[300px] h-auto transition-all duration-300 object-contain ${isScrolled ? "max-h-14 md:max-h-14" : "max-h-14"
+                className={`w-[210px] sm:w-[260px] lg:w-[300px] h-auto transition-all duration-300 object-contain ${isScrolled ? "max-h-12 md:max-h-14" : "max-h-12 md:max-h-14"
                   }`}
               />
             </Link>
@@ -84,7 +84,7 @@ export function Header() {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className={`lg:hidden p-2 transition-colors min-h-[48px] min-w-[48px] flex items-center justify-center ${isScrolled ? "text-white" : "text-slate-900"
+              className={`lg:hidden p-2 transition-colors min-h-[48px] min-w-[48px] flex items-center justify-center ${isScrolled ? "text-white" : "text-white"
                 }`}
               aria-label="Toggle Menu"
             >
