@@ -172,16 +172,19 @@ export function ManufacturingSection() {
 
               <div className="flex flex-wrap gap-3">
                 {bangladeshCompanies.map((company, index) => (
-                  <a
+                  <div
                     key={company.name}
-                    href={company.url}
-                    className={`group/link inline-flex items-center gap-2 px-6 py-3 bg-slate-900/40 hover:bg-slate-900/60 text-white hover:text-sky-300 text-sm font-medium rounded-lg transition-all duration-150 cursor-pointer border border-white/10 hover:border-sky-500/50 hover:shadow-[0_0_15px_rgba(14,165,233,0.3)] ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
-                      }`}
+                    className={`transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
                     style={{ transitionDelay: `${500 + index * 50}ms` }}
                   >
-                    {company.name}
-                    <ArrowUpRight className="w-4 h-4 text-sky-400 opacity-0 group-hover/link:opacity-100 transition-all duration-150" />
-                  </a>
+                    <a
+                      href={company.url}
+                      className="group/link inline-flex items-center gap-2 px-6 py-3 bg-slate-900/40 hover:bg-slate-900/60 text-white hover:text-sky-300 text-lg font-medium rounded-lg transition-all duration-150 cursor-pointer border border-white/10 hover:border-sky-500/50 hover:shadow-[0_0_15px_rgba(14,165,233,0.3)]"
+                    >
+                      {company.name}
+                      <ArrowUpRight className="w-4 h-4 text-sky-400 opacity-0 group-hover/link:opacity-100 transition-all duration-150" />
+                    </a>
+                  </div>
                 ))}
               </div>
             </div>
@@ -215,16 +218,19 @@ export function ManufacturingSection() {
               {/* Company Tags - Clickable Links */}
               <div className="flex flex-wrap gap-3">
                 {sriLankaCompanies.map((company, index) => (
-                  <a
+                  <div
                     key={company.name}
-                    href={company.url}
-                    className={`group/link inline-flex items-center gap-2 px-6 py-3 bg-slate-900/40 hover:bg-slate-900/60 text-white hover:text-sky-300 text-sm font-medium rounded-lg transition-all duration-150 cursor-pointer border border-white/10 hover:border-sky-500/50 hover:shadow-[0_0_15px_rgba(14,165,233,0.3)] ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
-                      }`}
+                    className={`transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
                     style={{ transitionDelay: `${600 + index * 50}ms` }}
                   >
-                    {company.name}
-                    <ArrowUpRight className="w-4 h-4 text-sky-400 opacity-0 group-hover/link:opacity-100 transition-all duration-150" />
-                  </a>
+                    <a
+                      href={company.url}
+                      className="group/link inline-flex items-center gap-2 px-6 py-3 bg-slate-900/40 hover:bg-slate-900/60 text-white hover:text-sky-300 text-lg font-medium rounded-lg transition-all duration-150 cursor-pointer border border-white/10 hover:border-sky-500/50 hover:shadow-[0_0_15px_rgba(14,165,233,0.3)]"
+                    >
+                      {company.name}
+                      <ArrowUpRight className="w-4 h-4 text-sky-400 opacity-0 group-hover/link:opacity-100 transition-all duration-150" />
+                    </a>
+                  </div>
                 ))}
               </div>
             </div>

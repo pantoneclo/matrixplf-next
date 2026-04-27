@@ -44,23 +44,40 @@ export function ProductGallery({ category }: ProductGalleryProps) {
         {/* Gallery Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-start">
 
-          {/* Card 1: Large Image */}
-          <Reveal delay={0.1}>
-            <div className="relative aspect-[3/4] lg:aspect-[2/3] rounded-2xl overflow-hidden shadow-xl shadow-slate-200">
-              <Image
-                src={category.images[0] || "https://images.unsplash.com/photo-1544441893-675973e31985"}
-                alt="Product 1"
-                fill
-                className="object-cover"
-              />
-            </div>
-          </Reveal>
+          {/* Column 1 */}
+          <div className="space-y-8">
+            {/* Card 1: Image 0 */}
+            <Reveal delay={0.1}>
+              <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-xl shadow-slate-200 group">
+                <Image
+                  src={category.images[0] || "https://images.unsplash.com/photo-1544441893-675973e31985"}
+                  alt={`${category.name} 1`}
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+              </div>
+            </Reveal>
+
+            {/* Card 2: Image 3 (New addition to use all 4 images) */}
+            {category.images[3] && (
+              <Reveal delay={0.2}>
+                <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-xl shadow-slate-200 group">
+                  <Image
+                    src={category.images[3]}
+                    alt={`${category.name} 4`}
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                </div>
+              </Reveal>
+            )}
+          </div>
 
           {/* Column 2 */}
           <div className="space-y-8">
-            {/* Card 2: Text Card */}
-            <Reveal delay={0.2}>
-              <div className="bg-[#3D4145] rounded-2xl p-10 lg:p-12 text-white h-full flex flex-col justify-between aspect-square lg:aspect-auto">
+            {/* Card 3: Text Card */}
+            <Reveal delay={0.3}>
+              <div className="bg-[#3D4145] rounded-2xl p-10 lg:p-12 text-white flex flex-col justify-between min-h-[350px]">
                 <div>
                   <h3 className="text-3xl font-bold mb-1">Sustainable</h3>
                   <h4 className="text-3xl font-bold text-sky-400 mb-6">Fabrics</h4>
@@ -75,14 +92,14 @@ export function ProductGallery({ category }: ProductGalleryProps) {
               </div>
             </Reveal>
 
-            {/* Card 3: Image Card */}
-            <Reveal delay={0.3}>
-              <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-xl shadow-slate-200">
+            {/* Card 4: Image 1 */}
+            <Reveal delay={0.4}>
+              <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-xl shadow-slate-200 group">
                 <Image
                   src={category.images[1] || "https://images.unsplash.com/photo-1539109132384-361556960c95"}
-                  alt="Product 2"
+                  alt={`${category.name} 2`}
                   fill
-                  className="object-cover"
+                  className="object-cover transition-transform duration-700 group-hover:scale-110"
                 />
               </div>
             </Reveal>
@@ -90,21 +107,21 @@ export function ProductGallery({ category }: ProductGalleryProps) {
 
           {/* Column 3 */}
           <div className="space-y-8">
-            {/* Card 4: Image Card */}
-            <Reveal delay={0.4}>
-              <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-xl shadow-slate-200">
+            {/* Card 5: Image 2 */}
+            <Reveal delay={0.5}>
+              <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-xl shadow-slate-200 group">
                 <Image
                   src={category.images[2] || "https://images.unsplash.com/photo-1483985988355-763728e1935b"}
-                  alt="Product 3"
+                  alt={`${category.name} 3`}
                   fill
-                  className="object-cover"
+                  className="object-cover transition-transform duration-700 group-hover:scale-110"
                 />
               </div>
             </Reveal>
 
-            {/* Card 5: Text Card */}
-            <Reveal delay={0.5}>
-              <div className="bg-[#3D4145] rounded-2xl p-10 lg:p-12 text-white h-full flex flex-col justify-between aspect-square lg:aspect-auto">
+            {/* Card 6: Text Card */}
+            <Reveal delay={0.6}>
+              <div className="bg-[#3D4145] rounded-2xl p-10 lg:p-12 text-white flex flex-col justify-between min-h-[350px]">
                 <div>
                   <h3 className="text-3xl font-bold mb-1">Precision</h3>
                   <h4 className="text-3xl font-bold text-sky-400 mb-6">Craftsmanship</h4>
@@ -119,7 +136,6 @@ export function ProductGallery({ category }: ProductGalleryProps) {
               </div>
             </Reveal>
           </div>
-
         </div>
       </div>
     </section>

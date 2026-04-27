@@ -15,19 +15,38 @@ export default function CategorySection() {
     offset: ["start start", "end end"]
   })
 
-  // Layout pattern for 7 categories: [Single, Double, Single, Double, Single]
+  // Dynamically generate layout pattern based on categories length
   const columns = useMemo(() => {
-    return [
-      { type: 'single', width: 'w-[85vw] sm:w-[400px] md:w-[500px] lg:w-[600px]', items: [categories[0]] },
-      { type: 'double', width: '', items: [categories[1], categories[2]] },
-      { type: 'single', width: 'w-[75vw] sm:w-[300px] md:w-[350px] lg:w-[420px]', items: [categories[3]] },
-      { type: 'double', width: '', items: [categories[4], categories[5]] },
-      { type: 'single', width: 'w-[85vw] sm:w-[400px] md:w-[500px] lg:w-[600px]', items: [categories[6]] },
-    ]
+    const cols = []
+    let i = 0
+    let isSingle = true
+
+    while (i < categories.length) {
+      if (isSingle || i === categories.length - 1) {
+        // Single column
+        cols.push({
+          type: 'single',
+          width: 'w-[75vw] sm:w-[300px] md:w-[350px] lg:w-[420px]',
+          items: [categories[i]]
+        })
+        i += 1
+      } else {
+        // Double column
+        cols.push({
+          type: 'double',
+          width: '',
+          items: [categories[i], categories[i + 1]]
+        })
+        i += 2
+      }
+      isSingle = !isSingle
+    }
+    return cols
   }, [])
 
   // Calculate horizontal movement based on viewport scroll progress of the sticky wrapper
-  const xMovement = useTransform(scrollYProgress, [0, 1], ["0%", "-75%"])
+  // Scaling movement percentage based on the number of columns to ensure all content is reachable
+  const xMovement = useTransform(scrollYProgress, [0, 1], ["0%", `-${columns.length * 15}%`])
   const smoothX = useSpring(xMovement, { stiffness: 60, damping: 25 })
 
   return (

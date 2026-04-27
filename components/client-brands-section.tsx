@@ -76,7 +76,7 @@ export function ClientBrandsSection() {
   }
 
   return (
-    <section className="w-full bg-[#0d1420] py-20 border-t border-white/5 overflow-hidden relative">
+    <section className="w-full bg-[#0d1420] py-8 lg:py-16 border-t border-white/5 overflow-hidden relative">
       <div className="container mx-auto px-6 lg:px-12 mb-12">
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
           <Reveal className="flex flex-col items-start gap-4">

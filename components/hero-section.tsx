@@ -103,7 +103,7 @@ export function HeroSection() {
       {/* Content */}
       <div className="relative z-20 h-full flex items-center py-24">
         <div className="container mx-auto px-6 lg:px-12">
-          <div className="max-w-3xl pt-20">
+          <div className="max-w-4xl pt-20">
             {/* Main Heading */}
             <h1
               className={`transition-all duration-1000 uppercase ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
@@ -111,13 +111,13 @@ export function HeroSection() {
             >
               <span
                 key={`title-${currentSlide}`}
-                className="block text-3xl min-[360px]:text-4xl sm:text-4xl md:text-5xl lg:text-7xl font-bold text-white leading-tight tracking-tight animate-fade-in-up"
+                className="block text-3xl min-[360px]:text-4xl sm:text-4xl md:text-5xl lg:text-7xl xl:text-8xl font-bold text-white leading-none tracking-tight animate-fade-in-up"
               >
                 {slide.title}
               </span>
               <span
                 key={`highlight-${currentSlide}`}
-                className="block text-3xl min-[360px]:text-4xl sm:text-4xl md:text-4xl lg:text-7xl font-bold text-white leading-tight tracking-tight mt-2 animate-fade-in-up animation-delay-100"
+                className="block text-3xl min-[360px]:text-4xl sm:text-4xl md:text-4xl lg:text-7xl xl:text-8xl font-bold text-white leading-none tracking-tight animate-fade-in-up animation-delay-100"
 
                 dangerouslySetInnerHTML={{ __html: slide.titleHighlight }}
               >

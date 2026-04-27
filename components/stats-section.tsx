@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react"
 
 const stats = [
   {
-    value: 6,
+    value: 3,
     suffix: "+",
     label: "Manufacturing Units Across",
     sublabel: "6 Countries",
@@ -161,7 +161,7 @@ export function StatsSection() {
     <section
       ref={sectionRef}
       id="who-we-are"
-      className="relative py-12 lg:py-16 overflow-hidden"
+      className="relative py-8 lg:py-16 overflow-hidden"
     >
       {/* Interactive Moving Background */}
       <MovingBackground />
