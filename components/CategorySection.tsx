@@ -6,6 +6,7 @@ import { ArrowRight } from "lucide-react"
 import CategoryCard from "./CategoryCard"
 import { categories } from "@/lib/data"
 import { Reveal } from "@/components/Reveal"
+import Link from "next/link"
 
 export default function CategorySection() {
   const containerRef = useRef<HTMLDivElement>(null)
@@ -34,7 +35,7 @@ export default function CategorySection() {
         // Double column
         cols.push({
           type: 'double',
-          width: '',
+          width: 'w-[38vw] sm:w-[150px] md:w-[150px] lg:w-[220px]',
           items: [categories[i], categories[i + 1]]
         })
         i += 2
@@ -117,7 +118,7 @@ export default function CategorySection() {
               ))}
 
               {/* Final CTA Card */}
-              <div className="flex-shrink-0 w-[85vw] sm:w-[500px] md:w-[600px] lg:w-[800px] h-full rounded-[2.5rem] bg-[#111823] border border-white/10 p-4 md:p-10 flex flex-col justify-between relative overflow-hidden group">
+              <div className="flex-shrink-0 w-[85vw] sm:w-[350px] md:w-[500px] lg:w-[600px] h-full rounded-[2.5rem] bg-[#111823] border border-white/10 p-4 md:p-10 flex flex-col justify-between relative overflow-hidden group">
                 <div className="flex justify-between items-start relative z-10">
                   <span className="text-sky-500 text-[10px] md:text-xs font-bold uppercase tracking-[0.3em]">
                     End of Categories
@@ -134,10 +135,13 @@ export default function CategorySection() {
                     </p>
                   </div>
 
-                  <button className="inline-flex items-center gap-3 px-4 py-2 md:px-8 md:py-4 bg-sky-500 hover:bg-sky-400 text-[#0d1420] rounded-full font-bold text-lg transition-all group/btn shadow-xl shadow-sky-500/20 active:scale-95">
+                  <Link
+                    href="/contact"
+                    className="inline-flex items-center gap-3 px-4 py-2 md:px-8 md:py-4 bg-sky-500 hover:bg-sky-400 text-[#0d1420] rounded-full font-bold text-lg transition-all group/btn shadow-xl shadow-sky-500/20 active:scale-95 w-fit"
+                  >
                     Start a conversation
                     <ArrowRight className="w-6 h-6 transition-transform group-hover/btn:translate-x-2" />
-                  </button>
+                  </Link>
                 </div>
 
                 {/* Decorative background globs */}
@@ -149,7 +153,7 @@ export default function CategorySection() {
           </div>
 
           {/* Dynamic Progress Indicator */}
-          <div className="container mx-auto px-6 lg:px-12 relative z-20 mt-12">
+          <div className="container mx-auto px-6 lg:px-12 relative z-20 mt-4">
             <div className="h-[1px] bg-white/5 hidden md:block w-full">
               <motion.div
                 className="h-full bg-sky-500 shadow-[0_0_15px_rgba(56,189,248,0.6)]"
