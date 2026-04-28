@@ -162,7 +162,7 @@ export function HeroSection() {
                 <Button
                   onClick={() => setIsProfileModalOpen(true)}
                   variant="matrix"
-                  className="flex-1 sm:flex-none"
+                  // className="flex-1 sm:flex-none"
                   size={"lg"}
                 >
                   <Download className="w-4 h-4 sm:w-5 sm:h-5" />
@@ -173,7 +173,9 @@ export function HeroSection() {
                 <Link href="/contact" className={cn(buttonVariants({
                   variant: "outline",
                   size: "lg"
-                }), "flex-1 sm:flex-none")}>
+                }),
+                  // "flex-1 sm:flex-none"
+                )}>
                   Contact Our Team
                 </Link>
               </div>
