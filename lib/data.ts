@@ -24,24 +24,24 @@ export const categories: Category[] = [
     description: "We engineer high-recovery fiber blends and anatomical silhouettes designed for lasting comfort and structural longevity. We control every stage of development for bulk consistency.",
     featured_cards: [
       {
-        title: "Sustainable",
-        subtitle: "Fabrics",
-        body: "We source eco-friendly bamboo, modal, organic cotton, and recycled polyesters to ensure incredibly soft and breathable comfort, naturally protecting the planet.",
+        title: "Comfort",
+        subtitle: "Driven R&D",
+        body: "We develop soft-structure fabrics that balance a premium hand-feel with daily wear durability.",
       },
       {
-        title: "Precision",
-        subtitle: "Craftsmanship",
-        body: "Every seam, stitch, and cut is engineered by our state-of-the-art facilities across South Asia. We utilize advanced flatlock and ultrasonic welding techniques.",
+        title: "Adaptive",
+        subtitle: "Stretch",
+        body: "We utilize high-recovery materials that allow total movement while maintaining garment shape.",
       },
       {
-        title: "Test 3",
-        subtitle: "Craftsmanship",
-        body: "Every seam, stitch, and cut is engineered by our state-of-the-art facilities across South Asia. We utilize advanced flatlock and ultrasonic welding techniques.",
+        title: "Refined",
+        subtitle: "Silhouettes",
+        body: "We design balanced, versatile fits suitable for both indoor relaxation and high-end casual use.",
       },
       {
-        title: "Test 4",
-        subtitle: "Craftsmanship",
-        body: "Every seam, stitch, and cut is engineered by our state-of-the-art facilities across South Asia. We utilize advanced flatlock and ultrasonic welding techniques.",
+        title: "Stability",
+        subtitle: "At Scale",
+        body: "We ensure superior fabric stability to maintain color and performance through repeated washing.",
       }
     ],
 
@@ -69,24 +69,24 @@ export const categories: Category[] = [
     description: "We source low-micron fibers and engineer breathable knit structures to optimize thermal regulation and restorative comfort. We ensure fabric stability for consistent bulk results.",
     featured_cards: [
       {
-        title: "Sustainable",
-        subtitle: "Fabrics",
-        body: "We source eco-friendly bamboo, modal, organic cotton, and recycled polyesters to ensure incredibly soft and breathable comfort, naturally protecting the planet.",
+        title: "Soft",
+        subtitle: "Touch Mastery",
+        body: "We source ultra-smooth, skin-friendly fibers designed specifically for sensitive, all-night comfort.",
       },
       {
-        title: "Precision",
-        subtitle: "Craftsmanship",
-        body: "Every seam, stitch, and cut is engineered by our state-of-the-art facilities across South Asia. We utilize advanced flatlock and ultrasonic welding techniques.",
+        title: "Thermal",
+        subtitle: "Balance",
+        body: "We select high-breathability materials to naturally regulate body temperature during rest cycles.",
       },
       {
-        title: "Test 3",
-        subtitle: "Craftsmanship",
-        body: "Every seam, stitch, and cut is engineered by our state-of-the-art facilities across South Asia. We utilize advanced flatlock and ultrasonic welding techniques.",
+        title: "Relaxed",
+        subtitle: "Silhouettes",
+        body: "We design anatomical silhouettes that allow for natural movement without restriction or binding.",
       },
       {
-        title: "Test 4",
-        subtitle: "Craftsmanship",
-        body: "Every seam, stitch, and cut is engineered by our state-of-the-art facilities across South Asia. We utilize advanced flatlock and ultrasonic welding techniques.",
+        title: "Gentle",
+        subtitle: "Construction",
+        body: "We apply low-friction seam technology to eliminate skin irritation during extended wear.",
       }
     ],
     images: [
