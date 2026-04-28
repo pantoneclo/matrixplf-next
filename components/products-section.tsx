@@ -50,7 +50,7 @@ export function ProductsSection() {
             ...prev,
             [hoveredId]: ((prev[hoveredId] || 0) + 1) % category.images.length
           }))
-        }, 800)
+        }, 1500)
       }
     }
 
@@ -193,7 +193,7 @@ export function ProductsSection() {
         >
           <div
             ref={sliderRef}
-            className="flex gap-2 transition-transform duration-500 ease-out"
+            className="flex gap-2 transition-transform duration-1000 ease-in-out"
             style={{ transform: `translateX(-${sliderPosition}px)` }}
           >
             {categories.map((category, index) => {
@@ -222,7 +222,7 @@ export function ProductsSection() {
                   {category.images.map((image, imgIndex) => (
                     <div
                       key={imgIndex}
-                      className={`absolute top-0 left-0 transition-all duration-500 ${imgIndex === currentImageIndex
+                      className={`absolute top-0 left-0 transition-all duration-1000 ease-in-out ${imgIndex === currentImageIndex
                         ? "opacity-100 scale-100"
                         : "opacity-0 scale-105"
                         }`}
@@ -255,7 +255,7 @@ export function ProductsSection() {
                       {category.images.map((_, imgIndex) => (
                         <div
                           key={imgIndex}
-                          className={`h-1 rounded-full transition-all duration-500 ${imgIndex === currentImageIndex
+                          className={`h-1 rounded-full transition-all duration-1000 ease-in-out ${imgIndex === currentImageIndex
                             ? "w-6 bg-white"
                             : "w-2 bg-white/40"
                             }`}
