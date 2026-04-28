@@ -4,14 +4,14 @@ import { useEffect, useRef, useState } from "react"
 
 const stats = [
   {
-    value: 3,
-    suffix: "+",
+    value: 6,
+    suffix: "",
     label: "Manufacturing Units Across",
-    sublabel: "6 Countries",
+    sublabel: "3 Countries",
   },
   {
     value: 37,
-    suffix: "",
+    suffix: "+",
     label: "Partner Factories",
     sublabel: "in Our Sourcing Network",
   },

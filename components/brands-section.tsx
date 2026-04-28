@@ -17,7 +17,7 @@ const ownBrands = [
   },
   {
     name: "leafletic",
-    logo: "/Leafletic-logo-New-3.png",
+    logo: "/Leafletic-Logo.png",
     category: "Ladies’ Fashion",
     desc: "A European womenswear brand developed and distributed across EU markets, built on a strong understanding of consumer demand, product positioning, and market trends. From concept and design to production and retail distribution, the brand reflects our capability to develop and scale products across diverse categories with commercial relevance.",
     linkText: "EXPLORE BRAND",

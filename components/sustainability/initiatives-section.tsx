@@ -10,12 +10,12 @@ const initiatives = [
     image: "/assets/sustainability/1.png",
     paragraphs: [
       {
-        text: "We are producing and working with fabrics made with sustainable fibre that are better than conventional ones. Organic, fair trade, eco-friendly, non-toxic and low-impact dyes that use harmless chemicals reduce water waste and are safer for workers and better for the environment.",
+        text: "We develop and source fabrics using sustainable fibres designed to reduce environmental impact while maintaining performance and quality. Our approach prioritizes responsible materials, low-impact dyeing processes, and safer chemical usage — ensuring better outcomes for both people and the environment.",
         icon: <Leaf className="w-5 h-5 text-white" />,
         iconBg: "bg-[#3E8E41]"
       },
       {
-        text: "We are investing in yarns including organic cotton, linen, and other available fibers that use less water than conventional growing methods.",
+        text: "We actively invest in materials such as organic cotton, linen, and other resource-efficient fibres that require less water and support more sustainable production methods.",
         icon: <Droplets className="w-5 h-5 text-white" />,
         iconBg: "bg-[#1ea1d7]"
       }
@@ -28,12 +28,12 @@ const initiatives = [
     image: "/assets/sustainability/2.png",
     paragraphs: [
       {
-        text: "Caustic soda (Sodium Hydroxide - NaOH) is one of the most commonly used and hazardous chemicals in the textile and garment industry.",
+        text: "We operate a caustic recovery system that enables the recycling and reuse of sodium hydroxide (NaOH) within our production processes, significantly reducing chemical consumption and environmental impact.",
         icon: <FlaskConical className="w-5 h-5 text-white" />,
         iconBg: "bg-[#1ea1d7]"
       },
       {
-        text: "We have installed a caustic recovery plant that enables us to recycle and reuse part of the caustic soda used in the process, helping to reduce the overall environmental footprint.",
+        text: "By recovering and reprocessing caustic soda, we improve resource efficiency, minimize waste, and ensure safer, more sustainable operations across our facilities.",
         icon: <Recycle className="w-5 h-5 text-white" />,
         iconBg: "bg-[#3E8E41]"
       }
@@ -46,12 +46,12 @@ const initiatives = [
     image: "/assets/sustainability/3.png",
     paragraphs: [
       {
-        text: "We have added laser machines for dry processes, replacing conventional methods such as PP spraying.",
+        text: "We continuously invest in advanced technologies to improve both environmental and workplace safety standards. Our transition to laser-based dry processing replaces conventional methods such as PP spray, significantly reducing chemical usage and exposure.",
         icon: <Bot className="w-5 h-5 text-white" />,
         iconBg: "bg-[#1ea1d7]"
       },
       {
-        text: "The PP spray method is hazardous to the health and safety of workers and the environment in which they operate, due to the transformation of chemicals into easily absorbable micro-particles.",
+        text: "Traditional PP spray processes can release hazardous micro-particles that impact both worker health and the surrounding environment. By adopting cleaner technologies, we minimize risk, enhance operational safety, and support more responsible manufacturing practices.",
         icon: null,
         iconBg: ""
       }
@@ -64,9 +64,14 @@ const initiatives = [
     image: "/assets/sustainability/4.png",
     paragraphs: [
       {
-        text: "We treat 100% of the water used in our textile and garment processing, removing all hazardous chemicals and materials. The treated water can be reused for various purposes, except for drinking.",
+        text: "We operate a fully integrated water treatment system, ensuring that all water used in our textile and garment processing is properly treated before reuse or discharge.",
         icon: <Droplet className="w-5 h-5 text-white" />,
         iconBg: "bg-[#1ea1d7]"
+      },
+      {
+        text: "Our process removes impurities and optimizes water quality, allowing safe reuse across operations while reducing environmental impact and supporting responsible manufacturing practices.",
+        icon: <Recycle className="w-5 h-5 text-white" />,
+        iconBg: "bg-[#3E8E41]"
       }
     ]
   }

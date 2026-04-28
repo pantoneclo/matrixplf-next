@@ -22,7 +22,6 @@ const footerLinks = {
   ],
   resources: [
     { label: "Sustainability", href: "/sustainability" },
-    { label: "Certifications", href: "#certifications" },
     { label: "Code Of Conduct", href: "/code-of-conduct" },
     { label: "Careers", href: "/careers" },
   ],
@@ -31,6 +30,7 @@ const footerLinks = {
 const socialLinks = [
   { icon: Linkedin, href: "https://www.linkedin.com/company/matrix-platform-ltd", label: "LinkedIn" },
   { icon: Facebook, href: "https://www.facebook.com/matrixplatformlimited", label: "Facebook" },
+  { icon: Instagram, href: "https://www.instagram.com/matrix.platform", label: "Instagram" },
 ]
 
 export function Footer() {

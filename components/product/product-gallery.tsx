@@ -126,7 +126,7 @@ export function ProductGallery({ category }: ProductGalleryProps) {
 
           <Reveal delay={0.1}>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 leading-none">
-              <span className="text-white drop-shadow-sm opacity-90">ntegrated</span>
+              <span className="text-white drop-shadow-sm opacity-90">Integrated</span>
               <span className="text-sky-500">Systems</span>
             </h2>
           </Reveal>

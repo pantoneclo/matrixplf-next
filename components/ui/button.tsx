@@ -9,18 +9,18 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: 'bg-primary text-primary-foreground hover:bg-primary/90',
+        default: 'cursor-pointer bg-primary text-primary-foreground hover:bg-primary/90',
         destructive:
-          'bg-destructive text-white hover:bg-destructive/90 focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/40 dark:bg-destructive/60',
+          'cursor-pointer bg-destructive text-white hover:bg-destructive/90 focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/40 dark:bg-destructive/60',
         outline:
-          'border bg-background text-primary shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50',
+          'cursor-pointer border bg-background text-primary shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50',
         secondary:
-          'bg-secondary text-secondary-foreground hover:bg-secondary/80',
+          'cursor-pointer bg-secondary text-secondary-foreground hover:bg-secondary/80',
         ghost:
-          'border-white/10 bg-white/5 hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50',
-        link: 'text-primary underline-offset-4 hover:underline',
+          'cursor-pointer border-white/10 bg-white/5 hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50',
+        link: 'cursor-pointer text-primary underline-offset-4 hover:underline',
         matrix:
-          'bg-sky-500 text-white hover:bg-sky-600',
+          'cursor-pointer bg-sky-500 text-white hover:bg-sky-600',
       },
       size: {
         default: 'h-9 px-4 py-2 has-[>svg]:px-3',
