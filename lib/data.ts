@@ -111,24 +111,24 @@ export const categories: Category[] = [
     description: "We utilize fine-gauge technology and seamless construction to create lightweight essentials with high elastic recovery. We control every stitch for 100% fit accuracy.",
     featured_cards: [
       {
-        title: "Sustainable",
-        subtitle: "Fabrics",
-        body: "We source eco-friendly bamboo, modal, organic cotton, and recycled polyesters to ensure incredibly soft and breathable comfort, naturally protecting the planet.",
+        title: "Next-to-Skin",
+        subtitle: "Engineering",
+        body: "We source ultra-soft, hypoallergenic fabrics engineered for direct skin contact and all-day use.",
       },
       {
-        title: "Precision",
-        subtitle: "Craftsmanship",
-        body: "Every seam, stitch, and cut is engineered by our state-of-the-art facilities across South Asia. We utilize advanced flatlock and ultrasonic welding techniques.",
+        title: "Seamless",
+        subtitle: "Innovation",
+        body: "We apply advanced bonding and flat-stitch construction to reduce friction and pressure points.",
       },
       {
-        title: "Test 3",
-        subtitle: "Craftsmanship",
-        body: "Every seam, stitch, and cut is engineered by our state-of-the-art facilities across South Asia. We utilize advanced flatlock and ultrasonic welding techniques.",
+        title: "Shape",
+        subtitle: "Retention",
+        body: "We engineer precision elastic recovery systems to maintain fit consistency over hundreds of wear cycles.",
       },
       {
-        title: "Test 4",
-        subtitle: "Craftsmanship",
-        body: "Every seam, stitch, and cut is engineered by our state-of-the-art facilities across South Asia. We utilize advanced flatlock and ultrasonic welding techniques.",
+        title: "Hygiene",
+        subtitle: "Intelligence",
+        body: "We integrate breathable, moisture-control textiles to support freshness and skin health.",
       }
     ],
     images: [
@@ -157,24 +157,24 @@ export const categories: Category[] = [
     description: "Technical fabrics and ergonomic designs that move with you. Engineered for peak athletic performance.",
     featured_cards: [
       {
-        title: "Sustainable",
-        subtitle: "Fabrics",
-        body: "We source eco-friendly bamboo, modal, organic cotton, and recycled polyesters to ensure incredibly soft and breathable comfort, naturally protecting the planet.",
+        title: "Performance",
+        subtitle: "Engineered",
+        body: "We engineer moisture-wicking textiles and multi-way stretch systems built for high-intensity movement.",
       },
       {
-        title: "Precision",
-        subtitle: "Craftsmanship",
-        body: "Every seam, stitch, and cut is engineered by our state-of-the-art facilities across South Asia. We utilize advanced flatlock and ultrasonic welding techniques.",
+        title: "Technical",
+        subtitle: "Fit Systems",
+        body: "We design ergonomic patterns and targeted compression zones to maximize stability and mobility.",
       },
       {
-        title: "Test 3",
-        subtitle: "Craftsmanship",
-        body: "Every seam, stitch, and cut is engineered by our state-of-the-art facilities across South Asia. We utilize advanced flatlock and ultrasonic welding techniques.",
+        title: "Breathable",
+        subtitle: "Structures",
+        body: "We develop specialized ventilated constructions to optimize airflow and active thermal regulation.",
       },
       {
-        title: "Test 4",
-        subtitle: "Craftsmanship",
-        body: "Every seam, stitch, and cut is engineered by our state-of-the-art facilities across South Asia. We utilize advanced flatlock and ultrasonic welding techniques.",
+        title: "Durable",
+        subtitle: "Reinforcement",
+        body: "We reinforce high-stress seams and source abrasion-resistant fabrics for long-term athletic performance.",
       }
     ],
     images: [
@@ -198,24 +198,24 @@ export const categories: Category[] = [
     description: "We engineer dense loopback textiles and reinforced seams designed for thermal retention and silhouette stability. We manage high-volume production with total shade uniformity.",
     featured_cards: [
       {
-        title: "Sustainable",
-        subtitle: "Fabrics",
-        body: "We source eco-friendly bamboo, modal, organic cotton, and recycled polyesters to ensure incredibly soft and breathable comfort, naturally protecting the planet.",
+        title: "Structured",
+        subtitle: "Comfort",
+        body: "We develop mid-to-heavyweight fabrics that balance core warmth with a clean, professional aesthetic.",
       },
       {
-        title: "Precision",
-        subtitle: "Craftsmanship",
-        body: "Every seam, stitch, and cut is engineered by our state-of-the-art facilities across South Asia. We utilize advanced flatlock and ultrasonic welding techniques.",
+        title: "Thermal",
+        subtitle: "Retention",
+        body: "We engineer high-density fleece and brushed interiors to trap heat efficiently without adding bulk.",
       },
       {
-        title: "Test 3",
-        subtitle: "Craftsmanship",
-        body: "Every seam, stitch, and cut is engineered by our state-of-the-art facilities across South Asia. We utilize advanced flatlock and ultrasonic welding techniques.",
+        title: "Shape",
+        subtitle: "Stability",
+        body: "We utilize heavy-duty rib and recovery systems to ensure structure is retained after repeated wear.",
       },
       {
-        title: "Test 4",
-        subtitle: "Craftsmanship",
-        body: "Every seam, stitch, and cut is engineered by our state-of-the-art facilities across South Asia. We utilize advanced flatlock and ultrasonic welding techniques.",
+        title: "Rugged",
+        subtitle: "Build",
+        body: "We reinforce garment construction to support long-term performance in both indoor and outdoor use.",
       }
     ],
     images: [
@@ -240,24 +240,24 @@ export const categories: Category[] = [
     description: "We control the complete denim lifecycle from indigo-dyeing to automated laser finishing. We deliver high-volume programs with zero variance in wash, shade, or fit integrity.",
     featured_cards: [
       {
-        title: "Sustainable",
-        subtitle: "Fabrics",
-        body: "We source eco-friendly bamboo, modal, organic cotton, and recycled polyesters to ensure incredibly soft and breathable comfort, naturally protecting the planet.",
+        title: "Industrial",
+        subtitle: "Strength",
+        body: "We source high-density denim constructions designed for rugged longevity and authentic character.",
       },
       {
-        title: "Precision",
-        subtitle: "Craftsmanship",
-        body: "Every seam, stitch, and cut is engineered by our state-of-the-art facilities across South Asia. We utilize advanced flatlock and ultrasonic welding techniques.",
+        title: "Wash",
+        subtitle: "Precision",
+        body: "We control in-house wash processes to ensure total color consistency across global bulk production.",
       },
       {
-        title: "Test 3",
-        subtitle: "Craftsmanship",
-        body: "Every seam, stitch, and cut is engineered by our state-of-the-art facilities across South Asia. We utilize advanced flatlock and ultrasonic welding techniques.",
+        title: "Engineered",
+        subtitle: "Integrity",
+        body: "We develop precise technical patterns to maintain shape and prevent bagging in key stress areas.",
       },
       {
-        title: "Test 4",
-        subtitle: "Craftsmanship",
-        body: "Every seam, stitch, and cut is engineered by our state-of-the-art facilities across South Asia. We utilize advanced flatlock and ultrasonic welding techniques.",
+        title: "Reinforced",
+        subtitle: "Hardware",
+        body: "We apply industrial-grade stitching and premium trims to enhance durability in high-wear zones.",
       }
     ],
     images: [
@@ -280,24 +280,24 @@ export const categories: Category[] = [
     description: "We source polymer-coated yarns and high-modulus fabrics to resist chlorine degradation and maintain hydrodynamic fit. We verify performance standards for global compliance.",
     featured_cards: [
       {
-        title: "Sustainable",
-        subtitle: "Fabrics",
-        body: "We source eco-friendly bamboo, modal, organic cotton, and recycled polyesters to ensure incredibly soft and breathable comfort, naturally protecting the planet.",
+        title: "Advanced",
+        subtitle: "Quick-Dry",
+        body: "We utilize hydrophobic fabric systems designed for rapid evaporation and comfort in and out of water.",
       },
       {
-        title: "Precision",
-        subtitle: "Craftsmanship",
-        body: "Every seam, stitch, and cut is engineered by our state-of-the-art facilities across South Asia. We utilize advanced flatlock and ultrasonic welding techniques.",
+        title: "Chemical",
+        subtitle: "Resilience",
+        body: "We select specialized, high-performance yarns to improve durability against chlorine and salt exposure.",
       },
       {
-        title: "Test 3",
-        subtitle: "Craftsmanship",
-        body: "Every seam, stitch, and cut is engineered by our state-of-the-art facilities across South Asia. We utilize advanced flatlock and ultrasonic welding techniques.",
+        title: "Elastic",
+        subtitle: "Recovery",
+        body: "We engineer high-modulus materials to maintain tension and fit integrity when wet.",
       },
       {
-        title: "Test 4",
-        subtitle: "Craftsmanship",
-        body: "Every seam, stitch, and cut is engineered by our state-of-the-art facilities across South Asia. We utilize advanced flatlock and ultrasonic welding techniques.",
+        title: "Secure",
+        subtitle: "Stability",
+        body: "We design supportive, high-motion cuts that ensure garment stability during active aquatic use.",
       }
     ],
     images: [
