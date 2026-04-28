@@ -52,17 +52,17 @@ export default function CategorySection() {
 
   // Touch handling for mobile finger slide
   const touchStart = useRef<number | null>(null)
-  
+
   const handleTouchStart = (e: React.TouchEvent) => {
     touchStart.current = e.touches[0].clientX
   }
 
   const handleTouchMove = (e: React.TouchEvent) => {
     if (touchStart.current === null) return
-    
+
     const touchCurrent = e.touches[0].clientX
     const deltaX = touchStart.current - touchCurrent
-    
+
     // Convert horizontal swipe into vertical scroll
     if (Math.abs(deltaX) > 10) {
       window.scrollBy(0, deltaX * 1.5)
@@ -181,7 +181,7 @@ export default function CategorySection() {
 
           {/* Dynamic Progress Indicator */}
           <div className="container mx-auto px-6 lg:px-12 relative z-20 mt-4">
-            <div className="h-[1px] bg-white/5 hidden md:block w-full">
+            <div className="h-px bg-white/5 hidden md:block w-full">
               <motion.div
                 className="h-full bg-sky-500 shadow-[0_0_15px_rgba(56,189,248,0.6)]"
                 style={{ scaleX: scrollYProgress, transformOrigin: "left" }}
