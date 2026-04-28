@@ -244,7 +244,7 @@ export function ProfileDownloadModal({ isOpen, onClose, customPdf, customTitle }
                       ) : (
                         <>
                           <Download className="w-4 h-4" />
-                          Get the Profile
+                          Get Profile
                         </>
                       )}
                     </Button>

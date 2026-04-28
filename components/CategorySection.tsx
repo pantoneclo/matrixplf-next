@@ -106,8 +106,7 @@ export default function CategorySection() {
               Categories.
             </h2>
             <p className="text-base lg:text-lg text-slate-400 font-medium max-w-xl leading-relaxed">
-              Explore our core product direction across fashion wear, outerwear,
-              bottomwear and category-driven apparel development.
+              Explore our core product categories across loungewear, nightwear, innerwear & essentials, activewear, sweatwear, denim, and swimwear  developed to combine trend relevance, technical capability, and scalable production.
             </p>
           </div>
         </Reveal>

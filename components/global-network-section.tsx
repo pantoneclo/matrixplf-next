@@ -224,7 +224,7 @@ export function GlobalNetworkSection() {
                   <h3 className="text-base font-bold tracking-tight" style={{ color: node.color }}>{node.title}</h3>
                 </div>
                 <p className="text-[11px] font-bold text-white mb-2 uppercase tracking-wider">{node.location}</p>
-                <p className="text-[11px] text-slate-400 leading-relaxed line-clamp-2">{node.desc}</p>
+                <p className="text-[11px] text-slate-400 leading-relaxed ">{node.desc}</p>
                 <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 w-3 h-3 rounded-full" style={{ backgroundColor: node.color, boxShadow: `0 0 15px ${node.color}` }} />
               </div>
             ))}
@@ -245,7 +245,7 @@ export function GlobalNetworkSection() {
                   <MapPin className="w-3.5 h-3.5" style={{ color: node.color }} />
                 </div>
                 <p className="text-[11px] font-bold text-white mb-2 uppercase tracking-wider">{node.location}</p>
-                <p className="text-[11px] text-slate-400 leading-relaxed line-clamp-2">{node.desc}</p>
+                <p className="text-[11px] text-slate-400 leading-relaxed ">{node.desc}</p>
                 <div className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 w-3 h-3 rounded-full" style={{ backgroundColor: node.color, boxShadow: `0 0 15px ${node.color}` }} />
               </div>
             ))}

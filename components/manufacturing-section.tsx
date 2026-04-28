@@ -87,16 +87,16 @@ export function ManufacturingSection() {
             className={`text-4xl md:text-5xl lg:text-7xl font-bold text-white leading-[1.1] mb-6 transition-all duration-700 delay-100 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
               }`}
           >
-            Backed by real
+            Driven by Real
             <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-sky-600">Production</span> strength
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-sky-600">Manufacturing</span> Strength
           </h2>
 
           <p
             className={`text-white/70 text-lg lg:text-xl max-w-2xl transition-all duration-700 delay-200 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
               }`}
           >
-            Strategic manufacturing facilities across South Asia delivering quality, capacity, and reliability.
+            Matrix Platform operates a high-precision manufacturing network across South Asia, engineered for vertical efficiency and rapid scalability. From high-volume knitwear to technical performance apparel, our facilities are built on a foundation of automated technology and world-class ESG standard
           </p>
         </div>
 
@@ -167,7 +167,7 @@ export function ManufacturingSection() {
               </div>
 
               <p className="text-white/70 text-base lg:text-lg mb-8 leading-relaxed">
-                High-volume manufacturing across knit and woven programs with state-of-the-art facilities.
+                High-volume manufacturing across knit and woven categories, supported by fully integrated facilities, strong production control, and scalable capacity for global programs. Our owned and partner manufacturing units ensure full control from development to delivery.
               </p>
 
               <div className="flex flex-wrap gap-3">
@@ -212,7 +212,7 @@ export function ManufacturingSection() {
               </div>
 
               <p className="text-white/70 text-base lg:text-lg mb-8 leading-relaxed">
-                Technical lingerie and polyamide product capability with BOI-approved manufacturing strength.
+                Specialized in technical lingerie and polyamide-based products, backed by advanced manufacturing capabilities and BOI-approved facilities ensuring precision and quality. Our owned and partner manufacturing units ensure full control from development to delivery.
               </p>
 
               {/* Company Tags - Clickable Links */}
