@@ -62,13 +62,14 @@ export function Header() {
                     const isActive = pathname === item.href
                     return (
                       <NavigationMenuItem key={item.label}>
-                        <Link href={item.href} legacyBehavior passHref>
+                        <NavigationMenuItem key={item.label}>
                           <NavigationMenuLink
                             active={isActive}
+                            href={item.href}
                             className={cn(buttonVariants({
                               variant: "ghost",
                               size: "sm",
-                              className: "rounded-full transition-all duration-1000"
+                              className: "rounded-full transition-all duration-1000 bg-none"
                             }),
                               isScrolled
                                 ? "text-background hover:text-sky-500 hover:bg-white/50"
@@ -78,7 +79,7 @@ export function Header() {
                           >
                             {item.label}
                           </NavigationMenuLink>
-                        </Link>
+                        </NavigationMenuItem>
                       </NavigationMenuItem>
                     )
                   })}
