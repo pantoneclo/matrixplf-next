@@ -35,7 +35,7 @@ export function WhoWeAreLegacySection() {
 
         {/* Deskstop Selective Blur Overlay */}
         <div
-          className="absolute inset-y-0 left-0 w-full lg:w-[65%] bg-slate-950/60 backdrop-blur-md z-10 hidden lg:block"
+          className="absolute inset-y-0 left-0 w-full lg:w-[65%] bg-slate-950/30 z-10 hidden lg:block"
           style={{
             maskImage: 'linear-gradient(to right, black 70%, transparent 100%)',
             WebkitMaskImage: 'linear-gradient(to right, black 70%, transparent 100%)'
@@ -75,6 +75,7 @@ export function WhoWeAreLegacySection() {
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed opacity-90">
               We also own and operate our retail brand across 16 European countries, giving us real market insight and a clear understanding of what sells — from concept and design through production to final distribution.
             </p>
+            <strong className="text-lg md:text-xl text-slate-300 leading-relaxed opacity-90"> One platform. Total control. From concept to customer.</strong>
           </div>
         </div>
       </div>

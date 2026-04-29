@@ -42,7 +42,7 @@ export default function CategoryCard({ name, image, link, className = "", priori
 
         {/* Footer Bar - Matches the design in the image */}
         <div className="bg-[#0b121f] py-2 px-4 mt-3 flex items-center justify-between border rounded-lg border-white/20  relative z-10 transition-colors duration-300 group-hover:border-sky-400">
-          <h3 className="truncate text-sm font-semibold capitalize tracking-tight text-white md:text-[15px]">
+          <h3 className="truncate text-sm font-semibold tracking-tight text-white md:text-[15px]" >
             {name}
           </h3>
           <ArrowRight className="text-white transition-colors duration-300 group-hover:text-sky-400" />

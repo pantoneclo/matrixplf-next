@@ -50,7 +50,7 @@ export function ProfileDownloadModal({ isOpen, onClose, customPdf, customTitle }
   async function onSubmit(values: FormValues) {
     setError(null)
 
-    const pdfUrl = customPdf || "/assets/company/Matrixapparels-Ltd-a-unit-of-Matrix-platform.pdf"
+    const pdfUrl = customPdf || "/assets/company/Matrix-Platform.pdf"
     const fileName = pdfUrl.split('/').pop() || "profile.pdf"
     const profileName = customTitle || "Matrix Group Company Profile"
 
@@ -121,7 +121,7 @@ export function ProfileDownloadModal({ isOpen, onClose, customPdf, customTitle }
                   <div>
                     <p className="text-sky-500 text-[10px] font-bold uppercase tracking-[0.2em] mb-1">Download</p>
                     <h2 className="text-2xl font-bold text-white tracking-tight">
-                      {customTitle || "Matrix Group Company Profile"}
+                      {customTitle || "Matrix Platform Ltd. - Profile"}
                     </h2>
                   </div>
                 </div>
@@ -244,7 +244,7 @@ export function ProfileDownloadModal({ isOpen, onClose, customPdf, customTitle }
                       ) : (
                         <>
                           <Download className="w-4 h-4" />
-                          Get the Profile
+                          Get Profile
                         </>
                       )}
                     </Button>

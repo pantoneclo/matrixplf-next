@@ -22,7 +22,6 @@ const footerLinks = {
   ],
   resources: [
     { label: "Sustainability", href: "/sustainability" },
-    { label: "Certifications", href: "#certifications" },
     { label: "Code Of Conduct", href: "/code-of-conduct" },
     { label: "Careers", href: "/careers" },
   ],
@@ -31,6 +30,7 @@ const footerLinks = {
 const socialLinks = [
   { icon: Linkedin, href: "https://www.linkedin.com/company/matrix-platform-ltd", label: "LinkedIn" },
   { icon: Facebook, href: "https://www.facebook.com/matrixplatformlimited", label: "Facebook" },
+  { icon: Instagram, href: "https://www.instagram.com/matrix.platform", label: "Instagram" },
 ]
 
 export function Footer() {
@@ -48,10 +48,10 @@ export function Footer() {
           <div className="col-span-2 lg:col-span-2">
             <Link href="/" className="group">
               <img
-                src="/Matrix-Platform-Logo-1.png"
+                src="/Matrix-Platform-Logo-2.png"
                 alt="Logo"
                 loading="lazy"
-                className="w-[210px] sm:w-[260px] lg:w-[300px] h-auto object-contain"
+                className="w-[300px] sm:w-[300px] lg:w-[300px] h-auto object-contain"
               />
             </Link>
 
@@ -67,7 +67,7 @@ export function Footer() {
           </div>
 
           {/* Links Columns */}
-          <div className="mt-8 lg:mt-0">
+          <div className="mt-4 lg:mt-0">
             {/* <h4 className="font-semibold text-white mb-6">Company</h4> */}
             <ul className="space-y-1">
               {footerLinks.company.map((link) => (

@@ -146,7 +146,7 @@ export function HeroSection() {
                 className={`mt-6 sm:mt-8 space-y-2 sm:space-y-3 transition-all duration-1000 delay-300 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
                   }`}
               >
-                <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-white/90 font-medium animate-fade-in-up animation-delay-200 whitespace-nowrap">
+                <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-white/90 font-medium animate-fade-in-up animation-delay-200 ">
                   {slide.subtitle}
                 </p>
                 <p className="text-base sm:text-lg md:text-xl text-white/80 animate-fade-in-up animation-delay-300">
@@ -156,17 +156,17 @@ export function HeroSection() {
 
               {/* CTA Buttons */}
               <div
-                className={`flex flex-row flex-wrap gap-3 sm:gap-4 mt-8 sm:mt-10 transition-all duration-1000 delay-500 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+                className={`flex flex-nowrap w-full sm:w-auto gap-3 sm:gap-4 mt-8 sm:mt-10 transition-all duration-1000 delay-500 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
                   }`}
               >
                 <Button
                   onClick={() => setIsProfileModalOpen(true)}
                   variant="matrix"
-                  // className="flex-1 sm:flex-none"
+                  className="flex-1 sm:flex-none min-w-0 px-2 sm:px-8"
                   size={"lg"}
                 >
-                  <Download className="w-4 h-4 sm:w-5 sm:h-5" />
-                  Download Profile
+                  <Download className="w-4 h-4 sm:w-5 sm:h-5 mr-1.5 shrink-0" />
+                  <span className="truncate text-xs sm:text-base">Download Profile</span>
                 </Button>
 
 
@@ -174,9 +174,9 @@ export function HeroSection() {
                   variant: "outline",
                   size: "lg"
                 }),
-                  // "flex-1 sm:flex-none"
+                  "flex-1 sm:flex-none justify-center min-w-0 px-2 sm:px-8"
                 )}>
-                  Contact Our Team
+                  <span className="truncate text-xs sm:text-base">Contact Our Team</span>
                 </Link>
               </div>
             </div>
