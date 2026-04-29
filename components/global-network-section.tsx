@@ -14,6 +14,14 @@ const geoUrl = "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json"
 
 const leftNodes = [
   {
+    id: "china",
+    title: "Matrix Platform Limited",
+    location: "Hong Kong",
+    desc: "Trade finance, HSBC credit facility, LC operations for factory relationships",
+    color: "#0ea5e9",
+    coordinates: [114.1694, 22.3193] as [number, number],
+  },
+  {
     id: "europe",
     title: "Matrix Design d.o.o.",
     location: "Ljubljana, Slovenia",
@@ -28,14 +36,6 @@ const leftNodes = [
     desc: "3 million metres/month fabric capacity. Polyester, viscose, knit fabrics.",
     color: "#a855f7",
     coordinates: [120.5821, 30.0503] as [number, number],
-  },
-  {
-    id: "china",
-    title: "Matrix Platform Limited",
-    location: "Hong Kong",
-    desc: "Trade finance, HSBC credit facility, LC operations for factory relationships",
-    color: "#0ea5e9",
-    coordinates: [114.1694, 22.3193] as [number, number],
   },
   {
     id: "srilanka",
@@ -133,11 +133,11 @@ export function GlobalNetworkSection() {
 
         {/* Desktop Dashboard Area - Static Layout */}
         <div className="hidden lg:block relative w-full aspect-[1400/900] mx-auto bg-[#0d1420] rounded-[3.5rem] border border-white/5 overflow-hidden shadow-2xl">
-          
-          <ComposableMap 
-            projection="geoMercator" 
-            projectionConfig={{ scale: MAP_SCALE, center: [CENTER_LON, CENTER_LAT] }} 
-            width={1400} 
+
+          <ComposableMap
+            projection="geoMercator"
+            projectionConfig={{ scale: MAP_SCALE, center: [CENTER_LON, CENTER_LAT] }}
+            width={1400}
             height={900}
             className="w-full h-full outline-none select-none opacity-40 focus:outline-none"
           >
@@ -214,7 +214,7 @@ export function GlobalNetworkSection() {
                 onMouseEnter={() => setActiveId(node.id)}
                 onMouseLeave={() => setActiveId(null)}
                 className={`absolute -translate-y-1/2 left-10 w-[310px] h-[130px] bg-[#0b121f]/80 backdrop-blur-xl p-6 rounded-2xl border-2 pointer-events-auto transition-all shadow-2xl flex flex-col justify-center ${activeId === node.id ? "scale-105 border-white/40 shadow-sky-500/10" : ""}`}
-                style={{ 
+                style={{
                   top: `${((i + 0.5) / leftNodes.length) * 100}%`,
                   borderColor: activeId === node.id ? node.color : `${node.color}50`,
                 }}
@@ -235,7 +235,7 @@ export function GlobalNetworkSection() {
                 onMouseEnter={() => setActiveId(node.id)}
                 onMouseLeave={() => setActiveId(null)}
                 className={`absolute -translate-y-1/2 right-10 w-[310px] h-[130px] bg-[#0b121f]/80 backdrop-blur-xl p-6 rounded-2xl border-2 pointer-events-auto transition-all shadow-2xl text-right flex flex-col justify-center ${activeId === node.id ? "scale-105 border-white/40 shadow-sky-500/10" : ""}`}
-                style={{ 
+                style={{
                   top: `${((i + 0.5) / rightNodes.length) * 100}%`,
                   borderColor: activeId === node.id ? node.color : `${node.color}50`,
                 }}
