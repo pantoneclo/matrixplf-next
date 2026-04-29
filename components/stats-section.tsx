@@ -9,12 +9,12 @@ const stats = [
     label: "Manufacturing Units Across",
     sublabel: "6 Countries",
   },
-  {
-    value: 37,
-    suffix: "",
-    label: "Partner Factories",
-    sublabel: "in Our Sourcing Network",
-  },
+  // {
+  //   value: 37,
+  //   suffix: "",
+  //   label: "Partner Factories",
+  //   sublabel: "in Our Sourcing Network",
+  // },
   {
     value: 3,
     suffix: "M+",
