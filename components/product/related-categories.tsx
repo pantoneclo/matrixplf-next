@@ -48,7 +48,7 @@ export function RelatedCategories({ currentCategorySlug }: RelatedCategoriesProp
           {otherCategories.map((category, idx) => (
             <Reveal key={category.id} delay={0.1 * idx}>
               <Link href={category.link} className="group block">
-                <div className="relative aspect-[4/5] rounded-t-2xl overflow-hidden">
+                <div className="relative aspect-4/5 rounded-t-2xl overflow-hidden [-webkit-mask-image:-webkit-radial-gradient(white,black)]">
                   {/* Category Number Badge */}
                   <div className="absolute top-4 left-4 z-20 bg-[#1a1d21]/80 backdrop-blur-md text-white text-[10px] font-bold w-8 h-8 rounded-full flex items-center justify-center border border-white/10">
                     {String(idx + 2).padStart(2, '0')}

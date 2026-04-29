@@ -14,6 +14,14 @@ const geoUrl = "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json"
 
 const leftNodes = [
   {
+    id: "china",
+    title: "Matrix Platform Limited",
+    location: "Hong Kong",
+    desc: "Trade finance, HSBC credit facility, LC operations for factory relationships",
+    color: "#0ea5e9",
+    coordinates: [114.1694, 22.3193] as [number, number],
+  },
+  {
     id: "europe",
     title: "Matrix Design d.o.o.",
     location: "Ljubljana, Slovenia",
@@ -28,14 +36,6 @@ const leftNodes = [
     desc: "3 million metres/month fabric capacity. Polyester, viscose, knit fabrics.",
     color: "#a855f7",
     coordinates: [120.5821, 30.0503] as [number, number],
-  },
-  {
-    id: "china",
-    title: "Matrix Platform Limited",
-    location: "Hong Kong",
-    desc: "Trade finance, HSBC credit facility, LC operations for factory relationships",
-    color: "#0ea5e9",
-    coordinates: [114.1694, 22.3193] as [number, number],
   },
   {
     id: "srilanka",
