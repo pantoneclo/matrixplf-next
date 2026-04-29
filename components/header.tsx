@@ -136,7 +136,7 @@ export function Header() {
                   setIsMobileMenuOpen(false)
                 }}
                 variant={"matrix"}
-                className="w-full"
+                size="lg"
               >
                 <Download className="w-4 h-4" />
                 Download Profile

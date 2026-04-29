@@ -146,7 +146,7 @@ export function HeroSection() {
                 className={`mt-6 sm:mt-8 space-y-2 sm:space-y-3 transition-all duration-1000 delay-300 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
                   }`}
               >
-                <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-white/90 font-medium animate-fade-in-up animation-delay-200 whitespace-nowrap">
+                <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-white/90 font-medium animate-fade-in-up animation-delay-200 ">
                   {slide.subtitle}
                 </p>
                 <p className="text-base sm:text-lg md:text-xl text-white/80 animate-fade-in-up animation-delay-300">
