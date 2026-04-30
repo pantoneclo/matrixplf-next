@@ -41,19 +41,32 @@ export function USPCardsSection() {
   useEffect(() => {
     if (isPaused || isTransitioning) return
 
-    const scrollInterval = setInterval(() => {
+    let animationFrameId: number;
+    let lastTime = performance.now();
+
+    const loop = (time: number) => {
+      const deltaTime = time - lastTime;
+      lastTime = time;
+
+      // Move by an amount proportional to deltaTime.
+      // This smooths out any frame rate drops.
+      const speed = 0.040; // smooth continuous sliding
+
       setScrollPosition((prev) => {
-        const nextPos = prev + 1.5 // Smooth continuous speed
-
-        // Seamles reset: if we reach the start of the 3rd set, jump to start of 2nd set
+        const nextPos = prev + (speed * deltaTime);
+        // Seamless reset: if we reach the start of the 3rd set, jump to start of 2nd set
         if (nextPos >= totalSetWidth * 2) {
-          return nextPos - totalSetWidth
+          return nextPos - totalSetWidth;
         }
-        return nextPos
-      })
-    }, 20)
+        return nextPos;
+      });
 
-    return () => clearInterval(scrollInterval)
+      animationFrameId = requestAnimationFrame(loop);
+    };
+
+    animationFrameId = requestAnimationFrame(loop);
+
+    return () => cancelAnimationFrame(animationFrameId);
   }, [isPaused, isTransitioning, totalSetWidth])
 
   const handleManualScroll = (direction: 'next' | 'prev') => {
@@ -114,8 +127,12 @@ export function USPCardsSection() {
           <div
             className="flex gap-6 will-change-transform"
             style={{
-              transform: `translateX(-${scrollPosition}px)`,
-              transition: isTransitioning ? "transform 0.5s cubic-bezier(0.4, 0, 0.2, 1)" : "none"
+              transform: `translate3d(-${scrollPosition}px, 0, 0)`,
+              transition: isTransitioning ? "transform 0.5s cubic-bezier(0.4, 0, 0.2, 1)" : "none",
+              backfaceVisibility: "hidden",
+              WebkitBackfaceVisibility: "hidden",
+              WebkitFontSmoothing: "antialiased",
+              transformStyle: "preserve-3d"
             }}
           >
             {infiniteCards.map((card, index) => (
@@ -123,7 +140,12 @@ export function USPCardsSection() {
                 key={`${card.title}-${index}`}
                 className={`flex-shrink-0 w-[420px] rounded-3xl overflow-hidden border border-white/5 bg-slate-900/50 backdrop-blur-xl shadow-2xl transition-all duration-700 group cursor-pointer ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
                   }`}
-                style={{ transitionDelay: `${(index % upsc.length) * 50}ms` }}
+                style={{
+                  transitionDelay: `${(index % upsc.length) * 50}ms`,
+                  backfaceVisibility: "hidden",
+                  WebkitBackfaceVisibility: "hidden",
+                  transform: "translateZ(0)"
+                }}
                 onMouseEnter={() => setIsPaused(true)}
                 onMouseLeave={() => setIsPaused(false)}
               >

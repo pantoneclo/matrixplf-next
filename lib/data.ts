@@ -319,7 +319,7 @@ export const upsc = [
     icon: Truck,
     title: "Seamless Logistics",
     subtitle: "End-to-end delivery. Zero complexity.",
-    description: "Full door-to-door delivery across EU, UK, and USA with complete DDP support. We manage duties, clearance, and fulfillment — ensuring your products arrive ready for retail.",
+    description: "FOB or DDP  built around your delivery needs. We support both origin-based FOB shipments and full door-to-door DDP delivery across the EU, UK, and USA. From duties and customs clearance to final fulfilment, our logistics model is structured to keep products moving smoothly and retail-ready.",
     gradient: "from-blue-500 to-cyan-500",
     image: "/assets/upsc/Seamless-Logistics.jpg",
     link: "/what-we-do#seamless-logistics",
