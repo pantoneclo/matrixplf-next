@@ -1,6 +1,8 @@
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import Image from "next/image"
+import Link from "next/link"
+import { ArrowRight } from "lucide-react"
 import { upsc } from "@/lib/data"
 
 export default function WhatWeDoPage() {
@@ -91,6 +93,12 @@ export default function WhatWeDoPage() {
                                         <p className={`text-lg md:text-xl text-gray-300 leading-relaxed max-w-md ${!isEven ? 'text-left md:text-right' : ''}`}>
                                             <strong className="text-[#4cb5e4]">{service.subtitle}</strong> {service.description}
                                         </p>
+
+                                        {service.link === "/sustainability#certifications" && (
+                                            <Link href={service.link} className="group inline-flex items-center gap-2 px-6 py-2.5 mt-2 border border-[#4cb5e4]/60 hover:border-[#4cb5e4] text-white rounded-full hover:bg-[#4cb5e4]/10 transition-all font-medium">
+                                                View certifications <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                                            </Link>
+                                        )}
                                     </div>
                                     <div className="w-full md:w-1/2">
                                         <div className="relative aspect-[4/3] overflow-hidden shadow-2xl">

@@ -3,6 +3,29 @@
 import { useEffect, useState } from "react"
 import Image from "next/image"
 
+const stats = [
+  {
+    title: "HSBC",
+    subtitle: "Backed Trade Finance",
+    desc: "LC operations via Hong Kong"
+  },
+  {
+    title: "EU Entity",
+    subtitle: "Direct Import into EU",
+    desc: "Matrix Design d.o.o. — Slovenia"
+  },
+  {
+    title: "FOB · DDP",
+    subtitle: "EU · UK · USA",
+    desc: "Door-to-door delivery"
+  },
+  {
+    title: "6",
+    subtitle: "Owned Manufacturing Units",
+    desc: "Across 3 countries"
+  }
+];
+
 export function WhoWeAreHeroSection() {
   const [isVisible, setIsVisible] = useState(false)
 
@@ -49,9 +72,28 @@ export function WhoWeAreHeroSection() {
                 }`}
             >
               <p className="text-lg md:text-xl lg:text-2xl text-slate-200 font-medium leading-relaxed">
-                Matrix Apparels Is An Integrated Manufacturing Group That Owns Its Fabric Supply, Controls Its Production & Delivers Globally
+                Matrix Platform Is An Integrated Manufacturing Group That Owns Its Fabric Supply, Controls Its Production & Delivers Globally
               </p>
             </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Bottom Stats Cards */}
+      <div className="absolute bottom-6 lg:bottom-12 left-0 right-0 z-20 w-full">
+        <div className="w-full overflow-x-auto hide-scrollbar snap-x snap-mandatory pb-4 md:pb-0">
+          <div className="flex md:grid md:grid-cols-2 lg:grid-cols-4 gap-4 px-6 lg:px-12 md:container md:mx-auto w-max md:w-auto">
+            {stats.map((stat, i) => (
+              <div
+                key={i}
+                className={`w-[280px] sm:w-[320px] md:w-auto bg-[#0d1420]/80 backdrop-blur-md border border-sky-500/30 rounded-xl p-6 transition-all duration-1000 flex-shrink-0 snap-start ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+                style={{ transitionDelay: `${600 + (i * 100)}ms` }}
+              >
+                <h3 className="text-white font-bold text-xl mb-3">{stat.title}</h3>
+                <p className="text-slate-200 text-sm font-semibold mb-1.5">{stat.subtitle}</p>
+                <p className="text-slate-400 text-xs">{stat.desc}</p>
+              </div>
+            ))}
           </div>
         </div>
       </div>

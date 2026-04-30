@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useRef, useState, useMemo } from "react"
-import { ChevronLeft, ChevronRight } from "lucide-react"
+import { ChevronLeft, ChevronRight, ArrowRight } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import { upsc } from "@/lib/data"
@@ -127,7 +127,7 @@ export function USPCardsSection() {
                 onMouseEnter={() => setIsPaused(true)}
                 onMouseLeave={() => setIsPaused(false)}
               >
-                <Link href={`/what-we-do#${card.title.toLowerCase().replace(/\s+/g, '-')}`} className="block w-full h-full">
+                <Link href={card.link} className="block w-full h-full">
                   {/* Image Section */}
                   <div className="relative h-[240px] overflow-hidden">
                     <Image
@@ -162,10 +162,14 @@ export function USPCardsSection() {
                       {card.description}
                     </p>
 
+                    <div className="mt-6 flex items-center text-sky-400 text-sm font-bold group-hover:text-sky-300 transition-colors">
+                      Learn More <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
+                    </div>
+
                     <div className={`mt-8 h-1 w-12 rounded-full bg-gradient-to-r ${card.gradient} opacity-50 group-hover:w-full group-hover:opacity-100 transition-all duration-700`} />
                   </div>
                 </Link>
-                l              </div>
+              </div>
             ))}
           </div>
         </div>

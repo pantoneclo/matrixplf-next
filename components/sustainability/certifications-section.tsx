@@ -49,7 +49,7 @@ export function SustainabilityCertificationsSection() {
   }, [])
 
   return (
-    <section ref={sectionRef} className="py-8 lg:py-20 bg-white w-full overflow-hidden">
+    <section ref={sectionRef} id="certifications" className="py-8 lg:py-20 bg-white w-full overflow-hidden">
       <div className="container mx-auto px-6 lg:px-12">
 
         {/* Header */}

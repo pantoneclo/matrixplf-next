@@ -9,12 +9,12 @@ const stats = [
     label: "Manufacturing Units Across",
     sublabel: "3 Countries",
   },
-//   {
-//     value: 37,
-//     suffix: "+",
-//     label: "Partner Factories",
-//     sublabel: "in Our Sourcing Network",
-//   },
+  //   {
+  //     value: 37,
+  //     suffix: "+",
+  //     label: "Partner Factories",
+  //     sublabel: "in Our Sourcing Network",
+  //   },
   {
     value: 3,
     suffix: "M+",
@@ -32,6 +32,12 @@ const stats = [
     suffix: "+",
     label: "International",
     sublabel: "Certifications",
+  },
+  {
+    value: 0,
+    suffix: "HSBC",
+    label: "Backed Trade Finance",
+    sublabel: "",
   },
 ]
 
@@ -70,7 +76,7 @@ function AnimatedCounter({
 
   return (
     <span className="text-4xl md:text-5xl lg:text-6xl font-bold text-white">
-      {count}{suffix}
+      {value > 0 ? count : ""}{suffix}
     </span>
   )
 }

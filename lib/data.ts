@@ -1,4 +1,5 @@
-import { Truck, Shield, Lightbulb, Palette, Award } from "lucide-react"
+import { Truck, Shield, Lightbulb, Palette, Award, Box, Landmark } from "lucide-react"
+import { EuIcon } from "@/components/eu-icon"
 
 export interface Category {
   id: number;
@@ -190,10 +191,10 @@ export const categories: Category[] = [
   },
   {
     id: 5,
-    slug: "sweatwear",
-    name: "SWEATWEAR",
+    slug: "sweatshirt",
+    name: "SWEATSHIRT",
     bgColor: "bg-amber-700",
-    link: "/product/sweatwear",
+    link: "/product/sweatshirt",
     subtitle: "STRUCTURED DURABILITY",
     description: "We engineer dense loopback textiles and reinforced seams designed for thermal retention and silhouette stability. We manage high-volume production with total shade uniformity.",
     featured_cards: [
@@ -321,6 +322,7 @@ export const upsc = [
     description: "Full door-to-door delivery across EU, UK, and USA with complete DDP support. We manage duties, clearance, and fulfillment — ensuring your products arrive ready for retail.",
     gradient: "from-blue-500 to-cyan-500",
     image: "/assets/upsc/Seamless-Logistics.jpg",
+    link: "/what-we-do#seamless-logistics",
   },
   {
     icon: Shield,
@@ -329,22 +331,7 @@ export const upsc = [
     description: "Fully aligned with global standards from day one. Ethical sourcing, certified production, and audit-ready systems ensure reliability and risk-free sourcing.",
     gradient: "from-sky-500 to-cyan-500",
     image: "/assets/upsc/audit-ready.jpg",
-  },
-  {
-    icon: Lightbulb,
-    title: "Brand Owners Mindset",
-    subtitle: "We think like your end customer.",
-    description: "As active brand operators across European markets, we understand product performance, pricing, and positioning — delivering what truly sells.",
-    gradient: "from-amber-500 to-orange-500",
-    image: "/assets/upsc/Brand-Owners-Mindset.jpg",
-  },
-  {
-    icon: Palette,
-    title: "Design to Reality",
-    subtitle: "From concept to scalable production",
-    description: "Our in-house design and development teams transform ideas into market-ready products with precision, speed, and technical expertise.",
-    gradient: "from-rose-500 to-pink-500",
-    image: "/assets/upsc/design-to-reality.jpg",
+    link: "/sustainability#certifications",
   },
   {
     icon: Award,
@@ -353,5 +340,52 @@ export const upsc = [
     description: "15+ international certifications covering quality, sustainability, and ethical manufacturing — ensuring full compliance for global retail partners.",
     gradient: "from-violet-500 to-purple-500",
     image: "/assets/upsc/certified-ex.jpg",
+    link: "/sustainability#certifications",
   },
+  {
+    icon: Landmark,
+    title: "HSBC Trade Finance Facility",
+    subtitle: "Strong Financial Partnership",
+    description: "Backed by HSBC in Hong Kong, through our entity Matrix Platform, we offer flexible payment terms, structured credit facilities, and secure transactions to support your business growth.",
+    gradient: "from-rose-500 to-pink-500",
+    image: "/assets/upsc/hsbc.png",
+    link: "/what-we-do#hsbc-trade-finance-facility",
+  },
+  {
+    icon: EuIcon,
+    title: "EU-Based Import & Invoicing",
+    subtitle: "Direct Eu Market Access",
+    description: "Through our registered entity Matrix Design d.o.o. in Slovenia, we enable direct EU imports. local invoicing in EUR and Simplified compliance for European buyers.",
+    gradient: "from-blue-900 to-blue-900",
+    image: "/assets/upsc/european-union.png",
+    link: "/what-we-do#eu-based-import-&-invoicing",
+  },
+  {
+    icon: Box,
+    title: "Flexible MOQ Starting From 500 Pcs.",
+    subtitle: "Flexible. Scalable. Reliable.",
+    description: "Designed for growing brands backed by fully integrated manufacturing, not outsourced capacity",
+    gradient: "from-rose-500 to-pink-500",
+    image: "/assets/upsc/moq.png",
+    link: "/what-we-do#flexible-moq-starting-from-500-pcs.",
+  },
+
+  {
+    icon: Lightbulb,
+    title: "Brand Owners Mindset",
+    subtitle: "We think like your end customer.",
+    description: "As active brand operators across European markets, we understand product performance, pricing, and positioning — delivering what truly sells.",
+    gradient: "from-amber-500 to-orange-500",
+    image: "/assets/upsc/Brand-Owners-Mindset.jpg",
+    link: "/what-we-do#brand-owners-mindset",
+  },
+  {
+    icon: Palette,
+    title: "Design to Reality",
+    subtitle: "From concept to scalable production",
+    description: "Our in-house design and development teams transform ideas into market-ready products with precision, speed, and technical expertise.",
+    gradient: "from-rose-500 to-pink-500",
+    image: "/assets/upsc/design-to-reality.jpg",
+    link: "/what-we-do#design-to-reality",
+  }
 ]
