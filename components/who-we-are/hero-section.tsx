@@ -2,27 +2,40 @@
 
 import { useEffect, useState } from "react"
 import Image from "next/image"
+import { Landmark, Globe, Factory } from "lucide-react"
+import { EuIcon } from "@/components/eu-icon"
+import { SpoolIcon } from "@/components/spool-icon"
 
 const stats = [
   {
+    icon: Landmark,
     title: "HSBC",
     subtitle: "Backed Trade Finance",
-    desc: "LC operations via Hong Kong"
+    desc: "Through our Matrix Platform entity in Hong Kong we offer flexible payment terms and secure global transactions."
   },
   {
-    title: "EU Entity",
-    subtitle: "Direct Import into EU",
-    desc: "Matrix Design d.o.o. — Slovenia"
+    icon: EuIcon,
+    title: "EU Based",
+    subtitle: "Import and Invoicing",
+    desc: "Matrix Design d.o.o. Slovenia enabling direct EU imports local EUR invoicing and simplified compliance."
   },
   {
-    title: "FOB · DDP",
-    subtitle: "EU · UK · USA",
-    desc: "Door-to-door delivery"
+    icon: Globe,
+    title: "Flexible Shipping",
+    subtitle: "",
+    desc: "FOB at origin or full DDP delivery across EU UK and USA built around your needs."
   },
   {
-    title: "6",
-    subtitle: "Owned Manufacturing Units",
-    desc: "Across 3 countries"
+    icon: Factory,
+    title: "Owned",
+    subtitle: "Manufacturing Platform",
+    desc: "6+ owned units across 3 countries with full control over quality capacity and delivery."
+  },
+  {
+    icon: SpoolIcon,
+    title: "Own Integrated",
+    subtitle: "Fabric Platform",
+    desc: "Over 3 million meters monthly with full control from R&D to finishing ensuring consistent quality and faster development."
   }
 ];
 
@@ -50,7 +63,7 @@ export function WhoWeAreHeroSection() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 h-full flex items-center">
+      <div className="relative z-10 h-full flex items-center pt-40">
         <div className="container mx-auto px-6 lg:px-12">
           <div className="max-w-4xl">
             {/* Main Heading */}
@@ -58,11 +71,14 @@ export function WhoWeAreHeroSection() {
               className={`transition-all duration-1000 uppercase ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
                 }`}
             >
-              <span className="block text-4xl sm:text-4xl md:text-5xl lg:text-7xl font-bold text-white leading-[1.1] tracking-tight">
-                BUILT TO <span className="text-sky-500">MANUFACTURE</span>
+              <span className="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] tracking-tight">
+                BUILT ON <span className="text-[#0ea5e9]">DECADES OF</span>
               </span>
-              <span className="block text-4xl sm:text-4xl md:text-5xl lg:text-7xl font-bold text-white leading-[1.1] tracking-tight">
-                <span className="text-sky-500">STRUCTURED</span> TO DELIVER
+              <span className="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-[#0ea5e9] leading-[1.1] tracking-tight">
+                MANUFACTURING
+              </span>
+              <span className="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] tracking-tight">
+                EXPERIENCE
               </span>
             </h1>
 
@@ -72,28 +88,9 @@ export function WhoWeAreHeroSection() {
                 }`}
             >
               <p className="text-lg md:text-xl lg:text-2xl text-slate-200 font-medium leading-relaxed">
-                Matrix Platform Is An Integrated Manufacturing Group That Owns Its Fabric Supply, Controls Its Production & Delivers Globally
+                From a 1989 printing house to a global manufacturing platform, Matrix connects China’s textile strength with South Asia’s production precision delivering end-to-end solutions for global retail brands.
               </p>
             </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Bottom Stats Cards */}
-      <div className="absolute bottom-6 lg:bottom-12 left-0 right-0 z-20 w-full">
-        <div className="w-full overflow-x-auto hide-scrollbar snap-x snap-mandatory pb-4 md:pb-0">
-          <div className="flex md:grid md:grid-cols-2 lg:grid-cols-4 gap-4 px-6 lg:px-12 md:container md:mx-auto w-max md:w-auto">
-            {stats.map((stat, i) => (
-              <div
-                key={i}
-                className={`w-[280px] sm:w-[320px] md:w-auto bg-[#0d1420]/80 backdrop-blur-md border border-sky-500/30 rounded-xl p-6 transition-all duration-1000 flex-shrink-0 snap-start ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
-                style={{ transitionDelay: `${600 + (i * 100)}ms` }}
-              >
-                <h3 className="text-white font-bold text-xl mb-3">{stat.title}</h3>
-                <p className="text-slate-200 text-sm font-semibold mb-1.5">{stat.subtitle}</p>
-                <p className="text-slate-400 text-xs">{stat.desc}</p>
-              </div>
-            ))}
           </div>
         </div>
       </div>

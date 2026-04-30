@@ -7,6 +7,7 @@ import CategoryCard from "./CategoryCard"
 import { categories } from "@/lib/data"
 import { Reveal } from "@/components/Reveal"
 import Link from "next/link"
+import Image from "next/image"
 import { buttonVariants } from "./ui/button"
 import { cn } from "@/lib/utils"
 
@@ -100,29 +101,39 @@ export default function CategorySection() {
 
   // Shared CTA card
   const CTACard = (
-    <div className="flex-shrink-0 w-[85vw] sm:w-[350px] md:w-[500px] lg:w-[600px] h-full rounded-[2.5rem] bg-[#111823] border border-white/10 p-4 md:p-10 flex flex-col justify-center items-center relative overflow-hidden group">
-      <div className="relative z-10 space-y-8">
-        <div className="space-y-4">
+    <div className="flex-shrink-0 w-[85vw] sm:w-[350px] md:w-[500px] lg:w-[600px] h-full rounded-bl-lg rounded-br-lg bg-[#111823] border border-white/10 p-4 md:p-10 flex flex-col justify-center items-center relative overflow-hidden group">
+      <Image
+        src="/assets/categories/category-cta.png"
+        alt="CTA Background"
+        fill
+        className="object-cover transition-transform duration-1000 group-hover:scale-105"
+      />
+      <div className="absolute inset-0 bg-[#0d1420]/70 backdrop-blur-[2px] transition-all duration-500 group-hover:bg-[#0d1420]/50 z-0" />
+
+      <div className="relative z-10 space-y-8 w-full">
+        <div className="space-y-4 text-center md:text-left">
           <h3 className="text-2xl md:text-4xl lg:text-5xl font-semibold text-white leading-[1.1] tracking-tight">
-            Ready to Scale Your <span className="text-sky-500">Next program?</span>
+            Ready to Scale Your <span className="text-sky-400">Next program?</span>
           </h3>
-          <p className="text-slate-400 text-base md:text-lg max-w-xl leading-relaxed">
+          <p className="text-slate-300 text-base md:text-lg max-w-xl leading-relaxed mx-auto md:mx-0 font-medium">
             Our integrated design and merchandising teams engineer concepts into production-ready collections with complete technical precision.
           </p>
         </div>
-        <Link
-          href="/contact"
-          className={cn(buttonVariants({
-            variant: "matrix",
-            size: "lg",
-          }), "shadow-xl shadow-sky-500/20 active:scale-95 w-fit")}
-        >
-          Start a conversation
-          <ArrowRight className="w-6 h-6 transition-transform group-hover/btn:translate-x-2" />
-        </Link>
+        <div className="flex justify-center md:justify-start">
+          <Link
+            href="/contact"
+            className={cn(buttonVariants({
+              variant: "matrix",
+              size: "lg",
+            }), "shadow-xl shadow-sky-500/20 active:scale-95 w-fit group/btn")}
+          >
+            Start a conversation
+            <ArrowRight className="w-6 h-6 transition-transform group-hover/btn:translate-x-2" />
+          </Link>
+        </div>
       </div>
-      <div className="absolute top-[-10%] right-[-10%] w-[400px] h-[400px] bg-sky-500/5 blur-[120px] rounded-full -z-0 group-hover:bg-sky-500/10 transition-colors duration-700" />
-      <div className="absolute bottom-[-20%] left-[-10%] w-[500px] h-[500px] bg-sky-500/10 blur-[150px] rounded-full -z-0" />
+      <div className="absolute top-[-10%] right-[-10%] w-[400px] h-[400px] bg-sky-500/20 blur-[120px] rounded-full z-0 group-hover:bg-sky-500/30 transition-colors duration-700 pointer-events-none" />
+      <div className="absolute bottom-[-20%] left-[-10%] w-[500px] h-[500px] bg-sky-500/10 blur-[150px] rounded-full z-0 pointer-events-none" />
     </div>
   )
 

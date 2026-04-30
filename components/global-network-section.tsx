@@ -144,7 +144,7 @@ export function GlobalNetworkSection() {
             <Geographies geography={geoUrl}>
               {({ geographies }) =>
                 geographies.map((geo) => (
-                  <Geography key={geo.rsmKey} geography={geo} fill="#151d29" stroke="#2d3a4b" strokeWidth={0.5} style={{ default: { outline: "none" }, hover: { outline: "none" }, pressed: { outline: "none" } }} />
+                  <Geography key={geo.rsmKey} geography={geo} fill="#2772e2ff" stroke="#e2f41fff" strokeWidth={0.5} style={{ default: { outline: "none" }, hover: { outline: "none" }, pressed: { outline: "none" } }} />
                 ))
               }
             </Geographies>

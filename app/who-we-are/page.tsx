@@ -1,6 +1,7 @@
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { WhoWeAreHeroSection } from "@/components/who-we-are/hero-section"
+import { WhoWeAreStatsCardsSection } from "@/components/who-we-are/stats-cards-section"
 import { WhoWeAreExcellenceSection } from "@/components/who-we-are/excellence-section"
 import { WhoWeAreLegacySection } from "@/components/who-we-are/legacy-section"
 import { WhoWeAreTimelineSection } from "@/components/who-we-are/timeline-section"
@@ -12,6 +13,7 @@ export default function Page() {
         <main className="min-h-screen bg-background">
             <Header />
             <WhoWeAreHeroSection />
+            <WhoWeAreStatsCardsSection />
             <WhoWeAreExcellenceSection />
             <WhoWeAreLegacySection />
             <GlobalNetworkSection />

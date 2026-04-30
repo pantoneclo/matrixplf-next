@@ -6,7 +6,7 @@ const stats = [
   {
     value: 6,
     suffix: "",
-    label: "Manufacturing Units Across",
+    label: "Manufacturing Units",
     sublabel: "3 Countries",
   },
   //   {
@@ -32,13 +32,7 @@ const stats = [
     suffix: "+",
     label: "International",
     sublabel: "Certifications",
-  },
-  {
-    value: 0,
-    suffix: "HSBC",
-    label: "Backed Trade Finance",
-    sublabel: "",
-  },
+  }
 ]
 
 function AnimatedCounter({

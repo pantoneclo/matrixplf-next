@@ -76,7 +76,7 @@ export default function WhatWeDoPage() {
                                             </div>
                                             <span className="text-white text-[9px] md:text-[11px] lg:text-[13px] font-bold uppercase tracking-[0.2em]">{service.subtitle}</span>
                                         </div>
-                                        <h3 className="text-4xl sm:text-5xl md:text-7xl font-bold tracking-tight text-white leading-tight">
+                                        <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white leading-tight">
                                             {isEven ? (
                                                 <>
                                                     {firstPart}<br />
