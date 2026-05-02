@@ -46,6 +46,7 @@ export function ManufacturingSection() {
           src="/assets/pages/Production-strength.png"
           alt="Garment factory workers"
           fill
+          sizes="100vw"
           className={`object-cover transition-transform duration-[15s] ease-out ${isVisible ? "scale-110" : "scale-100"
             }`}
           priority
@@ -67,17 +68,17 @@ export function ManufacturingSection() {
       {/* Floating accent elements */}
       <div className={`absolute top-20 right-20 w-72 h-72 bg-sky-500/10 rounded-full blur-3xl transition-all duration-1000 ${isVisible ? "opacity-100" : "opacity-0"
         }`} />
-      <div className={`absolute bottom-20 left-20 w-96 h-96 bg-sky-600/10 rounded-full blur-3xl transition-all duration-1000 delay-300 ${isVisible ? "opacity-100" : "opacity-0"
+      <div className={`absolute bottom-20 left-20 w-96 h-96 bg-sky-500/10 rounded-full blur-3xl transition-all duration-1000 delay-300 ${isVisible ? "opacity-100" : "opacity-0"
         }`} />
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-6 lg:px-12 py-12 lg:py-16">
         {/* Section Badge - Highlighted */}
         <div
-          className={`inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-sky-600/40 to-sky-500/30 border-2 border-sky-400/60 rounded-full mb-6 transition-all duration-700 shadow-lg shadow-sky-500/20 ${isVisible ? "opacity-100 translate-y-0 animate-pulse" : "opacity-0 translate-y-4"
+          className={`inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-sky-500/40 to-sky-500/30 border-2 border-sky-500/60 rounded-full mb-6 transition-all duration-700 shadow-lg shadow-sky-500/20 ${isVisible ? "opacity-100 translate-y-0 animate-pulse" : "opacity-0 translate-y-4"
             }`}
         >
-          <Factory className="w-5 h-5 text-sky-300" />
+          <Factory className="w-5 h-5 text-sky-500" />
           <span className="text-white text-base font-bold tracking-wider uppercase">Own Manufacturing Unit</span>
         </div>
 
@@ -89,7 +90,7 @@ export function ManufacturingSection() {
           >
             Driven by Real
             <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-sky-600">Manufacturing</span> Strength
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-500 to-sky-500">Manufacturing</span> Strength
           </h2>
 
           <p
@@ -106,8 +107,8 @@ export function ManufacturingSection() {
             }`}
         >
           <div className="flex items-center gap-3">
-            <div className="w-12 h-12 rounded-xl bg-sky-500/20 border border-sky-400/30 flex items-center justify-center">
-              <MapPin className="w-5 h-5 text-sky-400" />
+            <div className="w-12 h-12 rounded-xl bg-sky-500/20 border border-sky-500/30 flex items-center justify-center">
+              <MapPin className="w-5 h-5 text-sky-500" />
             </div>
             <div>
               <p className="text-2xl font-bold text-white">6</p>
@@ -115,8 +116,8 @@ export function ManufacturingSection() {
             </div>
           </div>
           <div className="flex items-center gap-3">
-            <div className="w-12 h-12 rounded-xl bg-sky-500/20 border border-sky-400/30 flex items-center justify-center">
-              <Factory className="w-5 h-5 text-sky-400" />
+            <div className="w-12 h-12 rounded-xl bg-sky-500/20 border border-sky-500/30 flex items-center justify-center">
+              <Factory className="w-5 h-5 text-sky-500" />
             </div>
             <div>
               <p className="text-2xl font-bold text-white">6</p>
@@ -124,8 +125,8 @@ export function ManufacturingSection() {
             </div>
           </div>
           <div className="flex items-center gap-3">
-            <div className="w-12 h-12 rounded-xl bg-sky-500/20 border border-sky-400/30 flex items-center justify-center">
-              <Users className="w-5 h-5 text-sky-400" />
+            <div className="w-12 h-12 rounded-xl bg-sky-500/20 border border-sky-500/30 flex items-center justify-center">
+              <Users className="w-5 h-5 text-sky-500" />
             </div>
             <div>
               <p className="text-2xl font-bold text-white">5000+</p>
@@ -133,8 +134,8 @@ export function ManufacturingSection() {
             </div>
           </div>
           <div className="flex items-center gap-3">
-            <div className="w-12 h-12 rounded-xl bg-sky-500/20 border border-sky-400/30 flex items-center justify-center">
-              <Award className="w-5 h-5 text-sky-400" />
+            <div className="w-12 h-12 rounded-xl bg-sky-500/20 border border-sky-500/30 flex items-center justify-center">
+              <Award className="w-5 h-5 text-sky-500" />
             </div>
             <div>
               <p className="text-2xl font-bold text-white">15+</p>
@@ -147,7 +148,7 @@ export function ManufacturingSection() {
         <div className="grid md:grid-cols-2 gap-6 lg:gap-8 w-full">
           {/* Bangladesh Card */}
           <div
-            className={`group relative bg-gradient-to-br from-white/15 to-white/5 backdrop-blur-xl rounded-3xl p-8 lg:p-10 border border-white/20 hover:border-sky-400/40 transition-all duration-500 delay-400 cursor-pointer ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
+            className={`group relative bg-gradient-to-br from-white/15 to-white/5 backdrop-blur-xl rounded-3xl p-8 lg:p-10 border border-white/20 hover:border-sky-500/40 transition-all duration-500 delay-400 cursor-pointer ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
               }`}
           >
             {/* Glow effect on hover */}
@@ -163,7 +164,7 @@ export function ManufacturingSection() {
                     Bangladesh
                   </h3>
                 </div>
-                <ChevronRight className="w-5 h-5 text-white/40 group-hover:text-sky-400 group-hover:translate-x-1 transition-all duration-300" />
+                <ChevronRight className="w-5 h-5 text-white/40 group-hover:text-sky-500 group-hover:translate-x-1 transition-all duration-300" />
               </div>
 
               <p className="text-white/70 text-base lg:text-lg mb-8 leading-relaxed">
@@ -179,10 +180,10 @@ export function ManufacturingSection() {
                   >
                     <a
                       href={company.url}
-                      className="group/link inline-flex items-center gap-2 px-6 py-3 bg-slate-900/40 hover:bg-slate-900/60 text-white hover:text-sky-300 text-lg font-medium rounded-lg transition-all duration-150 cursor-pointer border border-white/10 hover:border-sky-500/50 hover:shadow-[0_0_15px_rgba(14,165,233,0.3)]"
+                      className="group/link inline-flex items-center gap-2 px-6 py-3 bg-slate-900/40 hover:bg-slate-900/60 text-white hover:text-sky-500 text-lg font-medium rounded-lg transition-all duration-150 cursor-pointer border border-white/10 hover:border-sky-500/50 hover:shadow-[0_0_15px_rgba(14,165,233,0.3)]"
                     >
                       {company.name}
-                      <ArrowUpRight className="w-4 h-4 text-sky-400 opacity-0 group-hover/link:opacity-100 transition-all duration-150" />
+                      <ArrowUpRight className="w-4 h-4 text-sky-500 opacity-0 group-hover/link:opacity-100 transition-all duration-150" />
                     </a>
                   </div>
                 ))}
@@ -192,7 +193,7 @@ export function ManufacturingSection() {
 
           {/* Sri Lanka Card */}
           <div
-            className={`group relative bg-gradient-to-br from-white/15 to-white/5 backdrop-blur-xl rounded-3xl p-8 lg:p-10 border border-white/20 hover:border-sky-400/40 transition-all duration-500 delay-500 cursor-pointer ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
+            className={`group relative bg-gradient-to-br from-white/15 to-white/5 backdrop-blur-xl rounded-3xl p-8 lg:p-10 border border-white/20 hover:border-sky-500/40 transition-all duration-500 delay-500 cursor-pointer ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
               }`}
           >
             {/* Glow effect on hover */}
@@ -208,7 +209,7 @@ export function ManufacturingSection() {
                     Sri Lanka
                   </h3>
                 </div>
-                <ChevronRight className="w-5 h-5 text-white/40 group-hover:text-sky-400 group-hover:translate-x-1 transition-all duration-300" />
+                <ChevronRight className="w-5 h-5 text-white/40 group-hover:text-sky-500 group-hover:translate-x-1 transition-all duration-300" />
               </div>
 
               <p className="text-white/70 text-base lg:text-lg mb-8 leading-relaxed">
@@ -225,10 +226,10 @@ export function ManufacturingSection() {
                   >
                     <a
                       href={company.url}
-                      className="group/link inline-flex items-center gap-2 px-6 py-3 bg-slate-900/40 hover:bg-slate-900/60 text-white hover:text-sky-300 text-lg font-medium rounded-lg transition-all duration-150 cursor-pointer border border-white/10 hover:border-sky-500/50 hover:shadow-[0_0_15px_rgba(14,165,233,0.3)]"
+                      className="group/link inline-flex items-center gap-2 px-6 py-3 bg-slate-900/40 hover:bg-slate-900/60 text-white hover:text-sky-500 text-lg font-medium rounded-lg transition-all duration-150 cursor-pointer border border-white/10 hover:border-sky-500/50 hover:shadow-[0_0_15px_rgba(14,165,233,0.3)]"
                     >
                       {company.name}
-                      <ArrowUpRight className="w-4 h-4 text-sky-400 opacity-0 group-hover/link:opacity-100 transition-all duration-150" />
+                      <ArrowUpRight className="w-4 h-4 text-sky-500 opacity-0 group-hover/link:opacity-100 transition-all duration-150" />
                     </a>
                   </div>
                 ))}

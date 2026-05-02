@@ -24,8 +24,8 @@ function FeatureCard({ title, subtitle, body }: FeaturedCard) {
   return (
     <div className="bg-white/5 border border-white/10 rounded-2xl p-10 lg:p-12 text-white flex flex-col justify-start min-h-[350px] backdrop-blur-sm">
       <h3 className="text-3xl font-bold mb-1">{title}</h3>
-      <h4 className="text-3xl font-bold text-sky-400 mb-6">{subtitle}</h4>
-      <div className="w-12 h-1 bg-sky-400/30 mb-8" />
+      <h4 className="text-3xl font-bold text-sky-500 mb-6">{subtitle}</h4>
+      <div className="w-12 h-1 bg-sky-500/30 mb-8" />
       <p className="text-slate-400 leading-relaxed text-[15px]">{body}</p>
     </div>
   )
@@ -117,8 +117,8 @@ export function ProductGallery({ category }: ProductGalleryProps) {
         <div className="text-center mb-20 max-w-4xl mx-auto">
           <Reveal>
             <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-white/5 rounded-full mb-6 border border-white/10">
-              <div className="w-1.5 h-1.5 bg-sky-400 rounded-full" />
-              <span className="text-sky-400 text-[10px] font-bold uppercase tracking-widest">
+              <div className="w-1.5 h-1.5 bg-sky-500 rounded-full" />
+              <span className="text-sky-500 text-[10px] font-bold uppercase tracking-widest">
                 Why Matrix
               </span>
             </div>

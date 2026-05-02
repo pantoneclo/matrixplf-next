@@ -149,11 +149,11 @@ export function TeamSection() {
               }`}
           >
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-2">
-              Meet The <span className="text-sky-400">Team</span>
+              Meet The <span className="text-sky-500">Team</span>
             </h2>
             <button
               onClick={() => setShowTeamModal(true)}
-              className="inline-flex items-center gap-1 text-sky-400 hover:text-sky-300 text-sm font-medium underline underline-offset-4 transition-colors group"
+              className="inline-flex items-center gap-1 text-sky-500 hover:text-sky-500 text-sm font-medium underline underline-offset-4 transition-colors group"
             >
               More information on the core team
               <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -175,7 +175,7 @@ export function TeamSection() {
                   style={{ transitionDelay: `${300 + index * 50}ms` }}
                   title={`${member.name} - ${member.role}`}
                 >
-                  <div className="relative w-14 h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 rounded-full overflow-hidden ring-2 ring-sky-500/70 ring-offset-2 ring-offset-slate-800 group-hover:ring-sky-400 group-hover:ring-4 group-hover:scale-110 transition-all duration-300 shadow-lg shadow-black/30">
+                  <div className="relative w-14 h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 rounded-full overflow-hidden ring-2 ring-sky-500/70 ring-offset-2 ring-offset-slate-800 group-hover:ring-sky-500 group-hover:ring-4 group-hover:scale-110 transition-all duration-300 shadow-lg shadow-black/30">
                     <Image
                       src={member.image}
                       alt={member.name}
@@ -221,7 +221,7 @@ export function TeamSection() {
               </div>
               <div>
                 <h3 className="text-xl font-bold text-white">{selectedMember.name}</h3>
-                <p className="text-sky-400 font-medium text-sm">{selectedMember.role}</p>
+                <p className="text-sky-500 font-medium text-sm">{selectedMember.role}</p>
                 <p className="text-slate-400 text-xs">{selectedMember.location}</p>
               </div>
             </div>
@@ -231,7 +231,7 @@ export function TeamSection() {
 
             {/* Actions */}
             <div className="flex gap-3">
-              <Button className="flex-1 bg-sky-600 hover:bg-sky-500 text-white gap-2 text-sm">
+              <Button className="flex-1 bg-sky-500 hover:bg-sky-500 text-white gap-2 text-sm">
                 <Mail className="w-4 h-4" />
                 Contact
               </Button>
@@ -262,7 +262,7 @@ export function TeamSection() {
               <X className="w-4 h-4" />
             </button>
 
-            <h3 className="text-2xl font-bold text-white mb-6">Our <span className="text-sky-400">Core Team</span></h3>
+            <h3 className="text-2xl font-bold text-white mb-6">Our <span className="text-sky-500">Core Team</span></h3>
 
             {/* Team Grid */}
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -284,7 +284,7 @@ export function TeamSection() {
                     />
                   </div>
                   <div className="min-w-0">
-                    <h4 className="font-semibold text-white text-sm truncate group-hover:text-sky-400 transition-colors">
+                    <h4 className="font-semibold text-white text-sm truncate group-hover:text-sky-500 transition-colors">
                       {member.name}
                     </h4>
                     <p className="text-xs text-slate-400 truncate">{member.role}</p>

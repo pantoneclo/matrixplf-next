@@ -101,19 +101,19 @@ export default function CategorySection() {
 
   // Shared CTA card
   const CTACard = (
-    <div className="flex-shrink-0 w-[85vw] sm:w-[350px] md:w-[500px] lg:w-[600px] h-full rounded-bl-lg rounded-br-lg bg-[#111823] border border-white/10 p-4 md:p-10 flex flex-col justify-center items-center relative overflow-hidden group">
+    <div className="flex-shrink-0 w-[85vw] sm:w-[350px] md:w-[500px] lg:w-[600px] h-full rounded-bl-lg rounded-br-lg bg-[#111823] border border-white/10 p-4 md:p-10 flex flex-col justify-end items-center relative overflow-hidden group">
       <Image
         src="/assets/categories/category-cta.png"
         alt="CTA Background"
         fill
         className="object-cover transition-transform duration-1000 group-hover:scale-105"
       />
-      <div className="absolute inset-0 bg-[#0d1420]/70 backdrop-blur-[2px] transition-all duration-500 group-hover:bg-[#0d1420]/50 z-0" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent transition-all duration-500 z-0" />
 
       <div className="relative z-10 space-y-8 w-full">
         <div className="space-y-4 text-center md:text-left">
           <h3 className="text-2xl md:text-4xl lg:text-5xl font-semibold text-white leading-[1.1] tracking-tight">
-            Ready to Scale Your <span className="text-sky-400">Next program?</span>
+            Ready to Scale Your <span className="text-sky-500">Next program?</span>
           </h3>
           <p className="text-slate-300 text-base md:text-lg max-w-xl leading-relaxed mx-auto md:mx-0 font-medium">
             Our integrated design and merchandising teams engineer concepts into production-ready collections with complete technical precision.
@@ -140,24 +140,41 @@ export default function CategorySection() {
   return (
     <div className="relative bg-[#0d1420]">
       {/* Introduction Header - Scrolls Naturally with the page */}
-      <div className="container mx-auto px-6 lg:px-12 pt-32 pb-10 relative z-20">
-        <Reveal>
-          <div className="max-w-4xl">
-            <div className="inline-flex items-center gap-2 px-3 py-1 bg-sky-500/10 rounded-full mb-6 border border-sky-500/20">
-              <div className="w-1.5 h-1.5 bg-sky-500 rounded-full animate-pulse" />
-              <span className="text-sky-400 text-[10px] font-bold uppercase tracking-widest">
-                Our Capabilities
-              </span>
+      <div className="relative overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/assets/categories/banner.jpeg"
+            alt="Categories Banner"
+            fill
+            className="object-cover"
+            priority
+            sizes="100vw"
+          />
+          {/* Gradient Overlays for smooth transition and readability */}
+          <div className="absolute inset-0 bg-gradient-to-b from-[#0d1420] via-transparent to-[#0d1420]" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0d1420] via-transparent to-transparent" />
+        </div>
+
+        <div className="container mx-auto px-6 lg:px-12 pt-32 pb-16 relative z-20">
+          <Reveal>
+            <div className="max-w-4xl">
+              <div className="inline-flex items-center gap-2 px-3 py-1 bg-sky-500/10 rounded-full mb-6 border border-sky-500/20">
+                <div className="w-1.5 h-1.5 bg-sky-500 rounded-full animate-pulse" />
+                <span className="text-sky-500 text-[10px] font-bold uppercase tracking-widest">
+                  Our Capabilities
+                </span>
+              </div>
+              <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-[1.1] tracking-tight">
+                <span className="text-sky-500">Fashion-led</span> product<br />
+                Categories.
+              </h2>
+              <p className="text-base lg:text-lg text-slate-200 font-medium max-w-xl leading-relaxed">
+                Explore our core product categories across loungewear, nightwear, innerwear &amp; essentials, activewear, sweatwear, denim, and swimwear developed to combine trend relevance, technical capability, and scalable production.
+              </p>
             </div>
-            <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-[1.1] tracking-tight">
-              <span className="text-sky-500">Fashion-led</span> product<br />
-              Categories.
-            </h2>
-            <p className="text-base lg:text-lg text-slate-400 font-medium max-w-xl leading-relaxed">
-              Explore our core product categories across loungewear, nightwear, innerwear &amp; essentials, activewear, sweatwear, denim, and swimwear developed to combine trend relevance, technical capability, and scalable production.
-            </p>
-          </div>
-        </Reveal>
+          </Reveal>
+        </div>
       </div>
 
       {/* ─── MOBILE: Native horizontal swipe — no scroll-jacking, page scrolls freely ─── */}

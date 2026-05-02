@@ -55,6 +55,7 @@ export function WhoWeAreHeroSection() {
           alt="Manufacturing operations"
           fill
           priority
+          sizes="100vw"
           loading="eager"
           className="object-cover"
         />

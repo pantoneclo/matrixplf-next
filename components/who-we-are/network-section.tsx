@@ -49,8 +49,8 @@ export function WhoWeAreNetworkSection() {
             className={`inline-flex items-center gap-2 px-4 py-2 bg-sky-500/10 border border-sky-500/20 rounded-full mb-6 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
               }`}
           >
-            <Map className="w-4 h-4 text-sky-400" />
-            <span className="text-sky-400 text-sm font-bold tracking-wide uppercase">Global Network</span>
+            <Map className="w-4 h-4 text-sky-500" />
+            <span className="text-sky-500 text-sm font-bold tracking-wide uppercase">Global Network</span>
           </div>
 
           <h2
@@ -83,14 +83,14 @@ export function WhoWeAreNetworkSection() {
                 <div className="text-sm font-semibold text-sky-500 uppercase tracking-widest mb-2">
                   {loc.role}
                 </div>
-                <h3 className="text-3xl font-bold text-white mb-4 group-hover:text-sky-50 transition-colors">
+                <h3 className="text-3xl font-bold text-white mb-4 group-hover:text-sky-500 transition-colors">
                   {loc.country}
                 </h3>
                 <p className="text-zinc-400 leading-relaxed mb-8">
                   {loc.desc}
                 </p>
 
-                <div className="mt-auto flex items-center text-zinc-500 group-hover:text-sky-400 transition-colors text-sm font-bold">
+                <div className="mt-auto flex items-center text-zinc-500 group-hover:text-sky-500 transition-colors text-sm font-bold">
                   Explore capability
                   <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-2 transition-transform" />
                 </div>

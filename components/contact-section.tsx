@@ -26,7 +26,7 @@ const offices = [
     city2: "Dhaka",
     type: "Headquarters",
     address1: "Unit 1606, 16/F Comweb Plaza12 Cheung Yue StreetLai Chi Kok, Kowloon, Hong Kong",
-    address2: "House 163, Lane 1, Baridhara DOHS, Gulshan, Dhaka, Bangladesh",
+    address2: "House # 41, Road #92, Gulshan-2, Dhaka, Bangladesh.",
     phone1: "+386 30 796 092",
     email1: "shohel@matrixapparels.com"
   },
@@ -167,43 +167,42 @@ export function ContactSection() {
 
               <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-5">
-                  <div className="grid md:grid-cols-2 gap-5">
-                    <FormField
-                      control={form.control}
-                      name="name"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel className="block text-xs font-bold text-slate-200 mb-2">Name</FormLabel>
-                          <FormControl>
-                            <Input
-                              placeholder="Your name"
-                              className="w-full px-4 h-11 bg-transparent border border-slate-600 rounded-lg text-white placeholder:text-slate-500 focus:border-[#38bdf8] focus:ring-1 focus:ring-[#38bdf8] outline-none transition-all"
-                              {...field}
-                            />
-                          </FormControl>
-                          <FormMessage className="text-[10px] text-red-400" />
-                        </FormItem>
-                      )}
-                    />
-                    <FormField
-                      control={form.control}
-                      name="email"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel className="block text-xs font-bold text-slate-200 mb-2">Email</FormLabel>
-                          <FormControl>
-                            <Input
-                              type="email"
-                              placeholder="you@company.com"
-                              className="w-full px-4 h-11 bg-transparent border border-slate-600 rounded-lg text-white placeholder:text-slate-500 focus:border-[#38bdf8] focus:ring-1 focus:ring-[#38bdf8] outline-none transition-all"
-                              {...field}
-                            />
-                          </FormControl>
-                          <FormMessage className="text-[10px] text-red-400" />
-                        </FormItem>
-                      )}
-                    />
-                  </div>
+                  <FormField
+                    control={form.control}
+                    name="name"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel className="block text-xs font-bold text-slate-200 mb-2">Name</FormLabel>
+                        <FormControl>
+                          <Input
+                            placeholder="Your name"
+                            className="w-full px-4 h-11 bg-transparent border border-slate-600 rounded-lg text-white placeholder:text-slate-500 focus:border-[#38bdf8] focus:ring-1 focus:ring-[#38bdf8] outline-none transition-all"
+                            {...field}
+                          />
+                        </FormControl>
+                        <FormMessage className="text-[10px] text-red-400" />
+                      </FormItem>
+                    )}
+                  />
+                  <FormField
+                    control={form.control}
+                    name="email"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel className="block text-xs font-bold text-slate-200 mb-2">Email</FormLabel>
+                        <FormControl>
+                          <Input
+                            type="email"
+                            placeholder="you@company.com"
+                            className="w-full px-4 h-11 bg-transparent border border-slate-600 rounded-lg text-white placeholder:text-slate-500 focus:border-[#38bdf8] focus:ring-1 focus:ring-[#38bdf8] outline-none transition-all"
+                            {...field}
+                          />
+                        </FormControl>
+                        <FormMessage className="text-[10px] text-red-400" />
+                      </FormItem>
+                    )}
+                  />
+
 
                   <FormField
                     control={form.control}

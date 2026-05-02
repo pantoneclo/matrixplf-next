@@ -19,7 +19,7 @@ const teamMembers = [
     role: "Director",
     email: "tina@matrixapparels.com",
     linkedin: "https://www.linkedin.com/in/tina-cocej-b78094214/",
-    image: "/assets/bosses/tina.png",
+    image: "/assets/bosses/Tina.jpeg",
   },
   {
     id: 3,
@@ -27,7 +27,7 @@ const teamMembers = [
     role: "Director, Global Sales",
     email: "michaelhayles@matrixapparels.com",
     linkedin: "https://www.linkedin.com/in/michael-hayles-60888722/",
-    image: "/assets/bosses/michael.png",
+    image: "/assets/bosses/mike.jpeg",
   },
   {
     id: 4,
@@ -35,7 +35,7 @@ const teamMembers = [
     role: "Director, Commercial",
     email: "timokaranko@matrixapparels.com",
     linkedin: "https://www.linkedin.com/in/timo-karanko/",
-    image: "/assets/bosses/timo.png",
+    image: "/assets/bosses/Timo.jpeg",
   }
 ]
 
@@ -68,7 +68,8 @@ export function ConnectUs() {
                     src={member.image}
                     alt={member.name}
                     fill
-                    className="object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-105"
+                    sizes="(max-width: 768px) 50vw, 25vw"
+                    className="object-cover transition-all duration-700 group-hover:grayscale-0 group-hover:scale-105"
                   />
                   {/* Subtle vignette */}
                   <div className="absolute inset-0 bg-linear-to-t from-black/20 to-transparent opacity-60" />
@@ -81,7 +82,7 @@ export function ConnectUs() {
                     href={member.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="absolute top-3 right-3 sm:top-4 sm:right-4 lg:top-5 lg:right-5 w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-slate-700 flex items-center justify-center text-slate-400 hover:text-sky-400 hover:bg-slate-600 transition-all"
+                    className="absolute top-3 right-3 sm:top-4 sm:right-4 lg:top-5 lg:right-5 w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-slate-700 flex items-center justify-center text-slate-400 hover:text-sky-500 hover:bg-slate-600 transition-all"
                   >
                     <Linkedin className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                   </a>
@@ -92,7 +93,7 @@ export function ConnectUs() {
                     {member.role}
                   </p>
                   {member.email && (
-                    <a href={`mailto:${member.email}`} className="text-sky-400 text-[9px] sm:text-[10px] md:text-[12px] lg:text-[13px] font-semibold mt-1 block break-all lowercase transition-colors group-hover:text-sky-300 leading-snug">
+                    <a href={`mailto:${member.email}`} className="text-sky-500 text-[9px] sm:text-[10px] md:text-[12px] lg:text-[13px] font-semibold mt-1 block break-all lowercase transition-colors group-hover:text-sky-500 leading-snug">
                       {member.email}
                     </a>
                   )}

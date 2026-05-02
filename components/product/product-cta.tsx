@@ -23,7 +23,7 @@ export function ProductCTA({ categoryName }: ProductCTAProps) {
             <div className="max-w-2xl">
               <Reveal>
                 <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-                  Ready to develop a <span className="text-sky-400">{categoryName.toLowerCase()} program?</span>
+                  Ready to develop a <span className="text-sky-500">{categoryName.toLowerCase()} program?</span>
                 </h2>
               </Reveal>
 

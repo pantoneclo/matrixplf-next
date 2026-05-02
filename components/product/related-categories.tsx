@@ -71,7 +71,7 @@ export function RelatedCategories({ currentCategorySlug }: RelatedCategoriesProp
                     {category.name}
                   </span>
                   <div className="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center group-hover:border-sky-500/50 group-hover:bg-sky-500/10 transition-all">
-                    <ArrowRight className="w-4 h-4 text-white group-hover:text-sky-400" />
+                    <ArrowRight className="w-4 h-4 text-white group-hover:text-sky-500" />
                   </div>
                 </div>
               </Link>

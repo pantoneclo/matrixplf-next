@@ -142,7 +142,7 @@ export function ProductsSection() {
               className={`inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 mb-6 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
                 }`}
             >
-              <span className="w-2 h-2 bg-sky-400 rounded-full animate-pulse" />
+              <span className="w-2 h-2 bg-sky-500 rounded-full animate-pulse" />
               <span className="text-white/90 text-sm font-medium">Product Categories</span>
             </div>
 
@@ -151,7 +151,7 @@ export function ProductsSection() {
                 }`}
             >
               What We
-              <span className="text-sky-400"> Create</span>
+              <span className="text-sky-500"> Create</span>
             </h2>
 
             <p
@@ -278,17 +278,17 @@ export function ProductsSection() {
       <div className="container mx-auto px-6 lg:px-12 mt-12 relative z-10 flex items-center gap-6 md:gap-12">
         <div className="flex-grow h-[2px] bg-white/10 rounded-full overflow-hidden">
           <div
-            className="h-full bg-sky-400 rounded-full transition-all duration-300 shadow-[0_0_10px_rgba(56,189,248,0.5)]"
+            className="h-full bg-sky-500 rounded-full transition-all duration-300 shadow-[0_0_10px_rgba(56,189,248,0.5)]"
             style={{ width: `${maxScroll > 0 ? (sliderPosition / maxScroll) * 100 : 100}%` }}
           />
         </div>
         <Link
           href="/product"
-          className={`shrink-0 inline-flex items-center gap-2 px-6 py-2 bg-white/5 hover:bg-white/10 backdrop-blur-sm rounded-full border border-white/10 hover:border-sky-400 transition-all duration-500 ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-4"
+          className={`shrink-0 inline-flex items-center gap-2 px-6 py-2 bg-white/5 hover:bg-white/10 backdrop-blur-sm rounded-full border border-white/10 hover:border-sky-500 transition-all duration-500 ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-4"
             }`}
         >
           <span className="text-white/90 text-xs font-bold uppercase tracking-widest">View all</span>
-          <ArrowRight className="w-4 h-4 text-white/90 hover:text-sky-400" />
+          <ArrowRight className="w-4 h-4 text-white/90 hover:text-sky-500" />
         </Link>
       </div>
     </section>

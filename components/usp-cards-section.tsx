@@ -105,7 +105,7 @@ export function USPCardsSection() {
               className={`inline-flex items-center gap-2 px-4 py-2 bg-white/5 backdrop-blur-sm rounded-full border border-white/10 mb-6 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
                 }`}
             >
-              <span className="w-2 h-2 bg-sky-400 rounded-full animate-pulse" />
+              <span className="w-2 h-2 bg-sky-500 rounded-full animate-pulse" />
               <span className="text-white/80 text-xs font-bold uppercase tracking-[0.2em]">Why Matrix Platform</span>
             </div>
 
@@ -156,6 +156,7 @@ export function USPCardsSection() {
                       src={card.image}
                       alt={card.title}
                       fill
+                      sizes="(max-width: 768px) 100vw, 420px"
                       className="object-cover transition-transform duration-1000 group-hover:scale-110"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#0d1420] via-[#0d1420]/20 to-transparent" />
@@ -172,7 +173,7 @@ export function USPCardsSection() {
                   <div className="p-8 pt-4">
                     <div className="mb-4">
 
-                      <h3 className="text-2xl font-bold text-white group-hover:text-sky-400 transition-colors">
+                      <h3 className="text-2xl font-bold text-white group-hover:text-sky-500 transition-colors">
                         {card.title}
                       </h3>
                       <span className="text-sky-500 font-bold uppercase tracking-[0.2em] text-[10px] block mt-2 opacity-80">
@@ -184,7 +185,7 @@ export function USPCardsSection() {
                       {card.description}
                     </p>
 
-                    <div className="mt-6 flex items-center text-sky-400 text-sm font-bold group-hover:text-sky-300 transition-colors">
+                    <div className="mt-6 flex items-center text-sky-500 text-sm font-bold group-hover:text-sky-500 transition-colors">
                       Learn More <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
                     </div>
 

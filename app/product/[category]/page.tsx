@@ -60,14 +60,14 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
           </Link>
 
           <Reveal>
-            <h1 className="text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-black text-white mb-4 sm:mb-6 uppercase tracking-tighter leading-[0.9]">
+            <h1 className="text-4xl sm:text-6xl md:text-5xl lg:text-7xl font-black text-white mb-4 sm:mb-6 uppercase tracking-tighter leading-[0.9]">
               {category.name}
             </h1>
           </Reveal>
 
           <Reveal delay={0.2}>
             <div className="max-w-2xl">
-              <p className="text-sm sm:text-lg md:text-xl text-sky-400 font-bold mb-2 sm:mb-4 uppercase tracking-[0.15em] sm:tracking-[0.2em]">{category.subtitle}</p>
+              <p className="text-sm sm:text-lg md:text-xl text-sky-500 font-bold mb-2 sm:mb-4 uppercase tracking-[0.15em] sm:tracking-[0.2em]">{category.subtitle}</p>
               <p className="text-sm sm:text-base md:text-lg text-slate-300 leading-relaxed font-medium">
                 {category.description}
               </p>

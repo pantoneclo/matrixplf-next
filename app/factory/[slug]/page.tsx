@@ -71,7 +71,7 @@ export default async function FactoryPage({ params }: FactoryPageProps) {
                         </div>
                         <div>
                             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-2">
-                                <span className="text-[#4cb5e4]">{factory.namePart1}</span> <span className="text-white">{factory.namePart2}</span>
+                                <span className="text-sky-500">{factory.namePart1}</span> <span className="text-white">{factory.namePart2}</span>
                             </h1>
                             <p className="text-xl md:text-2xl text-white font-semibold mb-6">
                                 {factory.location}
@@ -86,20 +86,20 @@ export default async function FactoryPage({ params }: FactoryPageProps) {
             <section className="container mx-auto px-6 lg:px-12 -mt-6 relative">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                     <div className="bg-[#1e2632] border border-[#2b394b] rounded-xl p-8 text-center shadow-lg transition-transform hover:-translate-y-1">
-                        <div className="text-4xl lg:text-5xl font-bold text-[#4cb5e4] mb-2 tracking-tight">{factory.stats.workers}</div>
-                        <div className="text-sm font-semibold tracking-wider text-[#4cb5e4] uppercase">Skilled Workers</div>
+                        <div className="text-4xl lg:text-5xl font-bold text-sky-500 mb-2 tracking-tight">{factory.stats.workers}</div>
+                        <div className="text-sm font-semibold tracking-wider text-sky-500 uppercase">Skilled Workers</div>
                     </div>
                     <div className="bg-[#1e2632] border border-[#2b394b] rounded-xl p-8 text-center shadow-lg transition-transform hover:-translate-y-1">
-                        <div className="text-4xl lg:text-5xl font-bold text-[#4cb5e4] mb-2 tracking-tight">{factory.stats.capacity}</div>
-                        <div className="text-sm font-semibold tracking-wider text-[#4cb5e4] uppercase">Pieces / Month</div>
+                        <div className="text-4xl lg:text-5xl font-bold text-sky-500 mb-2 tracking-tight">{factory.stats.capacity}</div>
+                        <div className="text-sm font-semibold tracking-wider text-sky-500 uppercase">Pieces / Month</div>
                     </div>
                     <div className="bg-[#1e2632] border border-[#2b394b] rounded-xl p-8 text-center shadow-lg transition-transform hover:-translate-y-1">
-                        <div className="text-4xl lg:text-5xl font-bold text-[#4cb5e4] mb-2 tracking-tight">{factory.stats.lines}</div>
-                        <div className="text-sm font-semibold tracking-wider text-[#4cb5e4] uppercase">Production Lines</div>
+                        <div className="text-4xl lg:text-5xl font-bold text-sky-500 mb-2 tracking-tight">{factory.stats.lines}</div>
+                        <div className="text-sm font-semibold tracking-wider text-sky-500 uppercase">Production Lines</div>
                     </div>
                     <div className="bg-[#1e2632] border border-[#2b394b] rounded-xl p-8 text-center shadow-lg transition-transform hover:-translate-y-1">
-                        <div className="text-4xl lg:text-5xl font-bold text-[#4cb5e4] mb-2 tracking-tight">{factory.stats.area}</div>
-                        <div className="text-sm font-semibold tracking-wider text-[#4cb5e4] uppercase">Sq. Ft. Facility</div>
+                        <div className="text-4xl lg:text-5xl font-bold text-sky-500 mb-2 tracking-tight">{factory.stats.area}</div>
+                        <div className="text-sm font-semibold tracking-wider text-sky-500 uppercase">Sq. Ft. Facility</div>
                     </div>
                 </div>
             </section>
@@ -111,8 +111,8 @@ export default async function FactoryPage({ params }: FactoryPageProps) {
                     {/* Left Column - Product Strength */}
                     <div className="lg:w-7/12 bg-[#1e2632] border border-[#2b394b] rounded-xl p-6 sm:p-8 shadow-lg">
                         <div className="flex items-start sm:items-center gap-3 mb-6">
-                            <Factory className="w-8 h-8 text-[#4cb5e4]" />
-                            <h2 className="text-2xl md:text-3xl font-bold text-[#4cb5e4]">Product Strength & Capacity</h2>
+                            <Factory className="w-8 h-8 text-sky-500" />
+                            <h2 className="text-2xl md:text-3xl font-bold text-sky-500">Product Strength & Capacity</h2>
                         </div>
 
                         <div className="space-y-6 text-gray-300 leading-relaxed text-sm lg:text-base">
@@ -123,7 +123,7 @@ export default async function FactoryPage({ params }: FactoryPageProps) {
 
                         {/* Key Manufacturing Strengths */}
                         <div className="mt-8">
-                            <h3 className="text-xl font-bold text-[#4cb5e4] mb-4">Key Manufacturing Strengths</h3>
+                            <h3 className="text-xl font-bold text-sky-500 mb-4">Key Manufacturing Strengths</h3>
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                 {factory.strengths.map((strength: string, idx: number) => (
                                     <div key={idx} className="bg-[#24354a] hover:bg-[#2b4059] transition-colors border border-[#3b597c] text-center text-sm font-semibold py-3 rounded-lg text-white">
@@ -135,7 +135,7 @@ export default async function FactoryPage({ params }: FactoryPageProps) {
 
                         {/* Category Pills */}
                         <div className="mt-8">
-                            <h3 className="text-xl font-bold text-[#4cb5e4] mb-4">Core Product Categories</h3>
+                            <h3 className="text-xl font-bold text-sky-500 mb-4">Core Product Categories</h3>
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8">
                                 {factory.categories.map((cat: string, idx: number) => (
                                     <div key={idx} className="bg-[#24354a] hover:bg-[#2b4059] transition-colors border border-[#3b597c] text-center text-sm font-semibold py-3 rounded-lg text-white">
@@ -151,7 +151,7 @@ export default async function FactoryPage({ params }: FactoryPageProps) {
 
                         {/* Certifications Block */}
                         <div className="bg-[#1e2632] border border-[#2b394b] rounded-xl p-6 sm:p-8 shadow-lg flex-1">
-                            <h2 className="text-2xl font-bold text-[#4cb5e4] uppercase mb-6 tracking-wide">Our Certifications</h2>
+                            <h2 className="text-2xl font-bold text-sky-500 uppercase mb-6 tracking-wide">Our Certifications</h2>
 
                             <div className="grid grid-cols-3 sm:grid-cols-4 gap-4 items-center">
                                 {(factory.certifications && factory.certifications.length > 0
@@ -178,29 +178,29 @@ export default async function FactoryPage({ params }: FactoryPageProps) {
 
                         {/* Contact Block */}
                         <div className="bg-[#1e2632] border border-[#2b394b] rounded-xl p-6 sm:p-8 shadow-lg">
-                            <h2 className="text-2xl font-bold text-[#4cb5e4] uppercase mb-6 tracking-wide">Contact Us</h2>
+                            <h2 className="text-2xl font-bold text-sky-500 uppercase mb-6 tracking-wide">Contact Us</h2>
 
                             <div className="space-y-6">
                                 <div className="flex items-start gap-4">
-                                    <MapPin className="w-5 h-5 text-[#4cb5e4] mt-1 shrink-0" />
+                                    <MapPin className="w-5 h-5 text-sky-500 mt-1 shrink-0" />
                                     <div>
-                                        <h3 className="text-[#4cb5e4] font-semibold text-sm tracking-wider uppercase mb-1">Factory Address</h3>
+                                        <h3 className="text-sky-500 font-semibold text-sm tracking-wider uppercase mb-1">Factory Address</h3>
                                         <p className="text-gray-300 text-sm">{factory.contact.hq}</p>
                                     </div>
                                 </div>
 
                                 {/* <div className="flex items-start gap-4">
-                                    <Phone className="w-5 h-5 text-[#4cb5e4] mt-1 shrink-0" />
+                                    <Phone className="w-5 h-5 text-sky-500 mt-1 shrink-0" />
                                     <div>
-                                        <h3 className="text-[#4cb5e4] font-semibold text-sm tracking-wider uppercase mb-1">Phone</h3>
+                                        <h3 className="text-sky-500 font-semibold text-sm tracking-wider uppercase mb-1">Phone</h3>
                                         <p className="text-gray-300 text-sm">{factory.contact.phone}</p>
                                     </div>
                                 </div> */}
 
                                 <div className="flex items-start gap-4">
-                                    <Mail className="w-5 h-5 text-[#4cb5e4] mt-1 shrink-0" />
+                                    <Mail className="w-5 h-5 text-sky-500 mt-1 shrink-0" />
                                     <div>
-                                        <h3 className="text-[#4cb5e4] font-semibold text-sm tracking-wider uppercase mb-1">Email Inquiries</h3>
+                                        <h3 className="text-sky-500 font-semibold text-sm tracking-wider uppercase mb-1">Email Inquiries</h3>
                                         <p className="text-gray-300 text-sm">{factory.contact.email}</p>
                                     </div>
                                 </div>
@@ -216,7 +216,7 @@ export default async function FactoryPage({ params }: FactoryPageProps) {
                 <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
                     <div className="space-y-4">
                         <div className="flex items-center gap-3">
-                            <span className="text-sky-400 text-[10px] font-bold uppercase tracking-[0.3em]">Explore More</span>
+                            <span className="text-sky-500 text-[10px] font-bold uppercase tracking-[0.3em]">Explore More</span>
                             <div className="h-px w-12 bg-sky-500/30" />
                         </div>
                         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-white">
@@ -225,7 +225,7 @@ export default async function FactoryPage({ params }: FactoryPageProps) {
                     </div>
                     <Link
                         href="/factory"
-                        className="group flex items-center gap-2 text-sm font-bold text-sky-400 hover:text-white transition-colors"
+                        className="group flex items-center gap-2 text-sm font-bold text-sky-500 hover:text-white transition-colors"
                     >
                         View All Factories
                         <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
@@ -259,21 +259,21 @@ export default async function FactoryPage({ params }: FactoryPageProps) {
                                 </div>
 
                                 <div className="p-8">
-                                    <div className="flex items-center gap-2 text-sky-400 mb-3">
+                                    <div className="flex items-center gap-2 text-sky-500 mb-3">
                                         <MapPin className="w-4 h-4" />
                                         <span className="text-[11px] font-bold uppercase tracking-wider">{f.location}</span>
                                     </div>
-                                    <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-sky-400 transition-colors">
+                                    <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-sky-500 transition-colors">
                                         {f.namePart1} {f.namePart2}
                                     </h3>
 
                                     <div className="grid grid-cols-2 gap-4 pt-6 border-t border-white/5">
                                         <div>
-                                            <p className="text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-1 text-sky-400/60">Capacity</p>
+                                            <p className="text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-1 text-sky-500/60">Capacity</p>
                                             <p className="text-sm font-bold text-slate-200">{f.stats.capacity}</p>
                                         </div>
                                         <div>
-                                            <p className="text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-1 text-sky-400/60">Workers</p>
+                                            <p className="text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-1 text-sky-500/60">Workers</p>
                                             <p className="text-sm font-bold text-slate-200">{f.stats.workers}</p>
                                         </div>
                                     </div>

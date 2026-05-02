@@ -57,8 +57,8 @@ export default function FactoriesPage() {
                 <div className="container mx-auto px-6 lg:px-12 relative z-10">
                     <Reveal>
                         <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-white/5 rounded-full mb-6 border border-white/10">
-                            <div className="w-1.5 h-1.5 bg-sky-400 rounded-full animate-pulse" />
-                            <span className="text-sky-400 text-[10px] font-bold uppercase tracking-widest">
+                            <div className="w-1.5 h-1.5 bg-sky-500 rounded-full animate-pulse" />
+                            <span className="text-sky-500 text-[10px] font-bold uppercase tracking-widest">
                                 Manufacturing Network
                             </span>
                         </div>
@@ -90,7 +90,7 @@ export default function FactoriesPage() {
                                     key={s.label}
                                     className="bg-white/5 border border-white/10 rounded-2xl px-8 py-5 backdrop-blur-sm"
                                 >
-                                    <p className="text-3xl font-black text-sky-400">{s.value}</p>
+                                    <p className="text-3xl font-black text-sky-500">{s.value}</p>
                                     <p className="text-slate-400 text-xs font-bold uppercase tracking-widest mt-1">
                                         {s.label}
                                     </p>
@@ -109,7 +109,7 @@ export default function FactoriesPage() {
                             {/* Country header */}
                             <Reveal delay={ci * 0.1}>
                                 <div className="flex items-center gap-4 mb-10">
-                                    <MapPin className="w-5 h-5 text-sky-400" />
+                                    <MapPin className="w-5 h-5 text-sky-500" />
                                     <h2 className="text-xl font-black text-white uppercase tracking-widest">
                                         {country}
                                     </h2>
@@ -138,14 +138,14 @@ export default function FactoriesPage() {
                                                         className="object-cover transition-transform duration-700 group-hover:scale-105"
                                                     />
                                                 ) : (
-                                                    <div className="absolute inset-0 bg-gradient-to-br from-sky-900/40 to-slate-900" />
+                                                    <div className="absolute inset-0 bg-gradient-to-br from-sky-500/40 to-slate-900" />
                                                 )}
                                                 {/* Gradient overlay */}
                                                 <div className="absolute inset-0 bg-gradient-to-t from-[#0d1420] via-[#0d1420]/40 to-transparent" />
 
                                                 {/* Location badge */}
                                                 <div className="absolute bottom-4 left-4 flex items-center gap-1.5 bg-black/60 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/10">
-                                                    <MapPin className="w-3 h-3 text-sky-400" />
+                                                    <MapPin className="w-3 h-3 text-sky-500" />
                                                     <span className="text-white text-[11px] font-semibold">
                                                         {factory.location}
                                                     </span>
@@ -155,9 +155,9 @@ export default function FactoriesPage() {
                                             {/* Body */}
                                             <div className="p-6">
                                                 {/* Name */}
-                                                <h3 className="text-xl font-black text-white leading-tight mb-1 group-hover:text-sky-400 transition-colors">
+                                                <h3 className="text-xl font-black text-white leading-tight mb-1 group-hover:text-sky-500 transition-colors">
                                                     {factory.namePart1}{" "}
-                                                    <span className="text-sky-400 group-hover:text-white transition-colors">
+                                                    <span className="text-sky-500 group-hover:text-white transition-colors">
                                                         {factory.namePart2}
                                                     </span>
                                                 </h3>
@@ -209,7 +209,7 @@ export default function FactoriesPage() {
                                                     {factory.categories.slice(0, 3).map((cat) => (
                                                         <span
                                                             key={cat}
-                                                            className="px-2.5 py-1 bg-sky-500/8 border border-sky-500/20 text-sky-400 text-[10px] font-bold uppercase tracking-widest rounded-full"
+                                                            className="px-2.5 py-1 bg-sky-500/8 border border-sky-500/20 text-sky-500 text-[10px] font-bold uppercase tracking-widest rounded-full"
                                                         >
                                                             {cat}
                                                         </span>
@@ -223,11 +223,11 @@ export default function FactoriesPage() {
 
                                                 {/* CTA */}
                                                 <div className="flex items-center justify-between mt-5 pt-4 border-t border-white/5">
-                                                    <span className="text-sky-400 text-xs font-bold uppercase tracking-widest group-hover:text-sky-300 transition-colors">
+                                                    <span className="text-sky-500 text-xs font-bold uppercase tracking-widest group-hover:text-sky-500 transition-colors">
                                                         View Factory Profile
                                                     </span>
                                                     <div className="w-8 h-8 rounded-full bg-sky-500/10 border border-sky-500/20 flex items-center justify-center group-hover:bg-sky-500 group-hover:border-sky-500 transition-all">
-                                                        <ArrowRight className="w-3.5 h-3.5 text-sky-400 group-hover:text-white group-hover:translate-x-0.5 transition-all" />
+                                                        <ArrowRight className="w-3.5 h-3.5 text-sky-500 group-hover:text-white group-hover:translate-x-0.5 transition-all" />
                                                     </div>
                                                 </div>
                                             </div>

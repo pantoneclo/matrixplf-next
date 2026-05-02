@@ -19,7 +19,7 @@ export function FactoryProfileDownload({ factory }: FactoryProfileDownloadProps)
     <>
       <button
           onClick={() => setIsOpen(true)}
-          className="inline-flex items-center gap-2 bg-[#4cb5e4] hover:bg-[#3ba4d3] text-white text-sm font-semibold px-4 py-2 rounded transition-colors"
+          className="inline-flex items-center gap-2 bg-sky-500 hover:bg-[#3ba4d3] text-white text-sm font-semibold px-4 py-2 rounded transition-colors"
       >
           <Download className="w-4 h-4" /> Download Profile
       </button>

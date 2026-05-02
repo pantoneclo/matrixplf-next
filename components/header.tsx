@@ -62,24 +62,22 @@ export function Header() {
                     const isActive = pathname === item.href
                     return (
                       <NavigationMenuItem key={item.label}>
-                        <NavigationMenuItem key={item.label}>
-                          <NavigationMenuLink
-                            active={isActive}
-                            href={item.href}
-                            className={cn(buttonVariants({
-                              variant: "ghost",
-                              size: "sm",
-                              className: "rounded-full transition-all duration-1000 bg-none"
-                            }),
-                              isScrolled
-                                ? "text-background hover:text-sky-500 hover:bg-white/50"
-                                : "text-slate-900 hover:text-sky-400 hover:bg-white/10",
-                              isActive && (isScrolled ? "text-sky-400 bg-white/10" : "text-sky-500 bg-none")
-                            )}
-                          >
-                            {item.label}
-                          </NavigationMenuLink>
-                        </NavigationMenuItem>
+                        <NavigationMenuLink
+                          active={isActive}
+                          href={item.href}
+                          className={cn(buttonVariants({
+                            variant: "ghost",
+                            size: "sm",
+                            className: "rounded-full transition-all duration-1000 bg-none"
+                          }),
+                            isScrolled
+                              ? "text-background hover:text-sky-500 hover:bg-white/50"
+                              : "text-slate-900 hover:text-sky-500 hover:bg-white/10",
+                            isActive && (isScrolled ? "text-sky-500 bg-white/10" : "text-sky-500 bg-none")
+                          )}
+                        >
+                          {item.label}
+                        </NavigationMenuLink>
                       </NavigationMenuItem>
                     )
                   })}
@@ -123,7 +121,7 @@ export function Header() {
                     href={item.href}
                     className={cn(
                       "block font-medium py-3 px-3 rounded-lg transition-colors min-h-[44px]",
-                      isActive ? "text-sky-400 bg-none" : "text-white hover:text-sky-400 hover:bg-white/5"
+                      isActive ? "text-sky-500 bg-none" : "text-white hover:text-sky-500 hover:bg-white/5"
                     )}
                     onClick={() => setIsMobileMenuOpen(false)}
                   >

@@ -249,7 +249,7 @@ export default function CareersPage() {
           <Reveal className="flex flex-col items-start gap-4 mb-8">
             <div className="inline-flex items-center gap-3 px-6 py-2.5 bg-white/5 backdrop-blur-md rounded-full border border-white/10 shadow-lg">
               <div className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-500 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-sky-500"></span>
               </div>
               <span className="text-white text-[11px] font-bold uppercase tracking-[0.2em]">Why Matrix Platform</span>
@@ -273,14 +273,14 @@ export default function CareersPage() {
         <div className="container mx-auto px-6 lg:px-12">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
             <Reveal className="flex flex-col items-start gap-4">
-              <span className="text-sky-400 text-[10px] font-bold uppercase tracking-wider font-mono">Open Roles</span>
+              <span className="text-sky-500 text-[10px] font-bold uppercase tracking-wider font-mono">Open Roles</span>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight">
                 Find your <span className="text-sky-500">next role</span>
               </h2>
             </Reveal>
             <Reveal delay={0.1} className="max-w-md">
               <p className="text-slate-400 text-sm md:text-right">
-                Don&apos;t see your role? <a href="mailto:careers@matrixapparels.com" className="text-sky-400 hover:underline">Send your CV</a> and we&apos;ll keep it for future opportunities.
+                Don&apos;t see your role? <a href="mailto:careers@matrixapparels.com" className="text-sky-500 hover:underline">Send your CV</a> and we&apos;ll keep it for future opportunities.
               </p>
             </Reveal>
           </div>
@@ -299,7 +299,7 @@ export default function CareersPage() {
                       </Badge>
                     </div>
 
-                    <h3 className="text-xl md:text-2xl font-bold mb-3 group-hover:text-sky-400 transition-colors">
+                    <h3 className="text-xl md:text-2xl font-bold mb-3 group-hover:text-sky-500 transition-colors">
                       {job.title}
                     </h3>
 
@@ -343,7 +343,7 @@ export default function CareersPage() {
 
               <div className="flex gap-8 items-center text-left">
                 <div className="p-5 rounded-2xl bg-sky-500/10 border border-sky-500/20 group-hover:bg-sky-500/20 transition-colors hidden sm:flex">
-                  <Sparkles className="w-8 h-8 text-sky-400" />
+                  <Sparkles className="w-8 h-8 text-sky-500" />
                 </div>
                 <div>
                   <h2 className="text-2xl md:text-3xl font-bold mb-3 tracking-tight">
@@ -386,7 +386,7 @@ export default function CareersPage() {
             <div className="p-8 md:p-12 overflow-y-auto scrollbar-hide">
               {/* Header */}
               <div className="mb-10">
-                <span className="text-sky-400 text-[10px] font-bold uppercase tracking-[0.2em] mb-3 block">Job Details</span>
+                <span className="text-sky-500 text-[10px] font-bold uppercase tracking-[0.2em] mb-3 block">Job Details</span>
                 <DialogTitle className="text-3xl md:text-4xl font-bold text-white tracking-tight">
                   {selectedJob?.title}
                 </DialogTitle>
@@ -402,7 +402,7 @@ export default function CareersPage() {
                 ].map((info, i) => (
                   <div key={i} className="p-4 rounded-xl bg-white/5 border border-white/5 flex flex-col gap-2">
                     <div className="flex items-center gap-2">
-                      <info.icon className="w-3.5 h-3.5 text-sky-400" />
+                      <info.icon className="w-3.5 h-3.5 text-sky-500" />
                       <span className="text-[9px] font-bold uppercase tracking-wider text-slate-400">{info.label}</span>
                     </div>
                     <p className="text-xs font-semibold text-white leading-tight">{info.value}</p>
@@ -415,8 +415,8 @@ export default function CareersPage() {
                 {/* Summary */}
                 <div>
                   <div className="flex items-center gap-2 mb-4">
-                    <Briefcase className="w-4 h-4 text-sky-400" />
-                    <h4 className="text-[10px] font-bold text-sky-400 uppercase tracking-[0.2em]">Job Summary</h4>
+                    <Briefcase className="w-4 h-4 text-sky-500" />
+                    <h4 className="text-[10px] font-bold text-sky-500 uppercase tracking-[0.2em]">Job Summary</h4>
                   </div>
                   <p className="text-slate-300 text-sm md:text-base leading-relaxed">
                     {selectedJob?.summary}
@@ -425,7 +425,7 @@ export default function CareersPage() {
 
                 {/* Responsibilities */}
                 <div>
-                  <h4 className="text-[10px] font-bold text-sky-400 uppercase tracking-[0.2em] mb-6">Key Responsibilities</h4>
+                  <h4 className="text-[10px] font-bold text-sky-500 uppercase tracking-[0.2em] mb-6">Key Responsibilities</h4>
                   <ul className="space-y-4">
                     {selectedJob?.responsibilities.map((item: string, i: number) => (
                       <li key={i} className="flex gap-3 items-start text-slate-300 text-sm md:text-base">
@@ -438,7 +438,7 @@ export default function CareersPage() {
 
                 {/* Requirements */}
                 <div>
-                  <h4 className="text-[10px] font-bold text-sky-400 uppercase tracking-[0.2em] mb-6">Requirements</h4>
+                  <h4 className="text-[10px] font-bold text-sky-500 uppercase tracking-[0.2em] mb-6">Requirements</h4>
                   <ul className="space-y-4">
                     {selectedJob?.requirements.map((item: string, i: number) => (
                       <li key={i} className="flex gap-3 items-start text-slate-300 text-sm md:text-base">
@@ -600,7 +600,7 @@ export default function CareersPage() {
                     <div className="relative group cursor-pointer">
                       <div className="p-4 rounded-xl border border-dashed border-white/20 bg-white/5 group-hover:border-sky-500/50 group-hover:bg-sky-500/5 transition-all flex items-center justify-between">
                         <div className="flex items-center gap-3">
-                          <div className="p-2 rounded-lg bg-sky-500/10 text-sky-400 group-hover:bg-sky-500/20">
+                          <div className="p-2 rounded-lg bg-sky-500/10 text-sky-500 group-hover:bg-sky-500/20">
                             <Upload className="w-5 h-5" />
                           </div>
                           <span className="text-sm text-slate-400 group-hover:text-slate-300">

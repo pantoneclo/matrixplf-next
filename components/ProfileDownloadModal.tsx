@@ -116,7 +116,7 @@ export function ProfileDownloadModal({ isOpen, onClose, customPdf, customTitle }
               <div className="flex items-start justify-between">
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center">
-                    <Download className="w-6 h-6 text-sky-400" />
+                    <Download className="w-6 h-6 text-sky-500" />
                   </div>
                   <div>
                     <p className="text-sky-500 text-[10px] font-bold uppercase tracking-[0.2em] mb-1">Download</p>
@@ -160,7 +160,7 @@ export function ProfileDownloadModal({ isOpen, onClose, customPdf, customTitle }
                         </FormLabel>
                         <FormControl>
                           <div className="relative group">
-                            <User className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-500 group-focus-within:text-sky-400 transition-colors" />
+                            <User className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-500 group-focus-within:text-sky-500 transition-colors" />
                             <Input
                               placeholder="Jane Doe"
                               disabled={isSubmitting}
@@ -185,7 +185,7 @@ export function ProfileDownloadModal({ isOpen, onClose, customPdf, customTitle }
                         </FormLabel>
                         <FormControl>
                           <div className="relative group">
-                            <Building2 className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-500 group-focus-within:text-sky-400 transition-colors" />
+                            <Building2 className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-500 group-focus-within:text-sky-500 transition-colors" />
                             <Input
                               placeholder="Your company"
                               disabled={isSubmitting}
@@ -210,7 +210,7 @@ export function ProfileDownloadModal({ isOpen, onClose, customPdf, customTitle }
                         </FormLabel>
                         <FormControl>
                           <div className="relative group">
-                            <Mail className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-500 group-focus-within:text-sky-400 transition-colors" />
+                            <Mail className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-500 group-focus-within:text-sky-500 transition-colors" />
                             <Input
                               placeholder="you@company.com"
                               disabled={isSubmitting}

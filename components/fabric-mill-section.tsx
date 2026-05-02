@@ -62,7 +62,7 @@ export function FabricMillSection() {
           {[...Array(6)].map((_, i) => (
             <div
               key={i}
-              className="absolute w-2 h-2 bg-sky-400/30 rounded-full"
+              className="absolute w-2 h-2 bg-sky-500/30 rounded-full"
               style={{
                 left: `${15 + i * 15}%`,
                 top: `${20 + (i % 3) * 25}%`,
@@ -97,7 +97,7 @@ export function FabricMillSection() {
               {/* Overlay badge */}
               <div className="absolute bottom-5 left-5 right-5">
                 <div className="flex items-center gap-3 px-4 py-3 bg-white/10 backdrop-blur-md rounded-xl border border-white/20">
-                  <Factory className="w-6 h-6 text-sky-400" />
+                  <Factory className="w-6 h-6 text-sky-500" />
                   <div>
                     <span className="text-white text-base font-semibold block">Zhejiang Monalisa Textile</span>
                     <span className="text-slate-300 text-sm">Shaoxing, China</span>
@@ -114,11 +114,11 @@ export function FabricMillSection() {
           >
             {/* Highlighted "OUR OWN FABRIC MILL" badge */}
             <div
-              className={`inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-sky-500/20 to-sky-600/20 border-2 border-sky-400/50 rounded-full mb-5 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0 animate-pulse" : "opacity-0 translate-y-4"
+              className={`inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-sky-500/20 to-sky-500/20 border-2 border-sky-500/50 rounded-full mb-5 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0 animate-pulse" : "opacity-0 translate-y-4"
                 }`}
             >
-              <Sparkles className="w-4 h-4 text-sky-400" />
-              <span className="text-sky-300 text-sm font-bold tracking-widest uppercase">OUR OWN FABRIC MILL</span>
+              <Sparkles className="w-4 h-4 text-sky-500" />
+              <span className="text-sky-500 text-sm font-bold tracking-widest uppercase">OUR OWN FABRIC MILL</span>
             </div>
 
             <h2
@@ -127,7 +127,7 @@ export function FabricMillSection() {
             >
               Flexibility in
               <br />
-              <span className="text-sky-400">Every Thread</span>
+              <span className="text-sky-500">Every Thread</span>
             </h2>
 
             <p
@@ -135,24 +135,24 @@ export function FabricMillSection() {
                 }`}
             >
               A Fully Integrated Fabric Powerhouse
-              With a strategic stake in Zhejiang Monalisa Textile, producing over<span className="font-bold text-sky-400">3 million</span> meters of fabric monthly, we operate a vertically integrated textile platform covering fabric R&D, weaving, knitting, dyeing, printing, and finishing, delivering consistent quality and scalable production for global apparel supply chains.
+              With a strategic stake in Zhejiang Monalisa Textile, producing over<span className="font-bold text-sky-500">3 million</span> meters of fabric monthly, we operate a vertically integrated textile platform covering fabric R&D, weaving, knitting, dyeing, printing, and finishing, delivering consistent quality and scalable production for global apparel supply chains.
             </p>
 
             {/* Stats row */}
             <div className={`flex items-start justify-start md:justify-end gap-4 md:gap-8 mb-10 transition-all duration-700 delay-300 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
               }`}>
               <div className="text-left md:text-right">
-                <p className="text-2xl md:text-3xl font-bold text-sky-400">800+</p>
+                <p className="text-2xl md:text-3xl font-bold text-sky-500">800+</p>
                 <p className="text-[10px] md:text-xs text-slate-400 uppercase tracking-wider">Skilled Workforce</p>
               </div>
               <div className="w-px h-8 bg-white/10" />
               <div className="text-left md:text-right">
-                <p className="text-2xl md:text-3xl font-bold text-sky-400">6+</p>
+                <p className="text-2xl md:text-3xl font-bold text-sky-500">6+</p>
                 <p className="text-[10px] md:text-xs text-slate-400 uppercase tracking-wider">Units</p>
               </div>
               <div className="w-px h-8 bg-white/10" />
               <div className="text-center md:text-right">
-                <p className="text-2xl md:text-3xl font-bold text-sky-400">6</p>
+                <p className="text-2xl md:text-3xl font-bold text-sky-500">6</p>
                 <p className="text-[10px] md:text-xs text-slate-400 uppercase tracking-wider">Countries</p>
               </div>
             </div>
@@ -164,7 +164,7 @@ export function FabricMillSection() {
               <Button
                 size="lg"
                 onClick={() => setIsProfileModalOpen(true)}
-                className="bg-sky-600 hover:bg-sky-500 text-white px-6 gap-2 rounded-lg shadow-lg shadow-sky-500/30 hover:shadow-sky-500/50 transition-all duration-300"
+                className="bg-sky-500 hover:bg-sky-500 text-white px-6 gap-2 rounded-lg shadow-lg shadow-sky-500/30 hover:shadow-sky-500/50 transition-all duration-300"
               >
                 <Download className="w-4 h-4" />
                 Download Profile

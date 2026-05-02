@@ -74,7 +74,7 @@ export function Footer() {
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="text-slate-400 hover:text-sky-400 transition-colors py-2 inline-block w-full"
+                    className="text-slate-400 hover:text-sky-500 transition-colors py-2 inline-block w-full"
                   >
                     {link.label}
                   </Link>
@@ -90,7 +90,7 @@ export function Footer() {
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="text-slate-400 hover:text-sky-400 transition-colors py-2 inline-block w-full"
+                    className="text-slate-400 hover:text-sky-500 transition-colors py-2 inline-block w-full"
                   >
                     {link.label}
                   </Link>
@@ -119,7 +119,7 @@ export function Footer() {
                   aria-label={social.label}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center text-slate-400 hover:bg-sky-600 hover:text-white transition-all duration-300"
+                  className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center text-slate-400 hover:bg-sky-500 hover:text-white transition-all duration-300"
                 >
                   <social.icon className="w-5 h-5" />
                 </a>
@@ -129,10 +129,10 @@ export function Footer() {
             {/* Back to top */}
             <button
               onClick={scrollToTop}
-              className="flex items-center gap-2 text-slate-400 hover:text-sky-400 transition-colors group"
+              className="flex items-center gap-2 text-slate-400 hover:text-sky-500 transition-colors group"
             >
               <span className="text-sm">Back to top</span>
-              <div className="w-8 h-8 bg-slate-800 rounded-lg flex items-center justify-center group-hover:bg-sky-600 transition-colors">
+              <div className="w-8 h-8 bg-slate-800 rounded-lg flex items-center justify-center group-hover:bg-sky-500 transition-colors">
                 <ArrowUp className="w-4 h-4" />
               </div>
             </button>

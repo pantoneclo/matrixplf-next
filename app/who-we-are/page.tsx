@@ -14,7 +14,7 @@ export default function Page() {
             <Header />
             <WhoWeAreHeroSection />
             <WhoWeAreStatsCardsSection />
-            <WhoWeAreExcellenceSection />
+            {/* <WhoWeAreExcellenceSection /> */}
             <WhoWeAreLegacySection />
             <GlobalNetworkSection />
             {/* <WhoWeAreTimelineSection /> */}

@@ -61,7 +61,7 @@ export default function CodeOfConductPage() {
         <div className="container mx-auto px-6 lg:px-12 relative z-10">
           <Reveal className="flex flex-col items-start gap-4 mb-8">
             <div className="inline-flex items-center gap-2 px-3 py-1 bg-white/5 backdrop-blur-md rounded-full border border-white/10">
-              <Shield className="w-3.5 h-3.5 text-sky-400" />
+              <Shield className="w-3.5 h-3.5 text-sky-500" />
               <span className="text-white/80 text-[10px] font-bold uppercase tracking-wider">Matrix Platform Ltd</span>
             </div>
             <h1 className="text-4xl md:text-4xl lg:text-5xl font-bold leading-[1.1] tracking-tight">
@@ -82,7 +82,7 @@ export default function CodeOfConductPage() {
             <div className="p-4 rounded-[2rem] bg-white/5 border border-white/10 backdrop-blur-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-8 group hover:border-sky-500/30 transition-colors">
               <div className="flex gap-6 items-start">
                 <div className="p-4 rounded-2xl bg-sky-500/10 border border-sky-500/20 group-hover:bg-sky-500/20 transition-colors">
-                  <Mail className="w-6 h-6 text-sky-400" />
+                  <Mail className="w-6 h-6 text-sky-500" />
                 </div>
                 <div>
                   <h3 className="text-xl font-bold mb-2">Report a concern</h3>
@@ -113,7 +113,7 @@ export default function CodeOfConductPage() {
           <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-start">
             <Reveal className="sticky top-32">
               <div className="inline-flex items-center gap-2 px-3 py-1 bg-white/5 backdrop-blur-md rounded-full border border-white/10 mb-6">
-                <span className="text-sky-400 text-[10px] font-bold uppercase tracking-wider font-mono">Section 01</span>
+                <span className="text-sky-500 text-[10px] font-bold uppercase tracking-wider font-mono">Section 01</span>
               </div>
               <h2 className="text-4xl md:text-5xl font-bold mb-8 tracking-tight">
                 Code of Conduct <br />
@@ -131,7 +131,7 @@ export default function CodeOfConductPage() {
               </div>
               <div className="mt-10 p-6 rounded-2xl bg-white/5 border border-white/10">
                 <p className="text-sm text-slate-400 mb-2 font-medium">Chief Ethics Officer Contact:</p>
-                <a href="mailto:shohel@matrixapparels.com" className="text-xl font-bold text-sky-400 hover:text-sky-300 transition-colors">
+                <a href="mailto:shohel@matrixapparels.com" className="text-xl font-bold text-sky-500 hover:text-sky-500 transition-colors">
                   shohel@matrixapparels.com
                 </a>
               </div>
@@ -161,7 +161,7 @@ export default function CodeOfConductPage() {
           <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-start mb-16">
             <Reveal className="sticky top-32">
               <div className="inline-flex items-center gap-2 px-3 py-1 bg-white/5 backdrop-blur-md rounded-full border border-white/10 mb-6">
-                <span className="text-sky-400 text-[10px] font-bold uppercase tracking-wider font-mono">Section 02</span>
+                <span className="text-sky-500 text-[10px] font-bold uppercase tracking-wider font-mono">Section 02</span>
               </div>
               <h2 className="text-4xl md:text-5xl font-bold mb-8 tracking-tight">
                 Code of Conduct for <br />
@@ -205,7 +205,7 @@ export default function CodeOfConductPage() {
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-sky-500/10 blur-[150px] rounded-full -z-10 group-hover:bg-sky-500/15 transition-colors duration-700" />
 
               <div className="inline-flex p-5 rounded-[1.5rem] bg-sky-500/10 border border-sky-500/20 mb-5">
-                <CheckCircle2 className="w-10 h-10 text-sky-400" />
+                <CheckCircle2 className="w-10 h-10 text-sky-500" />
               </div>
 
               <h2 className="text-2xl md:text-3xl font-bold mb-5 tracking-tight">

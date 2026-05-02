@@ -53,6 +53,7 @@ export function ClientBrandsSection() {
                   src={brand.logo}
                   alt={brand.name}
                   fill
+                  sizes="160px"
                   className="object-contain transition-all duration-500 rounded-sm"
                 />
                 <span className="sr-only">{brand.name}</span>

@@ -117,7 +117,7 @@ export function GlobalNetworkSection() {
           <div className="max-w-3xl">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} className="inline-flex items-center gap-3 px-6 py-2.5 bg-white/5 backdrop-blur-md rounded-full border border-white/10 shadow-lg mb-6">
               <div className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-500 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-sky-500"></span>
               </div>
               <span className="text-white text-[11px] font-bold uppercase tracking-[0.2em]">Global Network Dashboard</span>
@@ -144,7 +144,7 @@ export function GlobalNetworkSection() {
             <Geographies geography={geoUrl}>
               {({ geographies }) =>
                 geographies.map((geo) => (
-                  <Geography key={geo.rsmKey} geography={geo} fill="#2772e2ff" stroke="#e2f41fff" strokeWidth={0.5} style={{ default: { outline: "none" }, hover: { outline: "none" }, pressed: { outline: "none" } }} />
+                  <Geography key={geo.rsmKey} geography={geo} fill="#414853ff" stroke="#24251fff" strokeWidth={0.5} style={{ default: { outline: "none" }, hover: { outline: "none" }, pressed: { outline: "none" } }} />
                 ))
               }
             </Geographies>
