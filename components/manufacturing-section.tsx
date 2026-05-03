@@ -39,7 +39,7 @@ export function ManufacturingSection() {
   }, [])
 
   return (
-    <section ref={sectionRef} id="what-we-do" className="relative min-h-[750px] lg:min-h-[850px] overflow-hidden">
+    <section ref={sectionRef} id="manufacturing-strength" className="relative min-h-[750px] lg:min-h-[850px] overflow-hidden">
       {/* Background Image with Ken Burns effect */}
       <div className="absolute inset-0">
         <Image

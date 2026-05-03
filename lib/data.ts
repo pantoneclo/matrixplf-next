@@ -48,14 +48,15 @@ export const categories: Category[] = [
 
     images: [
       "/assets/categories/lounge-nightwear/Lounge-&-Nightwear-1.png",
-      "/assets/categories/lounge-nightwear/Lounge-&-Nightwear-2.png",
-      "/assets/categories/lounge-nightwear/Lounge-&-Nightwear-3.png",
-      "/assets/categories/lounge-nightwear/Lounge-&-Nightwear-4.png",
-      "/assets/categories/lounge-nightwear/Lounge-&-Nightwear-7.png",
+      "/assets/categories/lounge-nightwear/Lounge-&-Nightwear-5.png",
+      "/assets/categories/lounge-nightwear/Lounge-&-Nightwear-8.png",
+      "/assets/categories/lounge-nightwear/Lounge-&-Nightwear-9.png",
       "/assets/categories/lounge-nightwear/Lounge-&-Nightwear-10.png",
       "/assets/categories/lounge-nightwear/Lounge-&-Nightwear-11.png",
       "/assets/categories/lounge-nightwear/Lounge-&-Nightwear-13.png",
-      "/assets/categories/lounge-nightwear/Lounge-&-Nightwear-18.png",
+      "/assets/categories/lounge-nightwear/Lounge-&-Nightwear-14.png",
+      "/assets/categories/lounge-nightwear/Lounge-&-Nightwear-15.png"
+
     ],
     bannerImage: "/assets/categories/banner/nightwear.png",
   },
@@ -95,13 +96,10 @@ export const categories: Category[] = [
       "/assets/categories/inner-essentials/Essentials-2.jpg",
       "/assets/categories/inner-essentials/Essentials-3.png",
       "/assets/categories/inner-essentials/Essentials-4.jpeg",
-      "/assets/categories/inner-essentials/Essentials-5.png",
       "/assets/categories/inner-essentials/Essentials-8.jpg",
       "/assets/categories/inner-essentials/Essentials-9.jpeg",
       "/assets/categories/inner-essentials/Essentials-10.jpg",
-      // "/assets/categories/inner-essentials/Essentials-13.jpg",
-      // "/assets/categories/inner-essentials/Essentials-14.jpg",
-      // "/assets/categories/inner-essentials/Essentials-15.jpg"
+      "/assets/categories/inner-essentials/Essentials-13.jpg"
     ],
     bannerImage: "/assets/categories/banner/Essentials.png",
   },
@@ -136,15 +134,15 @@ export const categories: Category[] = [
       }
     ],
     images: [
-      "/assets/categories/lingerie/Innerwear-&-Essentials-12.jpg",
+      "/assets/categories/lingerie/Innerwear-&-Essentials-1.jpg",
+      "/assets/categories/lingerie/Innerwear-&-Essentials-2.jpg",
       "/assets/categories/lingerie/Innerwear-&-Essentials-3.jpg",
       "/assets/categories/lingerie/Innerwear-&-Essentials-4.jpg",
       "/assets/categories/lingerie/Innerwear-&-Essentials-5.jpg",
-      "/assets/categories/lingerie/Innerwear-&-Essentials-6.jpg",
+      "/assets/categories/lingerie/Innerwear-&-Essentials-7.jpg",
       "/assets/categories/lingerie/Innerwear-&-Essentials-8.jpg",
-      "/assets/categories/lingerie/Innerwear-&-Essentials-10.jpg",
-      "/assets/categories/lingerie/Innerwear-&-Essentials-11.jpeg",
-      "/assets/categories/lingerie/Innerwear-&-Essentials-13.jpg",
+      "/assets/categories/lingerie/Innerwear-&-Essentials-9.jpg",
+      "/assets/categories/lingerie/Innerwear-&-Essentials-13.jpg"
 
 
 
@@ -229,13 +227,13 @@ export const categories: Category[] = [
     images: [
       "/assets/categories/swimwear/swimwear-6.jpg",
       "/assets/categories/swimwear/swimwear-1.png",
+      "/assets/categories/swimwear/swimwear-2.jpg",
       "/assets/categories/swimwear/swimwear-3.jpg",
-      "/assets/categories/swimwear/swimwear-4.jpeg",
+      "/assets/categories/swimwear/swimwear-4.jpg",
       "/assets/categories/swimwear/swimwear-5.jpg",
       "/assets/categories/swimwear/swimwear-7.jpg",
       "/assets/categories/swimwear/swimwear-8.jpg",
-      "/assets/categories/swimwear/swimwear-9.jpg",
-      "/assets/categories/swimwear/swimwear-10.jpg"
+      "/assets/categories/swimwear/swimwear-9.jpg"
 
     ],
     bannerImage: "/assets/categories/banner/swim.png",
@@ -271,20 +269,18 @@ export const categories: Category[] = [
       }
     ],
     images: [
-      "/assets/categories/sweat/Sweatshirt-Fleece-3.png",
       "/assets/categories/sweat/Sweatshirt-Fleece-1.png",
       "/assets/categories/sweat/Sweatshirt-Fleece-2.png",
+      "/assets/categories/sweat/Sweatshirt-Fleece-3.png",
       "/assets/categories/sweat/Sweatshirt-Fleece-4.png",
       "/assets/categories/sweat/Sweatshirt-Fleece-5.png",
       "/assets/categories/sweat/Sweatshirt-Fleece-6.png",
       "/assets/categories/sweat/Sweatshirt-Fleece-7.png",
       "/assets/categories/sweat/Sweatshirt-Fleece-8.png",
-      "/assets/categories/sweat/Sweatshirt-Fleece-9.png",
-      // "/assets/categories/sweat/Sweatshirt-Fleece-10.png",
-      // "/assets/categories/sweat/Sweatshirt-Fleece-11.png",
+      "/assets/categories/sweat/Sweatshirt-Fleece-9.png"
 
     ],
-    bannerImage: "/assets/categories/banner/Sweat shirt-&-Fleece.jpg",
+    bannerImage: "/assets/categories/banner/Sweat-shirt-Fleece.png",
   },
   {
     id: 8,
@@ -317,7 +313,7 @@ export const categories: Category[] = [
       }
     ],
     images: [
-      "/assets/categories/jersey-tee/jersey-tee-10.png",
+      "/assets/categories/jersey-tee/jersey-tee-9.png",
       "/assets/categories/jersey-tee/jersey-tee-1.png",
       "/assets/categories/jersey-tee/jersey-tee-2.png",
       "/assets/categories/jersey-tee/jersey-tee-3.png",
@@ -325,11 +321,7 @@ export const categories: Category[] = [
       "/assets/categories/jersey-tee/jersey-tee-5.png",
       "/assets/categories/jersey-tee/jersey-tee-6.jpg",
       "/assets/categories/jersey-tee/jersey-tee-7.jpg",
-      "/assets/categories/jersey-tee/jersey-tee-8.jpg",
-      // "/assets/categories/jersey-tee/jersey-tee-9.png",
-      // "/assets/categories/jersey-tee/jersey-tee-9.jpg",
-
-
+      "/assets/categories/jersey-tee/jersey-tee-8.png"
     ],
     bannerImage: "/assets/categories/banner/Polo.jpg",
   },

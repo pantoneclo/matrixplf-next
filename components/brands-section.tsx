@@ -62,13 +62,16 @@ export function BrandsSection() {
     <section ref={sectionRef} id="brands" className="w-full bg-white font-sans overflow-hidden">
 
       {/* Hero Banner Area */}
-      <div className="relative h-[70vh] min-h-[500px] w-full flex items-center bg-[#0a1122]">
-        <img
-          src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=2000&auto=format&fit=crop"
-          alt="Gym context"
-          className="absolute inset-0 w-full h-full object-cover mix-blend-overlay opacity-30"
+      <div className="relative h-[70vh] min-h-[500px] w-full flex items-center bg-slate-950">
+        <Image
+          src="/assets/brand/banner.png"
+          alt="Brands Banner"
+          fill
+          priority
+          quality={90}
+          className="object-cover object-center"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/90 to-slate-900/40" />
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/40 to-transparent" />
 
         <div className="container mx-auto relative z-10 px-6 lg:px-12 mt-12">
           <h1
@@ -117,6 +120,7 @@ export function BrandsSection() {
                         src={brand.logo}
                         alt={`${brand.name} Logo`}
                         fill
+                        quality={90}
                         className="object-contain object-left"
                       />
                     </div>

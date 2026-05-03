@@ -17,7 +17,7 @@ export default function WhatWeDoPage() {
                         src="/hero/what-we-do-hero.png"
                         alt="Corporate Office"
                         fill
-                        className="object-cover opacity-60"
+                        className="object-cover"
                         priority
                     />
                     <div className="absolute inset-0 bg-gradient-to-r from-[#0d1420] via-black/50 to-transparent" />
