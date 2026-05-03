@@ -19,7 +19,7 @@ const teamMembers = [
     role: "Director",
     email: "tina@matrixapparels.com",
     linkedin: "https://www.linkedin.com/in/tina-cocej-b78094214/",
-    image: "/assets/bosses/Tina.jpeg",
+    image: "/assets/bosses/Tina.jpg",
   },
   {
     id: 3,
@@ -27,7 +27,7 @@ const teamMembers = [
     role: "Director, Global Sales",
     email: "michaelhayles@matrixapparels.com",
     linkedin: "https://www.linkedin.com/in/michael-hayles-60888722/",
-    image: "/assets/bosses/mike.jpeg",
+    image: "/assets/bosses/mike.jpg",
   },
   {
     id: 4,

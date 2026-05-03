@@ -272,7 +272,7 @@ export const categories: Category[] = [
       "/assets/categories/sweat/Sweatshirt-Fleece-1.png",
       "/assets/categories/sweat/Sweatshirt-Fleece-2.png",
       "/assets/categories/sweat/Sweatshirt-Fleece-3.png",
-      "/assets/categories/sweat/Sweatshirt-Fleece-4.png",
+      "/assets/categories/sweat/Sweatshirt-Fleece-4.jpg",
       "/assets/categories/sweat/Sweatshirt-Fleece-5.png",
       "/assets/categories/sweat/Sweatshirt-Fleece-6.png",
       "/assets/categories/sweat/Sweatshirt-Fleece-7.png",
