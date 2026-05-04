@@ -103,7 +103,7 @@ export function ManufacturingSection() {
 
         {/* Stats Row */}
         <div
-          className={`flex flex-wrap gap-8 lg:gap-12 mb-12 transition-all duration-700 delay-300 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+          className={`grid grid-cols-2 lg:flex lg:flex-wrap gap-6 lg:gap-12 mb-12 transition-all duration-700 delay-300 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
         >
           <div className="flex items-center gap-3">

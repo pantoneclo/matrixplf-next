@@ -63,13 +63,23 @@ export function BrandsSection() {
 
       {/* Hero Banner Area */}
       <div className="relative h-[70vh] min-h-[500px] w-full flex items-center bg-slate-950">
+        {/* Desktop Banner */}
         <Image
           src="/assets/brand/banner.png"
           alt="Brands Banner"
           fill
           priority
-          quality={90}
-          className="object-cover object-center"
+          quality={100}
+          className="hidden md:block object-cover object-center"
+        />
+        {/* Mobile Banner */}
+        <Image
+          src="/assets/brand/Brand-Mobile.jpg"
+          alt="Brands Banner Mobile"
+          fill
+          priority
+          quality={100}
+          className="block md:hidden object-cover object-center"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/40 to-transparent" />
 

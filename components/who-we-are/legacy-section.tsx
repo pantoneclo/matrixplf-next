@@ -50,7 +50,7 @@ export function WhoWeAreLegacySection() {
       </div>
 
       {/* Legacy Content */}
-      <div className="container mx-auto px-6 lg:px-12 relative z-20 py-12 lg:py-24">
+      <div className="container mx-auto px-6 lg:px-12 relative z-20 py-8 lg:py-12">
         <div className="max-w-2xl lg:max-w-[50%]">
           <h2
             className={`text-3xl md:text-4xl lg:text-5xl font-bold text-sky-500 mb-8 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
@@ -59,23 +59,68 @@ export function WhoWeAreLegacySection() {
             The Matrix <span className="text-white">Advantage</span>
           </h2>
 
-          <div className={`space-y-6 md:space-y-8 transition-all duration-700 delay-200 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-            }`}>
-            <p className="text-lg md:text-xl text-slate-300 leading-relaxed opacity-90">
-              Matrix Platform is a vertically integrated manufacturing ecosystem connecting fabric, production, and global retail.
+          <div className={`space-y-6 transition-all duration-700 delay-200 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
+            <p className="text-xl md:text-2xl text-white font-semibold leading-tight mb-8">
+              One integrated platform. Built for global retail execution.
             </p>
 
-            <p className="text-lg md:text-xl text-slate-300 leading-relaxed opacity-90">
-              We maintain a strategic stake in Zhejiang Monalisa Textile, producing over 3 million meters of fabric monthly, and deliver more than 3 million garments across knit, woven, and specialized categories.
-            </p>
-            <p className="text-lg md:text-xl text-slate-300 leading-relaxed opacity-90">
-              Operating across Bangladesh, China, and Sri Lanka — supported by Hong Kong trade finance and EU logistics — we provide full DDP delivery, ensuring goods arrive retail-ready.
-            </p>
+            <div className="grid gap-6">
+              {[
+                {
+                  title: "Fabric Control at Source",
+                  desc: "Own integrated fabric platform producing 3M+ meters monthly ensuring consistency, speed, and cost control."
+                },
+                {
+                  title: "Scalable Manufacturing Network",
+                  desc: "6 owned units across 3 countries optimized for flexibility, specialization, and volume execution."
+                },
+                {
+                  title: "Global Delivery Capability",
+                  desc: "FOB and DDP logistics structured for EU, UK, and USA market access with reliable delivery."
+                },
+                {
+                  title: "Real Market Understanding",
+                  desc: "Operating across 16 European markets with direct retail insight into consumer demand and sell-through."
+                },
+                {
+                  title: "Quality Built In",
+                  desc: "Right-first-time approach driven by TQM, ISO standards, and full traceability across the supply chain."
+                },
+                {
+                  title: "Design-Led Development",
+                  desc: "Turning insight into product through integrated design and market intelligence.",
+                  stats: "2 Design Directors · 3 Fashion Designers · 6 Product Developers · 13 Retail & Digital Specialists"
+                }
+              ].map((item, index) => (
+                <div key={index} className="group">
+                  <div className="inline-flex items-center gap-2.5 px-4 py-2 border rounded-full  mb-3 transition-all duration-300 border-sky-500/40 bg-sky-500/10">
+                    <div className="relative flex items-center justify-center h-2 w-2">
+                      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
+                      <span className="relative inline-flex rounded-full h-2 w-2 bg-sky-500 shadow-[0_0_8px_rgba(14,165,233,0.5)]"></span>
+                    </div>
+                    <h3 className="text-white text-[10px] md:text-xs font-bold uppercase tracking-[0.2em] leading-none">
+                      {item.title}
+                    </h3>
+                  </div>
+                  <p className="text-slate-300 text-sm md:text-base leading-snug opacity-90">
+                    {item.desc}
+                  </p>
+                  {item.stats && (
+                    <div className="mt-3 py-2 px-4 bg-white/5 border-l-2 border-sky-500 rounded-r-lg">
+                      <p className="text-xs md:text-sm text-sky-400 font-medium tracking-wide">
+                        {item.stats}
+                      </p>
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
 
-            <p className="text-lg md:text-xl text-slate-300 leading-relaxed opacity-90">
-              We also own and operate our retail brand across 16 European countries, giving us real market insight and a clear understanding of what sells — from concept and design through production to final distribution.
-            </p>
-            <strong className="text-lg md:text-xl text-slate-300 leading-relaxed opacity-90"> One platform. Total control. From concept to customer.</strong>
+            <div className="pt-6 border-t border-white/10 mt-8">
+              <strong className="text-lg md:text-xl text-white/90 leading-tight">
+                One platform. Total control. From concept to customer.
+              </strong>
+            </div>
           </div>
         </div>
       </div>

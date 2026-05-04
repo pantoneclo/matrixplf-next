@@ -38,12 +38,24 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
       <section className="relative w-full overflow-hidden bg-[#0d1420] h-screen min-h-[600px]">
         {/* Background Image */}
         <div className="absolute inset-0">
+          {/* Desktop Banner */}
+          {/* Desktop Banner */}
           <Image
             src={category.bannerImage}
             alt={category.name}
             fill
-            className="object-cover object-center"
+            className="hidden md:block object-cover object-center"
             priority
+            quality={100}
+          />
+          {/* Mobile Banner */}
+          <Image
+            src={category.mobileBannerImage}
+            alt={category.name}
+            fill
+            className="block md:hidden object-cover object-center"
+            priority
+            quality={100}
           />
           {/* Refined Overlays */}
 

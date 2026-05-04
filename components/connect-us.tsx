@@ -27,7 +27,7 @@ const teamMembers = [
     role: "Director, Global Sales",
     email: "michaelhayles@matrixapparels.com",
     linkedin: "https://www.linkedin.com/in/michael-hayles-60888722/",
-    image: "/assets/bosses/mike.jpg",
+    image: "/assets/bosses/mike.png",
   },
   {
     id: 4,

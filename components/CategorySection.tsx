@@ -143,13 +143,23 @@ export default function CategorySection() {
       <div className="relative overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
+          {/* Desktop Banner */}
           <Image
             src="/assets/categories/banner.jpeg"
             alt="Categories Banner"
             fill
-            className="object-cover"
+            className="hidden md:block object-cover"
             priority
-            sizes="100vw"
+            quality={100}
+          />
+          {/* Mobile Banner */}
+          <Image
+            src="/assets/categories/mobile-banner.png"
+            alt="Categories Banner Mobile"
+            fill
+            className="block md:hidden object-cover"
+            priority
+            quality={100}
           />
           {/* Gradient Overlays for smooth transition and readability */}
           <div className="absolute inset-0 bg-gradient-to-b from-[#0d1420] via-transparent to-[#0d1420]" />

@@ -12,6 +12,7 @@ export interface Category {
   featured_cards: { title: string; subtitle: string; body: string }[];
   link: string;
   bannerImage: string;
+  mobileBannerImage: string;
 }
 
 export const categories: Category[] = [
@@ -59,6 +60,7 @@ export const categories: Category[] = [
 
     ],
     bannerImage: "/assets/categories/banner/nightwear.png",
+    mobileBannerImage: "/assets/categories/banner/mobile/nightwear-9X16.jpg"
   },
   {
     id: 2,
@@ -102,6 +104,7 @@ export const categories: Category[] = [
       "/assets/categories/inner-essentials/Essentials-13.jpg"
     ],
     bannerImage: "/assets/categories/banner/Essentials.png",
+    mobileBannerImage: "/assets/categories/banner/mobile/Essentials-Mobile.jpg"
   },
   {
     id: 3,
@@ -148,6 +151,7 @@ export const categories: Category[] = [
 
     ],
     bannerImage: "/assets/categories/banner/Lingerie-&-Intimates.jpg",
+    mobileBannerImage: "/assets/categories/banner/mobile/Lingerie-&-Intimates-mobile.jpg"
   },
   {
     id: 4,
@@ -192,6 +196,7 @@ export const categories: Category[] = [
 
     ],
     bannerImage: "/assets/categories/banner/activewear.png",
+    mobileBannerImage: "/assets/categories/banner/mobile/activewear-mobile.jpg"
   },
 
   {
@@ -237,6 +242,7 @@ export const categories: Category[] = [
 
     ],
     bannerImage: "/assets/categories/banner/swim.png",
+    mobileBannerImage: "/assets/categories/banner/mobile/swim-mobile.png"
   },
   {
     id: 7,
@@ -281,6 +287,7 @@ export const categories: Category[] = [
 
     ],
     bannerImage: "/assets/categories/banner/Sweat-shirt-Fleece.png",
+    mobileBannerImage: "/assets/categories/banner/mobile/Sweat-shirt-&-Fleece-mobile.jpg"
   },
   {
     id: 8,
@@ -324,6 +331,7 @@ export const categories: Category[] = [
       "/assets/categories/jersey-tee/jersey-tee-8.png"
     ],
     bannerImage: "/assets/categories/banner/Polo.jpg",
+    mobileBannerImage: "/assets/categories/banner/mobile/polo-mobile.jpg"
   },
 ];
 
