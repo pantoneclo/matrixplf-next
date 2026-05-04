@@ -102,16 +102,24 @@ export default function CategorySection() {
   // Shared CTA card
   const CTACard = (
     <div className="flex-shrink-0 w-[85vw] sm:w-[350px] md:w-[500px] lg:w-[600px] h-full rounded-bl-lg rounded-br-lg bg-[#111823] border border-white/10 p-4 md:p-10 flex flex-col justify-end items-center relative overflow-hidden group">
+      {/* Desktop Image */}
       <Image
         src="/assets/categories/category-cta.png"
         alt="CTA Background"
         fill
-        className="object-cover transition-transform duration-1000 group-hover:scale-105"
+        className="hidden md:block object-cover transition-transform duration-1000 group-hover:scale-105"
+      />
+      {/* Mobile Image */}
+      <Image
+        src="/assets/categories/category-cat-mobile.jpg"
+        alt="CTA Background Mobile"
+        fill
+        className="block md:hidden object-cover transition-transform duration-1000 group-hover:scale-105"
       />
       <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent transition-all duration-500 z-0" />
 
       <div className="relative z-10 space-y-8 w-full">
-        <div className="space-y-4 text-center md:text-left">
+        <div className="space-y-4 text-left md:text-left">
           <h3 className="text-2xl md:text-4xl lg:text-5xl font-semibold text-white leading-[1.1] tracking-tight">
             Ready to Scale Your <span className="text-sky-500">Next program?</span>
           </h3>
