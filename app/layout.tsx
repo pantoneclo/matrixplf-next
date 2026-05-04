@@ -3,7 +3,7 @@ import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Matrixplatform | Design-Led Apparel Manufacturing Excellence',
+  title: 'Matrixplatform | Excellence in Design-Led Apparel Manufacturing',
   description: 'Design-led, vertically integrated apparel manufacturing platform delivering fabric, development, and global production under one system.',
   generator: 'v0.app',
   icons: {
