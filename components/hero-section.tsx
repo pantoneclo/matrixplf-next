@@ -113,13 +113,15 @@ export function HeroSection() {
           />
           {/* Dark overlay for better text readability */}
           <div className="absolute inset-0 bg-slate-900/30" />
+          {/* Mobile specific bottom gradient for content visibility */}
+          <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent md:hidden" />
         </div>
       ))}
 
       {/* Main Content Wrapper */}
       <div className="relative z-10 flex flex-col h-full">
         {/* Content Area */}
-        <div className="flex-1 flex items-center pb-2 pt-6 sm:pt-12">
+        <div className="flex-1 flex items-end md:items-center pb-12 md:pb-2 pt-6 md:pt-12">
           <div className="container mx-auto px-6 lg:px-12">
             <div className="max-w-4xl pt-8 sm:pt-20">
               {/* Main Heading */}
