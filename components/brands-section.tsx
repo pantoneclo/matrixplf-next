@@ -12,7 +12,7 @@ const ownBrands = [
     desc: "A European menswear brand developed and distributed across 16 EU countries, built on a strong understanding of market demand, product positioning, and consumer behavior. From concept and design to production and retail distribution, the brand reflects our ability to translate ideas into commercially successful products at scale.",
     linkText: "EXPLORE BRAND",
     link: "https://pantoneclo.si",
-    image: "/assets/brand/Pantoneclo.png", // two men walking
+    image: "/assets/brand/Pantoneclo.jpg", // two men walking
     align: "right"
   },
   {
@@ -22,7 +22,7 @@ const ownBrands = [
     desc: "A European womenswear brand developed and distributed across EU markets, built on a strong understanding of consumer demand, product positioning, and market trends. From concept and design to production and retail distribution, the brand reflects our capability to develop and scale products across diverse categories with commercial relevance.",
     linkText: "EXPLORE BRAND",
     link: "https://pantoneclo.si",
-    image: "/assets/brand/Leafletic.png", // two women active
+    image: "/assets/brand/Leafletic.jpg", // two women active
     align: "left"
   },
   {
