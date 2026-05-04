@@ -47,11 +47,20 @@ export default function CodeOfConductPage() {
             src="/assets/pages/code-of-condact.png"
             alt="Code of Conduct"
             fill
-            className="object-cover opacity-40"
+            className="hidden md:block object-cover"
             priority
+            quality={100}
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#0d1420] via-transparent to-transparent" />
-          <div className="absolute inset-0 bg-black/20" />
+          <NextImage
+            src="/assets/pages/code-of-condact-mobile.png"
+            alt="Code of Conduct Mobile"
+            fill
+            className="block md:hidden object-cover object-center"
+            priority
+            quality={100}
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0d1420] via-[#0d1420]/20 to-transparent z-10" />
+          <div className="absolute inset-0 bg-[#0d1420]/60 z-10" />
         </div>
 
         {/* Background Decorative Glows */}
@@ -59,14 +68,18 @@ export default function CodeOfConductPage() {
         <div className="absolute bottom-[10%] left-[-5%] w-[400px] h-[400px] bg-sky-500/5 blur-[100px] rounded-full -z-10" />
 
         <div className="container mx-auto px-6 lg:px-12 relative z-10">
-          <Reveal className="flex flex-col items-start gap-4 mb-8">
+          <Reveal className="flex flex-col items-start gap-6 mb-8">
             <div className="inline-flex items-center gap-2 px-3 py-1 bg-white/5 backdrop-blur-md rounded-full border border-white/10">
               <Shield className="w-3.5 h-3.5 text-sky-500" />
-              <span className="text-white/80 text-[10px] font-bold uppercase tracking-wider">Matrix Platform Ltd</span>
+              <span className="text-white/80 text-[10px] font-bold uppercase tracking-wider">Compliance & Ethics</span>
             </div>
-            <h1 className="text-4xl md:text-4xl lg:text-5xl font-bold leading-[1.1] tracking-tight">
-              Code of Conduct &
-              <span className="text-sky-500"> Ethical Policy</span>
+            <h1 className="uppercase font-bold leading-[1] tracking-tighter">
+              <span className="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white">
+                Code of Conduct
+              </span>
+              <span className="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-sky-500">
+                & Ethical Policy
+              </span>
             </h1>
           </Reveal>
 
@@ -79,7 +92,7 @@ export default function CodeOfConductPage() {
 
           {/* Report a Concern Card */}
           <Reveal delay={0.4}>
-            <div className="p-4 rounded-[2rem] bg-white/5 border border-white/10 backdrop-blur-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-8 group hover:border-sky-500/30 transition-colors">
+            <div className="p-4 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-8 group hover:border-sky-500/30 transition-colors">
               <div className="flex gap-6 items-start">
                 <div className="p-4 rounded-2xl bg-sky-500/10 border border-sky-500/20 group-hover:bg-sky-500/20 transition-colors">
                   <Mail className="w-6 h-6 text-sky-500" />
@@ -111,7 +124,7 @@ export default function CodeOfConductPage() {
       <section className="py-8 bg-black/20 relative">
         <div className="container mx-auto px-6 lg:px-12">
           <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-start">
-            <Reveal className="sticky top-32">
+            <Reveal className="lg:sticky lg:top-32">
               <div className="inline-flex items-center gap-2 px-3 py-1 bg-white/5 backdrop-blur-md rounded-full border border-white/10 mb-6">
                 <span className="text-sky-500 text-[10px] font-bold uppercase tracking-wider font-mono">Section 01</span>
               </div>
@@ -159,7 +172,7 @@ export default function CodeOfConductPage() {
       <section className="py-8 relative overflow-hidden">
         <div className="container mx-auto px-6 lg:px-12">
           <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-start mb-16">
-            <Reveal className="sticky top-32">
+            <Reveal className="lg:sticky lg:top-32">
               <div className="inline-flex items-center gap-2 px-3 py-1 bg-white/5 backdrop-blur-md rounded-full border border-white/10 mb-6">
                 <span className="text-sky-500 text-[10px] font-bold uppercase tracking-wider font-mono">Section 02</span>
               </div>
@@ -200,7 +213,7 @@ export default function CodeOfConductPage() {
       <section className="py-8 px-6 lg:px-12">
         <div className="container mx-auto">
           <Reveal>
-            <div className="p-6 rounded-[3.5rem] bg-white/5 border border-white/10 backdrop-blur-xl relative overflow-hidden text-center group">
+            <div className="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-xl relative overflow-hidden text-center group">
               {/* Background decorative glow */}
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-sky-500/10 blur-[150px] rounded-full -z-10 group-hover:bg-sky-500/15 transition-colors duration-700" />
 

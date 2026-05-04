@@ -60,10 +60,10 @@ export function ConnectUs() {
         {/* Team Grid */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-2 lg:gap-2">
           {teamMembers.map((member, idx) => (
-            <Reveal key={member.id} delay={0.1 * (idx + 1)}>
+            <Reveal key={member.id} delay={0.1 * (idx + 1)} className="h-full">
               <div className="group relative flex flex-col h-full rounded overflow-hidden shadow-xl shadow-slate-200">
                 {/* Image Container */}
-                <div className="relative aspect-4/5 w-full overflow-hidden bg-slate-200">
+                <div className="relative aspect-[4/5] w-full overflow-hidden bg-slate-200">
                   <Image
                     src={member.image}
                     alt={member.name}
@@ -76,7 +76,7 @@ export function ConnectUs() {
                 </div>
 
                 {/* Footer Bar */}
-                <div className="relative bg-[#1a1d21] p-3 sm:p-4 lg:p-6 transition-colors group-hover:bg-[#252a30]">
+                <div className="relative flex-1 bg-[#1a1d21] p-3 sm:p-4 lg:p-6 transition-colors group-hover:bg-[#252a30]">
                   {/* LinkedIn — absolute top-right, aligned with name */}
                   <a
                     href={member.linkedin}
