@@ -75,11 +75,11 @@ export function ManufacturingSection() {
       <div className="relative z-10 container mx-auto px-6 lg:px-12 py-12 lg:py-16">
         {/* Section Badge - Highlighted */}
         <div
-          className={`inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-sky-500/40 to-sky-500/30 border-2 border-sky-500/60 rounded-full mb-6 transition-all duration-700 shadow-lg shadow-sky-500/20 ${isVisible ? "opacity-100 translate-y-0 animate-pulse" : "opacity-0 translate-y-4"
+          className={`inline-flex items-center gap-3 px-4 py-2 bg-gradient-to-r from-sky-500/40 to-sky-500/30 border-2 border-sky-500/60 rounded-full mb-6 transition-all duration-700 shadow-lg shadow-sky-500/20 ${isVisible ? "opacity-100 translate-y-0 animate-pulse" : "opacity-0 translate-y-4"
             }`}
         >
           <Factory className="w-5 h-5 text-sky-500" />
-          <span className="text-white text-base font-bold tracking-wider uppercase">Own Manufacturing Unit</span>
+          <span className="text-white text-sm sm:text-base font-bold tracking-wider uppercase">Own Manufacturing Unit</span>
         </div>
 
         {/* Section Header */}
