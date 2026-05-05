@@ -10,6 +10,15 @@ import { cn } from "@/lib/utils"
 
 const slides = [
   {
+    id: 3,
+    image: "/hero/Cover-3.png",
+    mobileImage: "/hero/mobile/Cover-3.jpg",
+    title: "TECHNICAL EDGE",
+    titleHighlight: "IN <br> <span class=\"whitespace-nowrap\">EVERY PRODUCT</span>",
+    subtitle: "Design-led R&D and technical teams shaping precise, production-ready garments.",
+    description: "Fit engineering, cost efficiency, and quality control — built to scale responsibly.",
+  },
+  {
     id: 1,
     image: "/hero/Cover1.jpg",
     mobileImage: "/hero/mobile/Cover-1.jpg",
@@ -27,15 +36,7 @@ const slides = [
     subtitle: "Integrated production systems ensuring consistency at every stage.",
     description: "From fabric development to nal nishing, each process is monitored, standardized, and continuously optimized.",
   },
-  {
-    id: 3,
-    image: "/hero/Cover-3.png",
-    mobileImage: "/hero/mobile/Cover-3.jpg",
-    title: "TECHNICAL EDGE",
-    titleHighlight: "IN <br> <span class=\"whitespace-nowrap\">EVERY PRODUCT</span>",
-    subtitle: "Design-led R&D and technical teams shaping precise, production-ready garments.",
-    description: "Fit engineering, cost efficiency, and quality control — built to scale responsibly.",
-  },
+
   {
     id: 4,
     image: "/hero/Cover-4.jpg",
