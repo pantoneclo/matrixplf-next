@@ -41,15 +41,16 @@ const offices = [
     email1: "shohel@matrixapparels.com"
   },
   {
-    Name: "Trinity Global enterprises (Pvt) Ltd",
-    city1: "Sri Lanka",
+    Name: "THREAD NO.27 LLC",
+    city1: "USA",
     city2: "",
     type: "Headquarters",
-    address1: "170/01, Bolgoda Gardens,Galkanuwa Road,Gorakana, Keselwaththa. Sri Lanka.",
+    address1: "44 Laurel St, Longmeadow, MA 01106",
     address2: "",
-    phone1: "+94 382286287",
+    phone1: "+386 30 796 092",
     email1: "shohel@matrixapparels.com"
-  },
+  }
+  ,
   {
     Name: "ZHEJIANG MONALISA TEXTILE CO., LTD.",
     city1: "China",
@@ -60,14 +61,15 @@ const offices = [
     phone1: "+386 30 796 092",
     email1: "shohel@matrixapparels.com"
   },
+
   {
-    Name: "THREAD NO.27 LLC",
-    city1: "USA",
+    Name: "Trinity Global enterprises (Pvt) Ltd",
+    city1: "Sri Lanka",
     city2: "",
     type: "Headquarters",
-    address1: "44 Laurel St, Longmeadow, MA 01106",
+    address1: "170/01, Bolgoda Gardens,Galkanuwa Road,Gorakana, Keselwaththa. Sri Lanka.",
     address2: "",
-    phone1: "+386 30 796 092",
+    phone1: "+94 382286287",
     email1: "shohel@matrixapparels.com"
   }
 ]
