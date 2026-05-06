@@ -59,6 +59,16 @@ const offices = [
     address2: "",
     phone1: "+386 30 796 092",
     email1: "shohel@matrixapparels.com"
+  },
+  {
+    Name: "THREAD NO.27 LLC",
+    city1: "USA",
+    city2: "",
+    type: "Headquarters",
+    address1: "44 Laurel St, Longmeadow, MA 01106",
+    address2: "",
+    phone1: "+386 30 796 092",
+    email1: "shohel@matrixapparels.com"
   }
 ]
 
