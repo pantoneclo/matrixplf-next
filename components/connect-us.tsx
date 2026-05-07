@@ -21,14 +21,14 @@ const teamMembers = [
     linkedin: "https://www.linkedin.com/in/tina-cocej-b78094214/",
     image: "/assets/bosses/Tina.jpg",
   },
-  {
-    id: 3,
-    name: "Michael Hayles",
-    role: "Director, Global Sales",
-    email: "michaelhayles@matrixapparels.com",
-    linkedin: "https://www.linkedin.com/in/michael-hayles-60888722/",
-    image: "/assets/bosses/mike.jpeg",
-  },
+  // {
+  //   id: 3,
+  //   name: "Michael Hayles",
+  //   role: "Director, Global Sales",
+  //   email: "michaelhayles@matrixapparels.com",
+  //   linkedin: "https://www.linkedin.com/in/michael-hayles-60888722/",
+  //   image: "/assets/bosses/mike.jpeg",
+  // },
   {
     id: 4,
     name: "Timo Karanko",
@@ -58,7 +58,7 @@ export function ConnectUs() {
         </div>
 
         {/* Team Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-2 lg:gap-2">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-2 lg:gap-2">
           {teamMembers.map((member, idx) => (
             <Reveal key={member.id} delay={0.1 * (idx + 1)} className="h-full">
               <div className="group relative flex flex-col h-full rounded overflow-hidden shadow-xl shadow-slate-200">
