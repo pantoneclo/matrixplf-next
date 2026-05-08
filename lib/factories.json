@@ -53,21 +53,8 @@
     "certifications": [
       "/certifications/1.png",
       "/certifications/2.png",
-      "/certifications/3.png",
-      "/certifications/4.png",
-      "/certifications/10.png",
-      "/certifications/12.png",
-      "/certifications/19.png",
-      "/certifications/16.png",
-      "/certifications/13.png",
-      "/certifications/17.png",
-      "/certifications/18.png",
-      "/certifications/14.png",
       "/certifications/6.png",
-      "/certifications/7.png",
-      "/certifications/8.png",
-      "/certifications/5.png",
-      "/certifications/11.png"
+      "/certifications/5.png"
     ],
     "profilePdf": "/assets/company/Matrixapparels-Ltd-a-unit-of-Matrix-platform.pdf"
   },
@@ -121,14 +108,14 @@
     },
     "certifications": [
       "/certifications/15.png",
-      "/certifications/13.png",
+      "/certifications/2.png",
       "/certifications/9.png",
-      "/certifications/20.png",
       "/certifications/14.png",
-      "/certifications/22.png",
+      "/certifications/4.png",
       "/certifications/11.png",
       "/certifications/21.png",
-      "/certifications/6.png"
+      "/certifications/6.png",
+      "/certifications/10.png"
     ],
     "profilePdf": "/assets/company/IFS-Texwear-Updated.pdf"
   },
@@ -185,7 +172,10 @@
       "/certifications/2.png",
       "/certifications/4.png",
       "/certifications/10.png",
-      "/certifications/12.png"
+      "/certifications/12.png",
+      "/certifications/9.png",
+      "/certifications/21.png",
+      "/certifications/7.png"
     ],
     "profilePdf": "/assets/company/MB-Knit-Profile-Updated-H.pdf"
   },
@@ -241,12 +231,16 @@
     "certifications": [
       "/certifications/20.png",
       "/certifications/9.png",
+      "/certifications/6.png",
       "/certifications/18.png",
       "/certifications/7.png",
       "/certifications/17.png",
       "/certifications/14.png",
+      "/certifications/15.png",
       "/certifications/10.png",
-      "/certifications/12.png"
+      "/certifications/12.png",
+      "/certifications/21.png",
+      "/certifications/22.png"
     ],
     "profilePdf": "/assets/company/Lithe-Group-Company-Profile-Update.pdf"
   },
@@ -301,9 +295,10 @@
       "/certifications/11.png",
       "/certifications/4.png",
       "/certifications/10.png",
-      "/certifications/17.png",
-      "/certifications/14.png",
-      "/certifications/5.png"
+      "/certifications/5.png",
+      "/certifications/2.png",
+      "/certifications/22.png",
+      "/certifications/7.png"
     ],
     "profilePdf": "/assets/company/West-Knitwear-Ltd-Profile-Update-S_compressed.pdf"
   },
@@ -360,6 +355,7 @@
       "/certifications/6.png",
       "/certifications/16.png",
       "/certifications/4.png",
+      "/certifications/14.png",
       "/certifications/7.png",
       "/certifications/12.png"
     ],
