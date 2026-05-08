@@ -240,7 +240,7 @@ export default async function FactoryPage({ params }: FactoryPageProps) {
                             <Link
                                 key={key}
                                 href={`/factory/${key}`}
-                                className="group relative block overflow-hidden rounded-[2rem] bg-[#1e2632] border border-white/5 hover:border-sky-500/30 transition-all duration-500"
+                                className="group relative block overflow-hidden rounded-xl bg-[#1e2632] border border-white/5 hover:border-sky-500/30 transition-all duration-500"
                             >
                                 <div className="aspect-[16/10] relative overflow-hidden">
                                     <Image
