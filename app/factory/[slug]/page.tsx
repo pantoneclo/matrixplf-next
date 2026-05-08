@@ -174,31 +174,25 @@ export default async function FactoryPage({ params }: FactoryPageProps) {
                     <div className="lg:w-5/12 flex flex-col gap-8">
 
                         {/* Certifications Block */}
-                        <div className="bg-[#1e2632] border border-[#2b394b] rounded-xl p-6 sm:p-8 shadow-lg flex-1">
-                            <h2 className="text-2xl font-bold text-sky-500 uppercase mb-6 tracking-wide">Our Certifications</h2>
+                        {factory.certifications && factory.certifications.length > 0 && (
+                            <div className="bg-[#1e2632] border border-[#2b394b] rounded-xl p-6 sm:p-8 shadow-lg flex-1">
+                                <h2 className="text-2xl font-bold text-sky-500 uppercase mb-6 tracking-wide">Our Certifications</h2>
 
-                            <div className="grid grid-cols-3 sm:grid-cols-4 gap-4 items-center">
-                                {(factory.certifications && factory.certifications.length > 0
-                                    ? factory.certifications
-                                    : [
-                                        "/certifications/1.png", "/certifications/2.png", "/certifications/3.png",
-                                        "/certifications/4.png", "/certifications/5.png", "/certifications/6.png",
-                                        "/certifications/7.png", "/certifications/8.png", "/certifications/9.png",
-                                        "/certifications/10.png"
-                                    ]
-                                ).map((cert: string, idx: number) => (
-                                    <div key={idx} className="relative aspect-square w-full h-full bg-white rounded-lg p-3 flex items-center justify-center border border-white/10 overflow-hidden hover:scale-105 transition-transform duration-300">
-                                        <Image
-                                            src={cert}
-                                            alt={`Certification ${idx + 1}`}
-                                            width={100}
-                                            height={100}
-                                            className="object-contain max-h-full"
-                                        />
-                                    </div>
-                                ))}
+                                <div className="grid grid-cols-3 sm:grid-cols-4 gap-4 items-center">
+                                    {factory.certifications.map((cert: string, idx: number) => (
+                                        <div key={idx} className="relative aspect-square w-full h-full bg-white rounded-lg p-3 flex items-center justify-center border border-white/10 overflow-hidden hover:scale-105 transition-transform duration-300">
+                                            <Image
+                                                src={cert}
+                                                alt={`Certification ${idx + 1}`}
+                                                width={100}
+                                                height={100}
+                                                className="object-contain max-h-full"
+                                            />
+                                        </div>
+                                    ))}
+                                </div>
                             </div>
-                        </div>
+                        )}
 
                         {/* Contact Block */}
                         <div className="bg-[#1e2632] border border-[#2b394b] rounded-xl p-6 sm:p-8 shadow-lg">
