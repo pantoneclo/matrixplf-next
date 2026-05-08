@@ -17,7 +17,7 @@
     ],
     "stats": {
       "workers": "500+",
-      "capacity": "2M",
+      "capacity": "0.2M",
       "lines": "10",
       "area": "26K"
     },
