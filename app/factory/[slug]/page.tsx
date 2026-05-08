@@ -61,14 +61,14 @@ export default async function FactoryPage({ params }: FactoryPageProps) {
                 <div className="container mx-auto px-6 lg:px-12 relative z-10 pb-16">
                     <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6">
                         {/* Custom SVG Logo */}
-                        <div className="w-16 h-20 md:w-20 md:h-24 flex-shrink-0">
+                        {/* <div className="w-16 h-20 md:w-20 md:h-24 flex-shrink-0">
                             <svg width="100%" height="100%" viewBox="0 0 60 80" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-[#f27435]">
                                 <circle cx="30" cy="30" r="18" stroke="currentColor" strokeWidth="4" />
                                 <path d="M 30 48 L 30 80" stroke="currentColor" strokeWidth="4" />
                                 <path d="M 15 65 L 45 65" stroke="currentColor" strokeWidth="4" />
                                 <path d="M 15 80 L 30 48 L 45 80" stroke="currentColor" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
                             </svg>
-                        </div>
+                        </div> */}
                         <div>
                             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-2">
                                 <span className="text-sky-500">{factory.namePart1}</span> <span className="text-white">{factory.namePart2}</span>
@@ -104,10 +104,10 @@ export default async function FactoryPage({ params }: FactoryPageProps) {
                         if (parts.length > 1) {
                             displayValue = parts[0];
                             const unit = parts.slice(1).join(" ");
-                            
+
                             // Capitalize unit
                             displayLabel = unit.charAt(0).toUpperCase() + unit.slice(1);
-                            
+
                             // Specific override for meters as requested
                             if (unit.toLowerCase() === "meters") {
                                 displayLabel = "Meters / Month";
