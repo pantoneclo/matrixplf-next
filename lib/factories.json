@@ -262,9 +262,9 @@
     ],
     "bannerVideos": [],
     "stats": {
-      "workers": "2,280+",
-      "capacity": "1.68M",
-      "lines": "40",
+      "workers": "1130+",
+      "capacity": "1.4M",
+      "lines": "24",
       "area": "50K"
     },
     "description": [
@@ -275,11 +275,11 @@
     ],
     "strengths": [
       "Established operation since 1996 with strong export experience",
-      "40 production lines with 1.8–2.0M pcs/month capacity",
+      "24 production lines with 1.4M–1.6M pcs/month capacity",
       "Knitting capacity of 15,000–20,000 kgs/day",
       "Dyeing capacity of 25,000–30,000 kgs/day",
       "Cutting capacity of 80,000 pcs/day with 4 auto spreaders and 1 auto cutter",
-      "2,280 sewing operators supported by 1,300 machines",
+      "1,130 sewing operators supported by 600 machines",
       "Strong backward linkage with continued expansion plans up to 55 lines",
       "Cotton spinning capability of 40,000 spindles in expansion roadmap",
       "In-house accessory facility and upgraded printing/embroidery capability",
@@ -319,10 +319,11 @@
     ],
     "bannerVideos": [],
     "stats": {
-      "workers": "2,200+",
-      "capacity": "1.2M",
-      "lines": "25",
-      "area": "180K"
+      "workers": "3000+",
+      "capacity": "2M",
+      "lines": "",
+      "machiness": "3000+",
+      "area": "300K"
     },
     "description": [
       "Aitken Spence Apparel is a global sustainability leader and the first company in Sri Lanka to be recognized among the Top Global 100 Companies for Sustainability 2022.",
@@ -373,8 +374,9 @@
     "stats": {
       "workers": "800+",
       "capacity": "3M meters",
-      "lines": "N/A",
-      "area": "N/A"
+      "lines": "350 looms",
+      "machiness": "160 Knitting Machines",
+      "area": ""
     },
     "description": [
       "Zhejiang Monalisa Textile Co., Ltd. is a fully integrated textile manufacturing platform specializing in fabric R&D, weaving, knitting, dyeing, printing and post-finishing for global apparel supply chains.",
@@ -385,8 +387,8 @@
     "strengths": [
       "Fully integrated textile platform from fiber to finished fabric",
       "Monthly capacity of ~3 million meters across multiple units",
-      "Weaving (Wangxing): ~1M meters/month with 350+ looms",
-      "Knitting (Maoxin): 180 machines with ~1,600 tons/month capacity",
+      "Weaving (Wangxing): ~3M meters/month with 350+ looms",
+      "Knitting (Maoxin): 160 machines with ~1,600 tons/month capacity",
       "Dyeing & Finishing (Xinyi): ~2,400 tons/month with 50+ dye vats",
       "Global Unit (Ethiopia): 160 machines with ~48 tons/day capacity",
       "In-house rotary printing capability for large-scale production",
@@ -401,11 +403,11 @@
       "Woven & Dyed Fabrics (Cotton, Polyester, blended textiles)"
     ],
     "contact": {
-      "hq": "Zhejiang, China",
+      "hq": "Building 3, No 1423, Eastern Renmin Road, Shaoxing, Zhejiang, China",
       "phone": "N/A",
-      "email": "N/A"
+      "email": "shohel@matrixapparels.com"
     },
     "certifications": [],
-    "profilePdf": ""
+    "profilePdf": "/assets/company/MonaLIsa-Textile.pdf"
   }
 }

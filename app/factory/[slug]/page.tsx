@@ -85,22 +85,46 @@ export default async function FactoryPage({ params }: FactoryPageProps) {
             {/* Stats Row */}
             <section className="container mx-auto px-6 lg:px-12 -mt-6 relative">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-                    <div className="bg-[#1e2632] border border-[#2b394b] rounded-xl p-8 text-center shadow-lg transition-transform hover:-translate-y-1">
-                        <div className="text-4xl lg:text-5xl font-bold text-sky-500 mb-2 tracking-tight">{factory.stats.workers}</div>
-                        <div className="text-sm font-semibold tracking-wider text-sky-500 uppercase">Skilled Workers</div>
-                    </div>
-                    <div className="bg-[#1e2632] border border-[#2b394b] rounded-xl p-8 text-center shadow-lg transition-transform hover:-translate-y-1">
-                        <div className="text-4xl lg:text-5xl font-bold text-sky-500 mb-2 tracking-tight">{factory.stats.capacity}</div>
-                        <div className="text-sm font-semibold tracking-wider text-sky-500 uppercase">Pieces / Month</div>
-                    </div>
-                    <div className="bg-[#1e2632] border border-[#2b394b] rounded-xl p-8 text-center shadow-lg transition-transform hover:-translate-y-1">
-                        <div className="text-4xl lg:text-5xl font-bold text-sky-500 mb-2 tracking-tight">{factory.stats.lines}</div>
-                        <div className="text-sm font-semibold tracking-wider text-sky-500 uppercase">Production Lines</div>
-                    </div>
-                    <div className="bg-[#1e2632] border border-[#2b394b] rounded-xl p-8 text-center shadow-lg transition-transform hover:-translate-y-1">
-                        <div className="text-4xl lg:text-5xl font-bold text-sky-500 mb-2 tracking-tight">{factory.stats.area}</div>
-                        <div className="text-sm font-semibold tracking-wider text-sky-500 uppercase">Sq. Ft. Facility</div>
-                    </div>
+                    {[
+                        { key: 'workers', label: 'Skilled Workers' },
+                        { key: 'capacity', label: 'Pieces / Month' },
+                        { key: 'lines', label: 'Production Lines' },
+                        { key: 'machiness', label: 'Machines' },
+                        { key: 'machines', label: 'Machines' },
+                        { key: 'area', label: 'Sq. Ft. Facility' },
+                    ].map((s) => {
+                        const val = factory.stats[s.key];
+                        if (!val || val === "") return null;
+
+                        let displayValue = val;
+                        let displayLabel = s.label;
+
+                        // Check if the value has a unit (e.g., "350 looms" or "3M meters")
+                        const parts = val.trim().split(/\s+/);
+                        if (parts.length > 1) {
+                            displayValue = parts[0];
+                            const unit = parts.slice(1).join(" ");
+                            
+                            // Capitalize unit
+                            displayLabel = unit.charAt(0).toUpperCase() + unit.slice(1);
+                            
+                            // Specific override for meters as requested
+                            if (unit.toLowerCase() === "meters") {
+                                displayLabel = "Meters / Month";
+                            }
+                        }
+
+                        return (
+                            <div key={s.key} className="bg-[#1e2632] border border-[#2b394b] rounded-xl p-8 text-center shadow-lg transition-transform hover:-translate-y-1">
+                                <div className="text-4xl lg:text-5xl font-bold text-sky-500 mb-2 tracking-tight">
+                                    {displayValue}
+                                </div>
+                                <div className="text-sm font-semibold tracking-wider text-sky-500 uppercase">
+                                    {displayLabel}
+                                </div>
+                            </div>
+                        );
+                    }).filter(Boolean).slice(0, 4)}
                 </div>
             </section>
 
