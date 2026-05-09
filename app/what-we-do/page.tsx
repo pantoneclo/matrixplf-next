@@ -57,8 +57,9 @@ export default function WhatWeDoPage() {
                     const isEven = index % 2 === 0;
                     // Split title for dual-color effect
                     const titleWords = service.title.split(' ');
-                    const firstPart = titleWords.slice(0, titleWords.length - 1).join(' ');
-                    const lastPart = titleWords[titleWords.length - 1];
+                    const splitIndex = titleWords.length <= 2 ? 1 : 2;
+                    const firstPart = titleWords.slice(0, splitIndex).join(' ');
+                    const lastPart = titleWords.slice(splitIndex).join(' ');
 
                     return (
                         <section
