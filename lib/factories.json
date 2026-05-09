@@ -52,8 +52,8 @@
     },
     "certifications": [
       "/certifications/1.png",
+      "/certifications/BSCI.png",
       "/certifications/2.png",
-      "/certifications/6.png",
       "/certifications/5.png"
     ],
     "profilePdf": "/assets/company/Matrixapparels-Ltd-a-unit-of-Matrix-platform.pdf"
@@ -71,7 +71,7 @@
     "bannerVideos": [],
     "stats": {
       "workers": "4,500+",
-      "capacity": "12M",
+      "capacity": "3.6M",
       "lines": "120",
       "area": "268.35K"
     },
@@ -107,15 +107,16 @@
       "email": "shohel@matrixapparels.com"
     },
     "certifications": [
-      "/certifications/15.png",
-      "/certifications/2.png",
-      "/certifications/9.png",
-      "/certifications/14.png",
-      "/certifications/4.png",
-      "/certifications/11.png",
-      "/certifications/21.png",
       "/certifications/6.png",
-      "/certifications/10.png"
+      "/certifications/2.png",
+      "/certifications/4.png",
+      "/certifications/14.png",
+      "/certifications/15.png",
+      "/certifications/10.png",
+      "/certifications/1.png",
+      "/certifications/9.png",
+      "/certifications/21.png",
+      "/certifications/mcci.png"
     ],
     "profilePdf": "/assets/company/IFS-Texwear-Updated.pdf"
   },
@@ -165,17 +166,16 @@
       "email": "shohel@matrixapparels.com"
     },
     "certifications": [
-      "/certifications/1.png",
-      "/certifications/11.png",
       "/certifications/6.png",
-      "/certifications/14.png",
       "/certifications/2.png",
       "/certifications/4.png",
+      "/certifications/14.png",
       "/certifications/10.png",
+      "/certifications/7.png",
       "/certifications/12.png",
+      "/certifications/1.png",
       "/certifications/9.png",
-      "/certifications/21.png",
-      "/certifications/7.png"
+      "/certifications/21.png"
     ],
     "profilePdf": "/assets/company/MB-Knit-Profile-Updated-H.pdf"
   },
@@ -229,18 +229,19 @@
       "email": "shohel@matrixapparels.com"
     },
     "certifications": [
-      "/certifications/20.png",
-      "/certifications/9.png",
-      "/certifications/6.png",
       "/certifications/18.png",
-      "/certifications/7.png",
-      "/certifications/17.png",
+      "/certifications/6.png",
+      "/certifications/20.png",
+      "/certifications/Fire-Wear.png",
       "/certifications/14.png",
       "/certifications/15.png",
+      "/certifications/17.png",
       "/certifications/10.png",
+      "/certifications/7.png",
       "/certifications/12.png",
-      "/certifications/21.png",
-      "/certifications/22.png"
+      "/certifications/22.png",
+      "/certifications/9.png",
+      "/certifications/21.png"
     ],
     "profilePdf": "/assets/company/Lithe-Group-Company-Profile-Update.pdf"
   },
@@ -292,13 +293,14 @@
     },
     "certifications": [
       "/certifications/6.png",
-      "/certifications/11.png",
+      "/certifications/1.png",
+      "/certifications/2.png",
       "/certifications/4.png",
       "/certifications/10.png",
       "/certifications/5.png",
-      "/certifications/2.png",
       "/certifications/22.png",
-      "/certifications/7.png"
+      "/certifications/7.png",
+      "/certifications/slcp.png"
     ],
     "profilePdf": "/assets/company/West-Knitwear-Ltd-Profile-Update-S_compressed.pdf"
   },
@@ -357,7 +359,9 @@
       "/certifications/4.png",
       "/certifications/14.png",
       "/certifications/7.png",
-      "/certifications/12.png"
+      "/certifications/12.png",
+      "/certifications/Europian-Flax.png",
+      "/certifications/Disny-FAMA.png"
     ],
     "profilePdf": "/assets/company/Aitken-Spence-Apparel-Profile-Update.pdf"
   },
