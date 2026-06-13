@@ -17,9 +17,9 @@
     ],
     "stats": {
       "workers": "500+",
-      "capacity": "0.2M",
+      "capacity": "200K",
       "lines": "10",
-      "area": "26K"
+      "area": "18K"
     },
     "description": [
       "Matrix Apparels Ltd. is a 100% export-oriented knit and woven garments manufacturing facility based in Dhaka, Bangladesh, built to deliver flexible, quality-driven retail programs for EU, UK and U.S. markets.",
@@ -73,7 +73,7 @@
       "workers": "4,500+",
       "capacity": "3.6M",
       "lines": "120",
-      "area": "268.35K"
+      "area": "248K"
     },
     "description": [
       "IFS TEXWEAR (PVT.) LTD. is a fully integrated composite knit manufacturing facility built to deliver high-volume, precision-driven retail programs for EU, UK and U.S. markets.",
@@ -135,7 +135,7 @@
       "workers": "1,115+",
       "capacity": "1.41M",
       "lines": "48",
-      "area": "90.97K"
+      "area": "90K"
     },
     "description": [
       "MB Knit Fashion Ltd. is a 100% export-oriented knit garment manufacturing facility with a long-standing track record in delivering consistent, high-volume retail programs for EU, UK and U.S. markets. Established in 1992, the factory operates from a 90,974 sq. ft. facility with a structured production setup designed for quality, efficiency and timely delivery.",
@@ -257,10 +257,10 @@
     ],
     "bannerVideos": [],
     "stats": {
-      "workers": "1130+",
-      "capacity": "1.4M",
-      "lines": "24",
-      "area": "50K"
+      "workers": "2280+",
+      "capacity": "2.0M",
+      "lines": "55",
+      "area": "89K"
     },
     "description": [
       "West Knitwear Ltd. is a vertically integrated knit manufacturing facility established in 1996, built to deliver high-volume, quality-driven retail programs for EU, UK and North American markets.",
@@ -369,13 +369,18 @@
     "namePart1": "Zhejiang",
     "namePart2": "Monalisa Textile Co., Ltd.",
     "location": "Zhejiang, China",
-    "bannerImages": [],
+    "bannerImages": [
+      {
+        "image": "/images/fabric-mill.jpg",
+        "status": "active"
+      }
+    ],
     "bannerVideos": [],
     "stats": {
       "workers": "800+",
       "capacity": "3M meters",
       "lines": "350 looms",
-      "machiness": "160 Knitting Machines",
+      "machiness": "160+ Knitting Machines",
       "area": ""
     },
     "description": [
