@@ -12,6 +12,7 @@ const footerLinks = {
     { label: "What We Do", href: "/what-we-do" },
     { label: "Brand", href: "/brands" },
     { label: "Products", href: "/product" },
+    { label: "Factories", href: "/factory" },
 
   ],
   services: [

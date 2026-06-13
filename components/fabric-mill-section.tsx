@@ -5,6 +5,7 @@ import { Download, Factory, Sparkles } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { ProfileDownloadModal } from "./ProfileDownloadModal"
 import Image from "next/image"
+import Link from "next/link"
 
 export function FabricMillSection() {
   const [isVisible, setIsVisible] = useState(false)
@@ -81,30 +82,32 @@ export function FabricMillSection() {
             className={`w-full lg:w-1/2 xl:w-[55%] transition-all duration-1000 ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-12"
               }`}
           >
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-black/40 border border-white/10 group">
-              <div className="relative h-80 md:h-96 lg:h-[450px] xl:h-[500px]">
-                <Image
-                  src="/images/fabric-mill.jpg"
-                  alt="Zhejiang Monalisa Textile Factory"
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-700"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 55vw"
-                  priority
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent" />
-              </div>
+            <Link href="/factory/zhejiang-monalisa" className="block cursor-pointer">
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-black/40 border border-white/10 group">
+                <div className="relative h-80 md:h-96 lg:h-[450px] xl:h-[500px]">
+                  <Image
+                    src="/images/fabric-mill.jpg"
+                    alt="Zhejiang Monalisa Textile Factory"
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-700"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 55vw"
+                    priority
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent" />
+                </div>
 
-              {/* Overlay badge */}
-              <div className="absolute bottom-5 left-5 right-5">
-                <div className="flex items-center gap-3 px-4 py-3 bg-white/10 backdrop-blur-md rounded-xl border border-white/20">
-                  <Factory className="w-6 h-6 text-sky-500" />
-                  <div>
-                    <span className="text-white text-base font-semibold block">Zhejiang Monalisa Textile</span>
-                    <span className="text-slate-300 text-sm">Shaoxing, China</span>
+                {/* Overlay badge */}
+                <div className="absolute bottom-5 left-5 right-5">
+                  <div className="flex items-center gap-3 px-4 py-3 bg-white/10 backdrop-blur-md rounded-xl border border-white/20">
+                    <Factory className="w-6 h-6 text-sky-500" />
+                    <div>
+                      <span className="text-white text-base font-semibold block">Zhejiang Monalisa Textile</span>
+                      <span className="text-slate-300 text-sm">Shaoxing, China</span>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
+            </Link>
           </div>
 
           {/* Right Side Text Content */}
