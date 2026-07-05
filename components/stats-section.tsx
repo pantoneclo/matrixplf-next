@@ -16,7 +16,7 @@ const stats = [
   //     sublabel: "in Our Sourcing Network",
   //   },
   {
-    value: 3,
+    value: 11.2,
     suffix: "M+",
     label: "Garments Produced",
     sublabel: "Per Month",
