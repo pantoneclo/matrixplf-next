@@ -13,7 +13,6 @@ const certifications = [
   { name: "Certification 8", src: "/certifications/8.png" },
   { name: "Certification 9", src: "/certifications/9.png" },
   { name: "Certification 10", src: "/certifications/10.png" },
-  // { name: "Certification 11", src: "/certifications/11.png" },
   { name: "Certification 12", src: "/certifications/12.png" },
   { name: "Certification 13", src: "/certifications/13.png" },
   { name: "Certification 14", src: "/certifications/14.png" },
