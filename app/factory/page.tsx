@@ -73,7 +73,7 @@ export default function FactoriesPage() {
 
                     <Reveal delay={0.2}>
                         <p className="text-slate-400 text-lg md:text-xl leading-relaxed max-w-2xl">
-                            Six vertically integrated manufacturing units across Bangladesh and Sri Lanka — each selected for technical capability, compliance standards, and production scale.
+                            Six vertically integrated manufacturing units across Bangladesh, Sri Lanka & China — each selected for technical capability, compliance standards, and production scale.
                         </p>
                     </Reveal>
 
@@ -82,7 +82,7 @@ export default function FactoriesPage() {
                         <div className="flex flex-wrap gap-6 mt-12">
                             {[
                                 { value: "6", label: "Manufacturing Units" },
-                                { value: "3M+", label: "Garments / Month" },
+                                { value: "11.2M+", label: "Garments / Month" },
                                 { value: "15+", label: "Certifications" },
                                 { value: "3", label: "Countries" },
                             ].map((s) => (
