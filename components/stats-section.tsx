@@ -18,7 +18,7 @@ const stats = [
   {
     value: 11.2,
     suffix: "M+",
-    label: "Garments Produced",
+    label: "Production Capacity",
     sublabel: "Per Month",
   },
   {

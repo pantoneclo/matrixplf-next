@@ -34,7 +34,7 @@ const offices = [
     Name: "Matrix Design D.o.o.",
     city1: "Ljubljana,Slovenia",
     city2: "",
-    type: "Headquarters",
+    type: "",
     address1: "3000 Celje, Slovenia",
     address2: "",
     phone1: "+386 30 796 092",
@@ -44,7 +44,7 @@ const offices = [
     Name: "THREAD NO.27 LLC",
     city1: "USA",
     city2: "",
-    type: "Headquarters",
+    type: "",
     address1: "44 Laurel St, Longmeadow, MA 01106",
     address2: "",
     phone1: "+386 30 796 092",
@@ -55,7 +55,7 @@ const offices = [
     Name: "ZHEJIANG MONALISA TEXTILE CO., LTD.",
     city1: "China",
     city2: "",
-    type: "Headquarters",
+    type: "",
     address1: "Building 3, No 1423, Eastern Renmin Road,Shaoxing, Zhejiang, China",
     address2: "",
     phone1: "+386 30 796 092",
@@ -66,7 +66,7 @@ const offices = [
     Name: "Trinity Global enterprises (Pvt) Ltd",
     city1: "Sri Lanka",
     city2: "",
-    type: "Headquarters",
+    type: "",
     address1: "170/01, Bolgoda Gardens,Galkanuwa Road,Gorakana, Keselwaththa. Sri Lanka.",
     address2: "",
     phone1: "+94 382286287",
@@ -291,7 +291,9 @@ export function ContactSection() {
                       <div className="flex-1 min-w-0">
                         <div className="flex items-center justify-between gap-2 mb-2">
                           <h4 className="font-bold text-white text-sm lg:text-base">{office.Name}</h4>
-                          <span className="text-slate-400 text-[10px] font-bold uppercase tracking-wider bg-white/5 px-2 py-0.5 rounded border border-white/10">{office.type}</span>
+                          {office.type && (
+                            <span className="text-slate-400 text-[10px] font-bold uppercase tracking-wider bg-white/5 px-2 py-0.5 rounded border border-white/10">{office.type}</span>
+                          )}
                         </div>
 
                         {/* Location 1 */}
