@@ -26,6 +26,14 @@ export function ClientBrandsSection() {
     { name: "Asos", logo: "/assets/client-brand/ASOS.jpg" },
     { name: "Tommy Hilfiger", logo: "/assets/client-brand/TOMMY-HILFIGER.jpg" },
     { name: "Pepe Jeans", logo: "/assets/client-brand/PEPE-JEANS.jpg" },
+    { name: "Costco", logo: "/assets/client-brand/COSTCO.jpeg" },
+    { name: "Genumark", logo: "/assets/client-brand/GENUMARK.jpeg" },
+    { name: "Skechers", logo: "/assets/client-brand/SKECHERS.jpeg" },
+    { name: "Us Polo", logo: "/assets/client-brand/US-POLO.jpeg" },
+
+
+
+
   ]
 
   return (
